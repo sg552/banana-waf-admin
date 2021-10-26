@@ -1,0 +1,65 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>行为访问频率</h2>
+  </div>
+  <div class="col-sm-1">
+    <div style="margin-top: 15px;">
+      <button class="btn btn-success " type="button"><i class="fa fa-download"></i>
+      <%= link_to raw("#{t('public.export_csv')}"),download_user_behavier_access_analysis_user_behaviers_path( params.to_enum.to_h.except(:controller, :action) ), style: "color: #ffffff"%></button>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <tr>
+                <th>行为</th>
+                <th>总访问次数</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if @user_user_behavier_access_analysis.present? %>
+                <% @user_user_behavier_access_analysis.includes(:behavier).each do |user_behavier| %>
+                  <tr>
+                    <td>
+                      <%= user_behavier.behavier.behavier_name rescue '-'%>
+                    </td>
+                    <td>
+                      <%= user_behavier.count %>
+                    </td>
+                    <td>
+                      <%= link_to "详情", user_behavier_access_analysis_show_user_behaviers_path(behavier_id: user_behavier.behavier_id), class: "fa-btn btn btn-xs btn-primary"%>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="11">
+                  <ul class="pull-right"><%#= paginate @user_user_behavier_access_analysis %></ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+  $(function() {
+    $('.footable').footable();
+  });
+</script>
+
+<% end %>

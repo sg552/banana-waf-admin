@@ -1,0 +1,108 @@
+# -*- encoding : utf-8 -*-
+
+puts "== 记得使用　　bundle exec cap deploy 来运行本命令"
+
+test_server_port = '22'
+test_server_ip = '47.56.117.246'
+test_server_username = 'root'
+
+production_server_port = [port]
+production_server_ip = 'ip...'
+production_server_username = 'username...'
+
+# 要求测试服务器和生产服务器的路径是一样的.
+app_name = 'waf-rails-admin'
+deploy_to = '/opt/app/waf-rails-admin'
+
+require 'capistrano-rbenv'
+load 'deploy/assets'
+
+set :rails, "bundle exec rails"
+set :application, app_name
+set :repository, "."
+set :scm, :none
+set :deploy_via, :copy
+set :copy_exclude, ['tmp', 'log']
+
+
+set(:server_type) {
+  puts "== 咱们的服务器可以根据 测试环境(test) 和生产环境(production)分别做部署。"
+  Capistrano::CLI.ui.ask("== 希望部署哪个？? 输入： (test/production)? ")
+}
+
+case server_type.chomp
+when 'test'
+  puts "== 好的，主人，现在部署测试环境"
+  sleep 2
+  username = test_server_username
+  server_port = test_server_port
+  server_ip = test_server_ip
+when 'production'
+  puts "== 好的，主人，现在部署生产环境 (记得要确认过眼神...)"
+  set(:is_confirm_to_deploy_to_production) {
+    Capistrano::CLI.ui.ask("== 确认要部署吗？ (yes/no) ")
+  }
+
+  if is_confirm_to_deploy_to_production == 'yes'
+    sleep 2
+    username = production_server_username
+    server_port = production_server_port
+    server_ip = production_server_ip
+  else
+    puts "== 重新来过吧！"
+    exit 0
+  end
+
+else
+  puts "小哥哥，没有这个选项啊：#{server_type.chomp}. 重来吧．"
+  exit 0
+end
+
+# 设置好各种参数
+set :user, username
+ssh_options[:port] = server_port
+server = server_ip
+set :deploy_to, deploy_to
+
+role :web, server
+role :app, server
+role :db,  server, :primary => true
+role :db,  server
+
+default_run_options[:pty] = true
+
+
+namespace :deploy do
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    db_migrate
+    sleep 2
+    #run "cd #{release_path} && sudo ./restart_very_quickly"
+  end
+  task :db_migrate do
+#    run "cd #{release_path} && bundle install"
+#    run "cd #{release_path} && RAILS_ENV=production bundle exec rails db:migrate"
+  end
+
+  namespace :assets do
+    task :precompile do
+      puts "======= should run precompile"
+      command = "cd #{release_path} && bundle exec rails tmp:create assets:precompile RAILS_ENV=production"
+
+
+      #    puts "== please run == \n #{command} \n == manually after deploy is done"
+      #run "bundle install"
+      #run "cd #{release_path} && bundle exec rails RAILS_ENV=production RAILS_GROUPS=assets assets:precompile "
+    end
+  end
+end
+
+
+desc "Copy database.yml to release_path"
+task :cp_database_yml do
+  puts "=== executing my customized command: "
+#  run "cp -r #{shared_path}/config/*.yml #{release_path}/config/"
+  puts "=== done (executing my customized command)"
+end
+
+before "deploy:assets:precompile", :cp_database_yml
+

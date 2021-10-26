@@ -1,0 +1,1074 @@
+zh:
+  html:
+    lang: zh
+    title: 管理员后台
+  views:
+    pagination:
+      first: "&laquo; 第一页"
+      last: "最后一页 &raquo;"
+      previous: "&lsaquo; 前一页"
+      next: "下一页 &rsaquo;"
+      truncate: "&hellip;"
+  google_otp:
+    i_want_to_disable: 想关闭吗?
+    please_input_otp_code: 请输入google authenticator显示的数字
+    tips: "Google authenticator 是为了您的安全而设置的．强烈建议开启．<br/>
+      开启后，您才可以使用提币功能．<br/>
+      您可以先解绑,然后重新绑定新的手机号码"
+    usage: "1. 下载并安装　google authenticator<br/>
+      2. 确保您的手机时间是自动更新的。<br/>
+       2.1 安卓：设置 -> 系统 -> 日期和时间 -> 自动设置 <br/>
+       2.1 IOS ：设置 -> 通用 -> 日期与时间 -> 自动设置 <br/>
+      2. 打开authenticator, 扫上面的二维码 <br/>
+      3. 每次需要的时候，打开使用即可<br/>
+      4. 如果您的设备无法开启二维码扫描界面，请手动输入您的帐号名: <span style='color: red'>%{email}</span>
+      和密钥: <span style='color: red'>%{secret}</span>. 并且选择＂基于时间＂."
+  header:
+    lever: 杠杆
+    members: 用户
+    background_administrator: 后台管理员
+    new_manager: 新建后台管理员
+    passport_to_be_verified: 待审核的护照
+    lock_deducting_balance_to_another_currency: 锁定操作2： 扣除余额到另一币种的锁定
+    locally_initiated_on_chain_transfer_records: 本地发起的链上转账记录
+    display_settings_of_transaction_to_note_on_the_first_page: 首页交易对便签显示设置
+    user_security_settings: 用户安全机制设定
+    file_upload: 文件上传
+    comment_list_of_transactions_in_French_currency: 法币交易评论列表
+    app: APP
+    registered_users: 注册用户
+    accounts: 用户资产
+    id_card_list: 待审核的身份证
+    crypto_transaction: 数字币与交易
+    general_operations: 账户冻结操作
+    general_operation_details: 账户冻结详情
+    scheduled_unlock: 定时解冻
+    batch_locking: 批量冻结
+    deposits: 充币记录
+    withdraws: 提币审核
+    currency: 币种
+    transaction_pairs: 交易对
+    a2a_transfer: 上币方空投糖果列表
+    IEO: 打新设置
+    transfer_list: 站内转账列表
+    system: 系统
+    system_constants: 系统常量
+    database_monitoring: 数据库监控
+    slider_images_management: 首页轮播图管理
+    related_progress_monitoring: 系统相关进程监控
+    auto_operation_monitoring: 自动化运维监控
+    roles_list: 角色列表
+    app_version_management: APP版本管理(新版)
+    app_version_management_old: APP版本管理(旧版)
+    set_app_down_link: App下载链接地址设置
+    ios_app_down_link: ios app下载链接地址
+    ios_app_down_qr_code_img_link: ios二维码下载链接地址
+    android_app_down_link: Android app下载链接地址
+    android_app_down_qr_code_img_link : Android 二维码下载链接地址
+    about_us: 关于我们
+    contact_us: 联系我们
+    market_monitor_settings: 交易对监控
+    default_language_setting: 默认语言设置
+    alarm_receiving_phone_setting: 报警接收电话设置
+    coin_receiving_phone_setting: 提币接收电话设置
+    footer_icons_setting: 下角标图标设置
+    default_pair_setting: 默认币币交易对设置
+    robots_setting: 机器人设置
+    country_code: 国家码
+    wallet_system: 钱包系统
+    virtual_asset: 凭空生成的虚拟资产
+    recharge_record: 冲币归拢记录
+    user_wallet: 用户的钱包地址
+    company_hot_wallet: 公司热钱包
+    company_cold_wallet: 公司冷钱包
+    crypto_exchange: 币币与法币交易
+    order_book: Order Book
+    orders: 币币订单列表(未成交的)
+    trades: 币币订单列表(已成交的)
+    k_line_editor: 币币交易K线修改器(已成交的)
+    k_line_preset: 币币交易K线预设器
+    fiat_trade: 法币交易(场外交易)订单列表
+    appeal_list: 法币交易申诉列表
+    statistics: 统计
+    system_info: 系统概览
+    reconciliation_manage: 对账管理(整体)
+    operation_platform: 运营平台
+    reconciliation_list: 自动对账列表(针对用户)
+    income_statistics: 交易所的收入(真实用户)
+    risk_control: 风控系统
+    user_info: 个人信息
+    edit_password: 修改密码
+    edit_google_otp: 修改谷歌验证码
+    market_making: 做市
+    signout: 退出登录
+    account_id: 账户ID
+    hedge_records: 对冲记录
+  edit_google_otp:
+    title: 绑定谷歌验证码
+    already_bound: 您已经绑定了谷歌验证器。不必再次绑定
+    no_binding: 您还没有绑定了谷歌验证器。请尽快绑定
+  personal_information:
+    title: 个人信息
+    upload_avatar: 上传头像
+    nickname: 昵称
+  edit_password:
+    title: 修改密码
+    old_password: 原密码
+    new_password: 新密码
+    reset_new_password: 重置新密码
+  public:
+    user_phone_email: 用户电话（邮箱）
+    protocol_for_users: 协议针对用户群体
+    all_user: 全部用户
+    selected_user: 后台录入群体
+    add: 增加
+    address: 地址
+    all: 全部
+    time_interval: 时间区间
+    back: 返回
+    cancel: 取消
+    clear_filter: 清空查询条件
+    confirm: 确认
+    confirm2: 确定
+    comment: 备注
+    commission: 手续费
+    currency: 币种
+    delete: 删除
+    delete_confirm: 你确定要删除吗?
+    details: 详情
+    edit: 编辑
+    email: 邮箱
+    email_hint: 请输入邮箱
+    example: 例如
+    export_csv: 导出csv
+    family: 家族
+    fee: 手续费
+    from: 从
+    gender: 性别
+    history_date: 没有历史记录
+    import_csv: 导入csv
+    list: 列表
+    market: 市场
+    name: 姓名
+    name2: 名称
+    no_result: 没有记录
+    operation: 操作
+    operator: 操作人
+    pair: 交易对
+    phone: 手机号
+    quantity: 数量
+    reconciliation: 对账
+    real_name_situation: 实名情况
+    search: 查询
+    select_coin: 请选择币种
+    sign_time: 注册时间
+    status: 状态
+    submit: 提交
+    time: 时间
+    to: 到
+    total: 合计
+    transaction: 交易
+    types: 类型
+    upload: 上传
+    user: 用户
+    user_id: 用户ID
+    verified: 实名认证
+    verify_time: 确认时间
+    view: 查看
+    wallet_addr: 钱包地址
+    buyer_name: 买方姓名
+    seller_name: 卖方姓名
+    buyer_phone: 买方电话
+    seller_phone: 卖方电话
+    account_type: 账户类型
+  lever:
+    Leveraged_lending: 杠杆借贷
+    leverage_interest: 杠杆借贷利息设定
+    list_of_leveraged_loans: 杠杆借款列表
+  members:
+    add_protocol_users: 添加协议用户
+    users_for_protocol: 协议用户
+    mobile: 手机
+    member_list: 用户列表
+    member_name: 姓名
+    member_phone: 手机号码
+    not_uploaded: 未上传
+    passed: 已通过
+    not_passed: 未通过
+    need_checked: 待审核
+    submit: 确认
+    cancel: 取消
+    total_users: 总用户数
+    alert: 该用户已被禁用
+    basic_information: 基本信息
+    unique_mark: 该用户唯一标记/用户ID
+    disabled_state: 禁用状态
+    disable: 禁用
+    normal: 正常
+    registered_at: 注册于
+    my_invitation_code: 本人邀请码
+    registered_invitation_code: 注册时填写的邀请码
+    inviter: 邀请人
+    verify_time: 确认时间
+    manual_confirm: 手动为他确认
+    recent_login_time: 最近登录时间
+    real_name_information: 实名信息
+    verified_record: 查询实名过往实名认证记录
+    home_address: 家庭住址
+    identification_number: 身份证号码
+    birthday: 生日
+    document_photo: 证件照
+    id_card_back: 身份证背面
+    id_card_front: 身份证正面
+    in_card_inhand: 手持身份证
+    undone_verified: 未完成身份验证
+    offline_information: 下线信息
+    id_card_review: 身份证审核
+    registered_time: 注册时间
+    id_card_record: 身份证记录
+    online: 没有下线
+    user_asset_information: 资产信息
+    query_asset_details: 查询资产详情
+    available_banlance: 可用余额
+    locking_banlance: 冻结余额
+    sum: 总额
+    recharge: 充币
+    cash: 提币
+    coin_to_coin_transaction_done: 币币交易(已完成)
+    seller: 卖出方(ask)
+    buyer: 买入方(bid)
+    transaction: 交易对
+    price: 价格
+    sell: 卖出
+    buy: 买入
+    coin_to_coin_transaction_undone: 币币交易(未完成订单)
+    freeze_quantity: 冻结数量
+    over_the_counter_done: 场外交易(成交的)
+    legal_currency_total: 法币总额
+    digital_currency_name: 数字币名称
+    digital_currency_total: 数字币总额
+    input_coin: 投入的币种
+    nil: 空
+    IEO: 打新
+    activity_name: 活动名称
+    get_coin: 得到的币种
+    airdrop_candy: 空投糖果
+    comment: 注释
+    inside_station_transfer: 站内转账
+    transfer_initiator: 转账发起人
+    transfer_recipient: 转账接收人
+    thaw_data: 解冻数据
+    unfreeze_amount: 解除冻结金额
+    release_time: 解除时间
+    generated_out_of_air: 凭空生成
+    generated_out_of_air_amount: 凭空生成金额
+    generated_time: 生成时间
+    forbidden_state: 禁用状态
+    current: 当前
+    new: 新的
+    confirm: 确定
+    back: 返回
+    modify_password: 修改密码
+    personal_reconciliation_page: 个人对账页面
+    unique_user_id: 用户ID（唯一标识）
+    calculation_formula_available_amount: 可用总量 = 收入合计 - 支出合计 - 支付手续费统计 - 余额变成的锁定 + 定时解冻
+    calculation_formula_locking_quantity: 锁定数量 = 锁定合计 - 定时解冻
+    correct: 正确
+    error: 错误
+    calculate_balance: 计算余额
+    calculate_locking: 计算锁定
+    current_balance: 当前余额
+    current_locking: 当前锁定
+    switching_currencies: 切换币种
+    current_currencies: 当前币种
+    available_quantity: 可用数量
+    locking_quantity: 锁定数量
+    digital_currency_amount: 数字币总量
+    total_income: 收入合计
+    recharge_coin: 充币
+    recharge_coin_description: 这里只计算已到账的充币. 没有达到确认数的（例如少于12次确认）是不考虑的
+    income_coin_to_coin: 币币交易收入
+    income_coin_to_coin_description: 用户通过币币交易获得的数字币。已经减掉了手续费
+    income_legal_coin: 法币交易收入
+    income_legal_coin_description1: '表示某个用户通过法币交易<span style="color: green">增加</span>的数字币'
+    income_legal_coin_description2: '有两种情况： <br/>
+                                    1. 该用户以"普通用户"身份，点击其他"商家"的"出售数字币"广告，来获得数字币。<br/>
+                                    2. 该用户以"商家"身份挂了广告，来"收购"其他"普通用户"的数字币。<br/>'
+    ordinary_user_buy_digital_currency: '以"普通用户"身份购买"商家"的数字币'
+    business_buy_digital_currency: '以"商家"身份收购"普通用户"的数字币'
+    inside_station_transfer_income: 站内转账收入
+    inside_station_transfer_income_description: 例如，别人转给该用户80
+    out_of_thin_air_add_virtual_assets: 凭空增加的虚拟资产
+    out_of_thin_air_add_virtual_assets_description: 源自于管理后台的操作。可以修改任意用户的“可用余额”或者“冻结余额”。
+    airdrop_candy_add: 空投糖果的增加
+    airdrop_candy_add_description: 发币方通过他们的后台，给用户空投的数字币。
+    old_data_migration: 老数据迁移：向可用余额充币
+    old_data_migration_description: '老用户的可用余额，是通过“充值”的形式进入到现在的交易所的。 <br/>
+                                    每一币充币，如果备注中注明："从老数据迁移过来，冻结的余额", 那么就是了。'
+    pay_total: 支出合计
+    digital_currency_draw: 数字币提币
+    digital_currency_draw_description: '提币的状态包括：未审批，已审批，已确认 <br/>
+                                        这里只计算“已确认”的状态。'
+    pay_coin_to_coin: 币币交易支出
+    pay_coin_to_coin_description: '用户通过币币交易减少的数字币。 <br/>
+                                   包含了币币交易支出手续费'
+    service_charge: 包含支出手续费
+    pay_legal_coin: 法币交易支出
+    pay_legal_coin_description1: '表示某个用户通过法币交易<span style="color: red">减少</span>的数字币'
+    pay_legal_coin_description2: '有两种情况： <br/>
+                                  1. 该用户以"普通用户"身份，点击其他"商家"的"收购数字币"广告，来用数字币兑换法币. <br/>
+                                  2. 该用户以"商家"身份挂了出售数字币的广告。'
+    ordinary_user_sell_digital_currency: 以"普通用户"身份卖给其他"商家"数字币
+    business_sell_digital_currency: 以"商家"身份卖给"普通用户"数字币
+    inside_station_transfer_pay: 站内转账支出
+    inside_station_transfer_pay_description: 把数字币转给别人，自己的余额会减少。
+    out_of_thin_air_reduce_virtual_assets: 凭空减少资产
+    out_of_thin_air_reduce_virtual_assets_description: 源自于管理后台的操作。可以修改任意用户的“可用余额”或者“冻结余额”。
+    airdrop_candy_reduce: 空投糖果的减少
+    airdrop_candy_reduce_description: 空投方空投糖果给别人时，自己账户会减少。
+    service_charge_count: 支付手续费统计
+    legal_currency_service_charge: 法币交易手续费
+    legal_currency_service_charge_description: 法币交易，每次都会收取广告商的手续费。
+    cash_service_charge: 提币手续费
+    cash_service_charge_description: 如题。只有提币成功后，才会收手续费。
+    station_transfer_service_charge: 站内转账手续费
+    station_transfer_service_charge_description: 如题。
+    locking_total: 锁定合计
+    coin_locking: 币币挂单锁定
+    coin_locking_description: 由于币币交易，可用余额减少，锁定余额增加
+    part_deal: 部分成交
+    never_deal: 从未成交
+    locking_undeal: 法币未成交锁定
+    locking_undeal_description: 由于法币交易，可用余额减少，锁定余额增加
+    cash_verify_locking: 提现待审核锁定
+    cash_verify_locking_description: 可用余额减少，锁定余额增加
+    old_data_locking_recharge: 老数据向锁定充币
+    old_data_locking_recharge_description: '老交易所的数据迁移到现在的交易所的时候，需要把“锁定余额”导入进来，用的就是“充币”的名义。<br/>
+                                           例如，张三在老交易所的 “锁定余额” 是30, 那么在新交易所中，就会有一笔充值。备注为“从老数据迁移过来，可用的锁定"'
+    generate_locking_currency: 凭空生成的锁定币
+    generate_locking_currency_description: 凭空生成的，为某个用户的”锁定余额“增加数量。
+    timing_unlock: 定时解冻
+    unlock_money: 解冻金额
+    unlock_money_description: 需要为某个用户的解冻金额，把”锁定余额“部分的数量，转移到”可用余额“中。
+    no_calculate_part: 不参与计算的部分
+    coin_service_charge: 币币交易手续费
+    coin_service_charge_description:  总计支付的手续费. 一笔币币交易成功后，卖方和买方都需要支付手续费。
+    income_service_charge: 收入手续费
+    pay_service_charge: 支出手续费
+    total: 合计
+    new_password: 新密码
+    repeat_new_password: 重复新密码
+    type: 类别
+    income_coin_to_coin_details: 币币交易收入明细
+    id_unique: ID（唯一标识）
+    back_to_personal_reconciliation_page: 返回个人对账页面
+    pay_coin_to_coin_details: 币币交易支出明细
+    buy_trade: 买入交易
+    sell_trade: 卖出交易
+    pay: 支出
+    income: 收入
+    edit_is_able_to_login: 编辑密码错误禁用状态
+    edit_is_able_assets_password: 编辑资金密码错误禁用状态
+  id_card_approvals:
+    id_card: 实名验证记录
+    id_card_description: 审批身份证的话，审批最新的一个就好了。
+    applicant: 申请人
+    auditor: 审核人
+    audit_status: 审核状态
+    apply_submit_time: 申请提交时间
+    passport: 护照
+    no_result: 暂无数据
+    need_checked: 待审核
+    view_and_review: 查看并审核
+    view: 查看
+  accounts:
+    users_assets: 用户的资产
+    available_balance: 可用余额
+    more_than: 大于
+    less_than: 小于
+    freeze_balance: 冻结余额
+    total: 总共
+    users: 个用户
+    current_page: 本页
+    hold_available_balance: 持有可用余额
+    hold_locking_balance: 持有锁定余额
+    hold_total_balance: 持有总计余额
+    account_id: 账户ID
+    available_banlance: 可用余额
+    locking_banlance: 冻结余额
+    sum: 合计
+  scheduled_unlockings:
+    current_unlock_sum: 当前已完成解冻数量
+    click_download: 点击下载
+    unlock_example_csv: 8.19解冻.csv下载例子
+    upload_hint: 点击一次就好。千万不要多次点击。大约需要1分钟
+    unlock: 解冻
+    manual_unlock: 手动解冻
+    unlock_amount: 解除冻结金额
+    timing_unlock: 定时解冻
+    user_phone: 用户电话
+    operation_type: 操作类型
+    unlock_entrance: 解冻入口
+    manual_add: 手动新增
+    info: 基本信息
+    unlock_time: 解除时间
+    unlock_data: 解冻数据
+  deposits:
+    index_title: 充币
+    deposits_total: 当前页面充值总额
+    select_coin: 请选择币种
+    create_time: 创建时间
+    confirm_time: 确认时间
+    process_title: 充币的进程监控
+    process_name: 进程名字
+    process_status: 进程状况
+    stopping: 已停止
+    title: 总计充币
+    balance: 金额为
+  withdraws:
+    title: 提币审核与历史列表
+    attention: "注意： <br/>
+      1. USDT提币发起后1～2分钟内，tx id的查询，可能会显示 invalid xxx ... 不要紧，过一分钟打开再看，就能看到具体的tx的情况了。<br/>
+      2. 没有发起tx的withdraw是可以被撤销的 <br/>
+      3. USDT, BTC转账时间2～3小时。<br/>
+      4. 点击审核之前，务必点击用户的对账按钮，看一下。 <br/>
+    "
+    apply_time: 申请/批准/ 执行时间
+    application: 申请
+    approval: 审批
+    execute: 执行
+    agree: 同意
+    undo: 撤销
+    check_account: 查账
+    history: 历史
+    already_copied: 已经复制
+    copy: 复制
+  currencies:
+    index_title: 交易所的币种
+    name: 名称
+    icon: 图标
+    base_factor: base factor
+    token: 令牌
+    contract_address: 合约地址
+    recharge_withdraw: 充提币
+    is_visible: 是否可见
+    yes_: 是
+    no_: 否
+    example: 例如
+    rechargeable: 可充值
+    withdrawable: 可提现
+    visible: 可见
+    hidden: 隐藏
+    edit_title: 编辑币种资料
+    new_title: 新建币种资料
+    position: Position(越大越在上面)
+    code: Code(小写，例如 eth)
+    icon_link: 币种icon链接
+    fullname: 币种全名(英文)
+    symbol: Symbol (必须要填)
+    release_time: 发行时间
+    release_quantity: 发行数量
+    circulation: 流通数量
+    site: 官方网站
+    white_paper: 白皮书
+    block_query: 区块查询
+    option: 选项
+    base_factor_hint: (小数点儿后多少位是有效的, ETH默认18)
+    precision: 精度
+    whether: 是否
+    eth_addr: ETH Contract 地址(如果是erc20代币的话)
+    withdraw_commission: 提币手续费
+    is_commission_fixed: 提币手续费是否固定
+    yes_fixed: 是, 都是固定的
+    is_rechargeable: 是否可以充币
+    recharge_minimum: 最小充币金额
+    is_withdrawable: 是否可以提币
+    withdraw_minimum: 最小提币金额
+    is_within_station: 是否可以站内转账
+    is_display_otc: 是否在OTC中显示
+    otc_fee: OTC交易费率，(默认0.005(千分之五)，必须在0~1之间)
+    otc_minimum: OTC最小交易金额
+    otc_decimal_point: OTC交易小数点位数(1 ~ 8 整数)
+    commission_fixed: 站内转账手续费（固定）
+    region: 币种区域
+    en_intro: 币种介绍(英文)
+    zh_intro: 币种介绍(中文)
+    kr_intro: 币种介绍(韩文)
+    ru_intro: 币种介绍(俄文)
+    jp_intro: 币种介绍(日文)
+    exist_msg: 该币种已经存在
+  markets:
+    index_title: 交易对管理
+    is_stock: 是否为股票
+    is_margin: 是否支持杠杆
+    ask_currency_precision: 整数部分(ask)精度
+    ask_currency_scale: 小数部分(ask)精度
+    bid_currency_precision: 整数部分(bid)精度
+    bid_currency_scale: 小数部分(bid)精度
+    edit_title: 编辑交易对
+    new_title: 新建交易对
+    ask_unit: 卖价(ask)单位
+    bid_unit: 买价(bid)单位
+    buy_commission: 买 手续费
+    sell_commission: 卖 手续费
+    buy_accuracy: 买 价格精度
+    sell_accuracy: 卖 价格精度
+    unvisible: 不可见
+    edit_alert: "0. 高能预警： 只有专业的技术人员才能操作本页面<br/>
+      1. 术语： ask price: 卖方报价/卖出价, bid price, 买方报价/买入价。 <br/>
+      例如:  id:  ethbtc,   ask unit: eth,  bid unit: btc <br/>
+      2. 注意： ask unit, bid unit, 必须是先存在于数据库中。 <br/>
+    "
+    price_accuracy: 价格精度
+    quantity_accuracy: 数量精度
+    order: 排序位置(越小越在上面)
+    trade_visible: 是否可见(下架交易对用)
+    min_trade: 最小交易量
+    stock_name: 股票名称
+  a2a_transfer:
+    title: 空投糖果记录列表
+    alert: 糖果是在放币方后台上，由发币方的人员空投的
+    sender: 发件人
+    reciver: 收件人
+    payer: 打款人
+    payee: 收款人
+    transfer_time: 转账时间
+  IEO:
+    only_positive_integer: 只允许输入正整数
+    edit_title: 编辑打新
+    new_title: 新建打新
+    list_title: 参与打新列表
+    start_time: 开始时间
+    end_time: 结束时间
+    start: 开始打新
+    start_confirm: 你确定开始打新吗?
+    end: 结束打新
+    end_confirm: 你确定要结束打新吗?
+    view: 查看
+    title: 标题
+    list_name: 参与人姓名
+    list_people: 参与人
+    list_time: 参与时间
+    list_participate: 参与打新数量
+    list_gain: 获得打新数量
+    form_hint1: TGC打币开始啦!
+    form_hint2: 请选择打新币种
+    form_hint3: (两千万)
+    form_hint4: (表示手续费 3%)
+    form_hint5: 请选择募集币种
+    form_hint6: 第二阶段. 随便填的文字
+    form_hint7: 20000 (表示一个ETH兑换20000个TGC)
+    form_hint8: 成功后的72小时后解锁
+    only_numbers: 只允许输入 0~1 的数字
+    form_icon: icon图片 (需要提前上传好url)
+    form_banner: banner图片 (需要提前上传好url)
+    form_coin: 打新币种(就是用户参加完活动得到的币种，例如TGC)
+    form_coin_num: 打新币种(例如TGC)的兑换数量
+    form_fee: 手续费比例(小数, 例如0.03 表示手续费是3%, 用户会得到97%的币)
+    form_raise_coin: 募集币种(就是用户付出的币种，例如 ETH)
+    form_raise_goal: 募集币种目标数量
+    form_min: 个人最小的募集币种数量（例如1，表示1ETH)
+    form_max: 个人最大的募集币种数量(例如5,表示最多投入5ETH）
+    form_start_time: 开始时间(精确到分)
+    form_end_time: 结束时间(精确到分)
+    form_stage: 阶段(选填，例如第一阶段，第二阶段等等）
+    form_exchange_num: 每个募集币种(例如ETH)可兑换打新币种(TGC)的数量
+    form_fake_num: 打新结束的需要显示的假的完成度，例如99%填写0.99, 会覆盖真实的百分比。(0~1, 不用就不填写)
+    form_coin_unlock: 币种解锁方案
+    intro: 介绍
+    is_human_intervention: 是否人为干预提前启动
+  internal_transfers:
+    title: 站内转账列表
+    sender: 转账发起人
+    sender_email: 转账发起人邮箱
+    receiver: 转账接收人
+    receiver_email: 转账接收人邮箱
+    coin: 转账币种
+    num: 到账数额
+    fee: 转账手续费
+  system_var:
+    index_title: 系统常量管理
+    new_title: 新建系统常量
+    edit_title: 编辑系统常量
+    alert: "这里的变量有的是人工设置的．　<br/>
+      但是不少都是跟外部系统抓取过来的．例如：high gas price, usd 对rmb的汇率等等．需要手动修改
+    "
+    value: 值
+    update_time: 更新时间
+    order: 排序
+    status: 健康状态
+    lang_title: 系统默认语言
+    zh: 中文
+    en: 英文
+    kr: 韩语
+    jp: 日语
+    ru: 俄语
+    alarm_title: 接收报警电话设置（逗号不区分中英文）
+    phone_hint: 请输入有效数字
+    withdraw_title: 提币通知接收电话设置（逗号不区分中英文）
+    transaction_title: 交易对默认设置
+    database_title: 数据库健康程度
+    database_connect: 数据库连接数
+    robot_id_set: 机器人ID
+    operation: 操作
+    member_name: 用户账号
+    add_robot: 添加机器人ID
+    max_failed: 允许最大登录次数
+  slider:
+    index_title: 首页轮播图管理
+    edit_title: 编辑首页轮播图
+    new_title: 新建首页轮播图
+    edit_show: 显示
+    title: 轮播图标题
+    type: 图片类型
+    link: 点击图片的跳转链接
+    is_display: 是否显示
+    upload: 上传图片
+    creator: 创建人
+    uploader: 上传人
+    preview: 图片预览
+    website_type: 网站类型
+  progress:
+    new_title: 新增监控进程
+    edit_title: 编辑进程
+    alert: 注意：非程序员，不可以更改或者删除
+    index_title1: 可见的交易对
+    index_title2: 不可见的交易对
+    index_title3: 未撮合订单与数据库的连接
+    title3_order: 全部未撮合订单
+    title3_connect: 数据库的连接数
+    index_title4: 监控进程列表
+    server_name: 服务器名称
+    project_name: 所在项目名称
+    name: 进程名称
+    checktime: 检查时间
+    no_: 暂无
+    log: 日志状态
+    log_tail: 日志最后内容
+    monitoring_or_not: 是否监控
+  realtime:
+    new_title: 创建实时监控
+    edit_title: 编辑实时监控
+    index_title: 实时监控
+    comment: 备注
+    interval: 监控请求间隔(秒)
+    url: 监控请求url
+    type: 监控类型
+    status: 当前状态
+    error_call: 上次出错语音消息拨打时间
+    error_call_times: 上次出错语音消息拨打次数
+    error_sms: 上次出错发送短信时间
+    error_sms_times: 上次出错发送短信次数
+    value_string: 字符串
+    last_checked: 上次检查时间
+  roles:
+    index_title: 角色列表（此页面非技术人员禁止操作）
+    new_title: 新建角色
+    edit_title: 编辑角色
+    manage_permission: 权限管理
+    collect_permission: 权限收集
+    set_permission: 权限设置
+    select_all: 全选
+    hint: 系统还未进行权限收集，请收集权限
+  app:
+    new_title: 新建APP版本信息
+    edit_title: 编辑APP版本信息
+    index_title: APP版本管理
+    android: 安卓版下载连接
+    IOS: IOS版下载链接
+    zh: 中文版本更新说明
+    en: 英文版本更新说明
+    ver: 版本号
+    ver_hint: 必须要不同于之前的版本号
+    ready_android: Android版本已就绪
+    ready_IOS: IOS版本已就绪
+    ready: 就绪
+    unready: 未就绪
+  footer_icon:
+    new_title: 创建新图标
+    edit_title: 编辑图标
+    add: 添加
+    index_title: 下角标图标列表
+    index_hint: (配置的图标会在 www，otc等项目footer中动态加载，目前只能增加8个图标)
+    enable: 正常
+    disable: 禁用
+    icon: 图标
+    link: 链接
+    desc: 描述
+    redirect: 跳转链接
+    example: 微信图标
+  robots:
+    index_title: 机器人设置
+    new_title: 新建机器人
+    edit_title: 编辑机器人
+    market: 市场名
+    hang_interval: 挂单间隔
+    trade_interval: 成交间隔
+    or: 或
+  country:
+    index_title: 国家码列表
+    edit_title: 编辑国家码
+    new_title: 新建国家码
+    country: 国家
+    code: 国家码
+    is_disable: 是否禁用
+  virtual:
+    index_title: 虚拟资产列表
+    new_title: 新建
+    alert: 由于空投糖果等原因，我们需要为某个账户虚拟出数字币来。需要统一放在这里，方便管理
+    select_coin: 请选择币种
+    select_account: 请选择账户
+    beneficiary: 收款方
+    quantity_hint: 正数是给，负数是扣除
+    is_lock: 是否锁定
+    income: 收支
+    add_to: 增加到
+    reduce: 减少
+    operation_time: 操作时间
+    balance: 可用余额
+    freeze: 冻结余额
+    account: 账户
+  put_crypto:
+    title: 归拢充币记录
+    total: 本页金额合计
+    total_hint: 先选择好币种后,就可以看到金额合计了
+    time: 时间
+    wallet_addr: 钱包地址
+    amount: 金额
+    big_wallet: 整理到大钱包
+    cmd: 原始命令
+  wallet:
+    index_title: 用户的钱包地址
+    show_title: 钱包详情
+    alert: 注意：地址钱包的余额 跟用户在交易所的余额是两个概念，二者无直接关系
+    view: 查看
+    addrs: 个地址
+    password: 密码
+    name: 用户名,姓名
+    available: 交易所可用的
+    freeze: 交易所冻结的
+    owner: 所属用户
+    addr_coin: 该地址对应的数字币
+    last_check: 上次检查时间
+    addr_info: ETH 或者BTC 或者USDT的地址信息
+    erc_info: 该erc-20的地址信息
+    total: 总数
+  cc_unordered:
+    order_list: 币币订单列表(未成交的)
+    user_id: 用户ID
+    phone_number: 手机号码
+    price_greater_than: 价格大于
+    price_lower_than: 价格低于
+    commission_direction: 委托方向
+    source: 来源
+    number_ordering : 数量排序
+    unit_price: 单价排序
+    hope_to_see_user : 希望看的用户ID
+    user_not_watching: 不希望看的用户ID
+    sell_orders: 卖单
+    pay_the_bill: 买单
+    not_sorting: 不排序
+    ascending: 升序
+    descending: 降序
+    comma_separated: 英文逗号分隔
+    done : 完成
+    never_dealt: 从未成交
+    partial_deal: 部分成交
+    withdrawn: 已撤单
+    order_quantity: 订单量
+    bulk_revocation: 批量撤销
+    order_code: 订单编码
+    price: 价格
+    original_quantity: 原始数量
+    commission_amount : 委托金额
+    commission_time: 委托时间
+    unfilled_quantity: 未成交数量
+    cancel: 撤销
+    cancel_confirm: 您确定要撤销订单吗?
+    all_cancel_confirm: 您确定要把本页选中的订单都撤销吗？
+  trades:
+    order_list: 币币订单列表(已成交的)
+    choose_currency: 请选择币种
+    seller: 卖方
+    buyer: 买方
+    time_from: 时间从
+    price_from: 价格从
+    confirm: 确定
+    trading_volume: 交易量
+    download: 下载CSV
+    rollback_confirm: 您确定要回滚交易吗?如果回滚出错，则是用户可用余额不足导致的。请查看该用户是否在OTC转账了。
+    batch_rollback: 批量回滚
+    batch_rollback_confirm: 您确定要把本页选中的交易都回滚吗？
+    price: 价格
+    number_of_transactions: 成交数量
+    handling_fee : 手续费
+    rollback: 回滚
+  k_lines:
+    data_list: K线数据列表
+    transaction_pair: 交易对
+    interval: 间隔
+    total: 合计
+    original_time: 原始时间
+    formatted_time: 格式化后的时间
+    original_data: 原始数据
+    opening_price: 开盘价
+    highest_price: 最高价
+    lowest_price: 最低价
+    closing_price : 收盘价
+    Volume: 成交量
+    record: 无记录
+  preset_k_lines:
+    title: 预设K线数据列表
+    insert_data: 待插入redis中的数据
+    database: 暂无数据
+  otc_tradings:
+    title: 场外交易订单
+    advertisers: 广告商
+    order_type: 订单类型
+    sell: 用户卖
+    buy: 用户买
+    creation_time: 创建时间
+    order_number: 订单号
+    ransaction_type: 交易类型（用户）
+    seller: 卖家
+    buyer: 买家
+    coin_number: 数字币数量
+    fcoin_number: 法币数量
+    advertiser: 广告人
+    status: 订单状态
+    wether_cancle: 是否取消
+    yes_: 是
+    not_: 否
+    timeout: 是否超时
+    extension_time: 是否延长时间
+    view: 查看
+    history_record: 没有历史记录
+  otc_trading_evaluations:
+    title: 场外交易订单评论
+    good_or_bad: 好评/差评
+    good: 好评
+    bad: 差评
+    content: 评论内容
+  disput:
+    title: 申诉列表
+    phone: 手机
+    appeal_time: 申诉时间
+    appeal_content: 申诉内容
+    status: 状态
+    order: 订单ID
+    cancel: 撤销
+    reason: 原因
+    save: 保存
+    restore: 恢复
+    details: 详情
+  system_statistics:
+    title: 系统统计
+    registered_number : 注册用户数
+    legal_currency_trading: 法币交易
+    transaction_number: 成交数
+    recharge_coin: 充币
+    extract_coins: 提币
+    transfer: 站内转账
+  account_statistics:
+    coin_amount_today: 今日提币金额
+    total_amount_of_coins: 总提币金额
+    currency_amount: 今日充币金额
+    total_amount_coins: 总充币金额
+    cold_wallet_balance: 冷钱包余额
+    hot_wallet_balance: 热钱包(提币钱包)余额
+    total_generate: 凭空生成合计
+    total_commission: 手续费合计
+    total_balance: 系统合计余额
+    income_expenditure: 今日收支
+    record: 特定日期的总账记录
+    choose_coins: 请选择币种
+    title: 总对账界面
+    reconciliation_information: 对账信息
+    remarks: 备注信息
+    calculatin_income_method: "平台总收入（忽略机器人） = 充币 - 提币 + 用户手续费（除去机器人的）- 提币手续费（因为充币-提币里面已经包括了提币手续费的收益，提币手续费相当于多加了一次，要减去）<br/><br/>
+                              2019年7月22日是数据转入的时间"
+    success: 对账成功
+    failure: 对账失败
+    real_time_information: "实时对账<br>
+                            注意：<br>
+                            1. 只有查询日期是今日的时候才可以进行实时对账.<br>
+                            2. 实时对账包括机器人交易，如订单正在撮合时会有0.1秒的误差，需要多次刷新进行确认，弹出对账成功即为对账成功.<br><br>
+                            公式：(真实余额 + 真实锁定 + 手续费 == 计算余额 + 计算锁定 + 手续费)<br><br>"
+    method_one: 值1：计算余额 + 计算锁定 + 手续费 =
+    method_two: 值2：真实余额 + 真实锁定 + 手续费 =
+    date: 日期
+    switch_currency: 切换币种
+    current_currency: 当前币种
+    current_balance: 当前余额
+    current_lock: 当前锁定
+    balance_lock: 当前余额 + 锁定
+    compute_balance_lock: 计算余额 + 计算锁定
+    compute_method: (老余额+老锁定) + 充币 + (凭空生成的余额或锁定) - 提币金额 - 所有手续费
+    balance: 当前余额（扣除机器人)
+    lock: 当前锁定（扣除机器人）
+    current_balace_lock: 当前余额 + 锁定（扣除机器人）
+    thaw_quantity: 当日解冻数量
+    balanced_currency: 老数据向余额充币
+    lock_the_coin: 老数据向锁定充币
+    total_currency_lock: 老数据充币提币合计
+    difference_reason: "初始数量相对于22142107.268918差了64500.0，<br>
+                       这个是因为“7月25日用户资产”改动前6条数据直接修改了老数据向老数据余额、锁定充币记录<br>
+                       原：150860.86<br>
+                       改：86360.86<br>"
+    confirm_receipt: 当日充币（确认到账）
+    total_confirm_receipt: 总充币金额（确认到账）
+    successful_withdrawal_coins: 当日提币（成功提币）
+    total_withdrawal_coins: 总提币金额（成功提币）
+    groundless_balance: 凭空生成的（余额）
+    groundless_lock: 凭空生成的（锁定）
+    cc_commission: 币币交易手续费
+    legal_coin_commission: 法币交易手续费
+    amount_coins_commission: 提币手续费
+    transfer_commission: 站内转账手续费
+    income: 平台总收入
+    income_norobot: 平台总收入（忽略机器人）
+    today_income_norobot: 当日总收入（忽略机器人）
+    migrated_assets: 数据迁移过来的资产（交易所7月29日导入进来所有用户资产余额）
+    migrated_assets_cab: "余额：12836786.268718000000000000<br>
+                         锁定：9305321.000200000000000000<br>
+                         总计：22142107.268918<br><br> "
+    migrated_assets_usdt: "余额：3218733.781133297695170301<br>
+                          锁定：110368534.465616981480959722<br>
+                          总计：113587268.24675028<br> "
+    balance_change_file: 用户账户余额变动文件
+    second_time: 7月30日
+    total_not_grow: 平台总和未增长
+    first_time: 7月25日
+    cc_robot: 币币交易平台机器人
+    robot: 做市机器人
+    test_robot: 测试机器人
+  automatic_reconciliation_list:
+    title: 每日对账列表
+    description: "这里是根据某个用户来对账.每个币种耗时大约10分钟 <br/>
+                 每日可以运行多次．建议在人少的时候运行．"
+    date: 日期
+    runner: 运行人
+    result: 结果
+    view: 查看
+  account_statistics_in_special_date:
+    reconciliation_formula: "对账公式：<br/>
+                            收入：充币，各种手续费，虚拟资产（正数）, 转账花费 <br/>
+                            支出：提币，虚拟资产（负数）　　<br/>
+                            统计从当日的00：00：00秒开始，　到23：59：59.999999 秒结束<br/>"
+    start_date: 统计起始日期
+    total_number: 日期内统计总计个数
+    no_: 暂无
+    search_time: 查找时间
+    available_balance: 截至当日总可用余额（须记录）
+    reference_data: 参考数据
+    freeze_balance: 截至当日总冻结余额（须记录）
+    total_balance: 截至当日总余额 + 总冻结（须记录）
+    today_currency_amount: 今日充币金额
+    total_currency_amount: 截至当日总充币金额
+    income: 收入
+    today_amount_coin: 今日提币金额
+    expenditure: 支出
+    virtual_asset: 今日虚拟生成的资产
+    income_expenditure: 正数收入，负数支出
+    total_virtual_asset: 截至当日总计虚拟生成资产
+    cc_commission: 今日币币交易手续费
+    total_cc_commission: 截至当日总计币币交易手续费
+    today_lc_commission: 今日法币交易手续费
+    total_lc_commission: 截至当日总计法币交易手续费
+    transfer_commission: 今日站内转账手续费
+    total_tranfer_commission: 截至当日总计站内转账手续费
+    ieo_commission: 今日IEO手续费
+    total_ieo_commission: 截至当日总计IEO手续费
+    amount_commission: 今日提币手续费
+    total_amount_commission: 截至当日总计提币手续费
+    cold_wallet_balance: 截至当日冷钱包余额（须记录）
+    hot_wallet_balance: 截至当日热钱包余额（须记录）
+    transfer_fee: 当日数字币转账花费（提现归拢）（须记录）
+    total_transfer_fee: 截至当日总计数字币转账花费（提现归拢）（须记录）
+    no_search: 没有查询到
+    report: 的报表
+  cold_wallet:
+    title: 冷钱包余额
+    note: 注意：本页面不要频繁刷新，否则会被查询服务器屏蔽ＩＰ．
+    address: 冷钱包地址
+    balance: 余额
+    click: 点击查询
+    search_holders: (点击后，根据address查看holders)
+  today:
+    confirm_time: 确认时间
+    amount: 金额为
+    recharge: 今日充币
+    withdraw: 今日提币
+    appeal_str: 申请/批准/执行时间
+    appeal1: 申请
+    appeal2: 审批
+    appeal3: 执行
+    agree: 同意
+    agree_confirm: 您确定吗?
+    alert: 公式： 今日营收 = 充币 - 提币 + 生成的虚拟资产的值
+    nodata: 暂无数据
+    gold: 到账金额
+    virtual: 今日生成的虚拟资产
+  hot_wallet:
+    title: 热钱包余额
+    alert: "注意1. 本页面不要频繁刷新（USDT要求10秒内最多查一次），否则会被查询服务器屏蔽ＩＰ. <br/>
+      注意2. BTC的余额不是某个地址的余额,是整个BTC节点的余额. 因为该热钱包整个节点都在我公司手中."
+    balance: 余额
+    balance_sum: BTC节点总余额
+    hint: 点击后，根据address查看holders
+  air_assert:
+    title: 凭空生成的资产
+    account: 账户
+    total: 总和
+    operation_time: 操作时间
+  total:
+    total_recharge: 总充币
+    total_withdraw: 总计提币金额
+    totol_commission: 总手续费
+    sum_gold: 系统总额
+    total_sum: 系统合计
+    lock: 锁定
+    lock_total: 余额锁定合计
+    create_time: 创建时间
+    withdraw_wallet_title: 提币钱包余额
+    total_money: 金额为
+    users: 用户
+    apply_approve_execution_time: 申请/批准/执行时间
+    apply: 申请
+    approve: 审批
+    excute: 执行
+    agree: 同意
+    confirm: 您确定吗？
+    service_charge_total: 手续费合计
+    total: 总计
+    coin_to_coin_transaction: 币币交易
+    coin_to_coin_transaction_description: 当前币币交易手续费是０．　从下周一开始才会收取
+    legal_coin_transaction: 法币交易
+    order_number: 订单号
+    transaction_type_user: 交易类型（用户）
+    digital_currency_number: 数字币数量
+    legal_currency_number: 法币数量
+    service_charge: 手续费
+    advertisement_initiator: 广告发起人
+    station_transfer_accounts: 站内转账
+    station_transfer_accounts_description: 目前站内转账免费．下周开始收费
+  otc_fiat_advertisements:
+    advertisements_list: 法币交易(场外订单)广告列表
+    currency_type: 数字币种类
+    fiat_type: 法币种类
+    price: 价格
+    builder_id: 发布者ID
+    currency_id: 数字币ID
+    unit_price: 单价
+    min_limit: 最小限额
+    max_limit: 最大限额
+    trade_type: 交易种类
+    mode_of_trading: 支付方式
+    is_canceled: 是否取消
+    trading_currency_amount: 数字币交易数量
+    created_at: 创建时间
+    advertisements_list_details: 广告列表详情
+    currency_code: 数字币代码
+    updated_at: 更新时间
+    trading_remark: 交易备注
+    trading_terms: 交易条款

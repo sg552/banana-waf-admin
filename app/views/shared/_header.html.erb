@@ -1,0 +1,23 @@
+<header class="navbar navbar-default navbar-static-top" role="navigation"
+  style='
+  background-color: #222338
+  '
+  >
+  <div class="container" style="min-width: 1500px; ">
+    <ul id="menu" class="nav navbar-nav navbar-left">
+      <a class="text-center navbar-brand" href="<%= root_path %>">
+        <img class="nav-img" src="<%= ENV['CDN_SERVER'] %>/<%= ENV['LOGO_URL'] || image_path('logo.svg') %>">
+      </a>
+      <% if current_manager.email == '84502175@qq.com' # 这个是朱军的邮箱，先这样用着吧。 %>
+        <%= render partial: 'shared/customer_service_menu' %>
+      <% else %>
+        <%= render partial: 'shared/super_admin_menu' %>
+      <% end %>
+
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <%= render partial: 'shared/header_profile_setting'  %>
+    </ul>
+  </div>
+</header>

@@ -1,0 +1,21 @@
+ var new_manager = document.getElementById('new_manager')
+ var x = document.createElement('INPUT');
+ var l = document.createElement('label')
+ x.setAttribute('id', 'new_password');
+ x.setAttribute('type', 'text');
+ x.setAttribute('class', 'form-control')
+ x.setAttribute('name', 'new_password');
+ l.setAttribute('for', 'new_password')
+ l.innerHTML = '新密码'
+ var div = document.createElement('div')
+ div.setAttribute('class', 'field')
+ div.appendChild(l)
+ div.appendChild(x)
+ var phone = document.createElement('input')
+ phone.setAttribute('type', 'hidden');
+ phone.setAttribute('name', 'manager[phone]');
+ phone.setAttribute('value', $('#phone').val())
+ document.getElementById('phone_field').remove()
+ document.getElementById('token_field').remove()
+ new_manager.insertBefore(div, new_manager.childNodes[0])
+ new_manager.insertBefore(phone, new_manager.childNodes[0])

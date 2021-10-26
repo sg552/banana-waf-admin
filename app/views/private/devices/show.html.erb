@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @market_maker.time %>
+</p>
+
+<p>
+  <strong>High:</strong>
+  <%= @market_maker.high %>
+</p>
+
+<p>
+  <strong>Low:</strong>
+  <%= @market_maker.low %>
+</p>
+
+<p>
+  <strong>Open:</strong>
+  <%= @market_maker.open %>
+</p>
+
+<p>
+  <strong>Close:</strong>
+  <%= @market_maker.close %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @market_maker.volume %>
+</p>
+
+<p>
+  <strong>Market:</strong>
+  <%= @market_maker.market_id %>
+</p>
+
+<%= link_to 'Edit', edit_market_maker_path(@market_maker) %> |
+<%= link_to 'Back', market_makers_path %>

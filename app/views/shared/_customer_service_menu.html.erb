@@ -1,0 +1,66 @@
+      <li class="dropdown ">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+          <i class="fa fa-heart"></i>
+          <span><%= t("header.members")%></span>
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="<%= members_path %>">
+              <i class="fa fa-users"></i>
+              <span><%= t("header.registered_users")%></span>
+            </a>
+          </li>
+          <li>
+            <a href="<%= accounts_path %>">
+              <i class="fa fa-cc-visa"></i>
+              <span><%= t("header.accounts")%></span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="dropdown ">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+          <i class="fa fa-btc"></i>
+          <span><%= t("header.crypto_transaction")%></span>
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="<%= deposits_path %>">
+              <i class="fa fa-sign-in"></i>
+              <span><%= t("header.deposits")%></span>
+            </a>
+          </li>
+          <li>
+            <a href="<%= withdraws_path %>">
+              <i class="fa fa-sign-out"></i>
+              <span><%= t("header.withdraws")%></span>
+            </a>
+          </li>
+          <li>
+            <a href="<%= sale_tokens_path %>">
+              <i class="fa fa-paw"></i>
+              <span><%= t("header.IEO")%></span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown ">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+          <i class="fa fa-heart"></i>
+          <%# <span>场外交易</span> %>
+          <span><%= t("header.crypto_exchange")%></span>
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="<%= otc_fiat_tradings_path %>">
+              <i class="fa fa-cc-visa"></i>
+              <%# <span>场外订单</span> %>
+              <span><%= t("header.fiat_trade")%></span>
+            </a>
+          </li>
+        </ul>
+      </li>

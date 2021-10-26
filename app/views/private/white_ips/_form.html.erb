@@ -1,0 +1,33 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <%= form_for @white_ip, html:{class: "form-horizontal"} do |f| %>
+
+            <div class="form-group" style="margin-top: 20px"><label class="col-sm-1 control-label">IP</label>
+              <div class="col-sm-11">
+              <%= f.text_field :ip, class: 'form-control' %>
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+            <div class="form-group"><label class="col-sm-1 control-label">备注</label>
+              <div class="col-sm-11">
+                <%= f.text_field :remark, class: 'form-control' %>
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+              <div class="col-sm-4 col-sm-offset-1">
+                <%= f.submit t("public.submit"), class: 'btn btn-primary' %>
+                <%= link_to t("public.back"), white_ips_path, class: 'btn btn-default' %>
+              </div>
+            </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

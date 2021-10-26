@@ -1,0 +1,1059 @@
+jp:
+  html:
+    lang: jp
+    title: 管理者の背景
+  views:
+    pagination:
+      first: "&laquo; 最初のページ"
+      last: "最後のページ &raquo;"
+      previous: "&lsaquo; 前のページ"
+      next: "次のページ &rsaquo;"
+      truncate: "&hellip;"
+  google_otp:
+    i_want_to_disable: 閉じたいですか?
+    please_input_otp_code: google authenticatorの表示する数字を入力してください。
+    tips: "Google authenticatorはあなたの安全のために設定しました。<br/>
+      開けてから、お札の機能を使うことができます。<br/>
+      オープンしてから、お金を引き出す機能が使えます。まず、縛りを解いて、新しい携帯電話番号を結びつけてもいいです。"
+    usage: "1. ダウンロードとインストール　google authenticator<br/>
+      2.あなたの携帯電話の時間は自動的に更新されます。<br/>
+      2.1 Android：設定->>システム->日付と時刻->自動設定 <br/>
+      2.1 IOS：設定->>汎用->日付と時間->自動設定 <br/>
+      3. authenticatorを開けて、上の二次元コードをスキャンします。 <br/>
+      4. 必要な時は開けて使えばいいです。<br/>
+      5. デバイスが二次元コードスキャン画面を開けられない場合、手動でアカウント名を入力してください：<span style='color: red'>%{email}</span>
+      和鍵と：<span style='color: red'>%{secret}</span>. そして「時間ベース」を選択します。
+      "
+  header:
+    lever: てこ
+    members: ユーザー
+    background_administrator: バックグラウンド管理者
+    new_manager: 新しいバックグラウンド管理者
+    lock_deducting_balance_to_another_currency: ロック操作2：残額を別の貨幣に差引いてロックする
+    passport_to_be_verified: 審査待ちのパスポート
+    locally_initiated_on_chain_transfer_records: ローカルで開始されたチェーン上の振替記録
+    display_settings_of_transaction_to_note_on_the_first_page: 最初の取引ペアの設定を表示します
+    user_security_settings: ユーザ安全機構設定
+    file_upload: ファイルアップロード
+    comment_list_of_transactions_in_French_currency: 法貨取引のレビューリスト
+    app: APP
+    registered_users: 登録ユーザー
+    accounts: ユーザー資産
+    id_card_list: IDカード
+    crypto_transaction: デジタルコインと取引
+    scheduled_unlock: じかん解凍
+    deposits: チャージ記録
+    withdraws: コイン審査
+    currency: 貨幣種
+    market_monitor_settings: 取引ペア監視
+    transaction_pairs: 取引は正しかった
+    a2a_transfer: 上幣方空投げキャンディ一覧
+    IEO: 新たに設置する
+    transfer_list: 構内振替リスト
+    system: システム
+    system_constants: システム定数
+    database_monitoring: データベース監視
+    slider_images_management: トップページロータグラフ管理
+    related_progress_monitoring: システム関連プロセス監視
+    auto_operation_monitoring: 自動化次元監視
+    roles_list: ロールリスト
+    app_version_management: APPバージョン管理(新版)
+    app_version_management_old: APPバージョン管理(旧版)
+    about_us: 私たちについて
+    contact_us: 連絡します
+    set_app_down_link: アプリダウンロードのリンク先の設定
+    ios_app_down_link: iosアプリからリンク先をダウンロードします
+    ios_app_down_qr_code_img_link: iosの二次元コードはリンクの住所をダウンロードします
+    android_app_down_link: Androidアプリからリンク先をダウンロードします
+    android_app_down_qr_code_img_link : Androidの二次元コードはリンクの住所をダウンロードします
+    default_language_setting: デフォルト言語設定
+    alarm_receiving_phone_setting: 警報受信電話設定
+    coin_receiving_phone_setting: コイン受信電話設定
+    footer_icons_setting: 下角アイコン設定
+    default_pair_setting: 回転貨幣取引対設定
+    robots_setting: ロボット設置
+    country_code: ナショナルコード
+    wallet_system: 財布システム
+    virtual_asset: 根拠もなく生成された仮想資産
+    recharge_record: コインをまとめて記録する
+    user_wallet: ユーザー財布
+    company_hot_wallet: 会社熱財布
+    company_cold_wallet: 会社の寒い財布
+    crypto_exchange: 通貨と場外取引
+    orders: 幣帛目録(未成約)
+    trades: 幣帛目録(既に成約されているもの)
+    k_line_editor: 貨幣取引K線修正器(成約済み)
+    k_line_preset: コイン取引K線プリセット
+    fiat_trade: 法貨取引(場外取引)注文リスト
+    appeal_list: 法幣取引の訴えの一覧
+    statistics: 統計をとる
+    system_info: システム概覧
+    reconciliation_manage: 帳簿管理(全体)
+    reconciliation_list: 自動対応帳リスト(利用者向け)
+    user_info: 個人情報
+    edit_password: パスワードを変更する
+    edit_google_otp: 編集
+    signout: ログアウト
+    market_making: 市場を営む
+    hedge_records: レコード
+  edit_google_otp:
+    title: Google Captchaをバインド
+    already_bound: 既にGoogle認証システムをバンドルしています。 再びバインドする必要はありません
+    no_binding: Google認証システムをまだバインドしていません。 できるだけ早くバインドしてください
+  personal_information:
+    title: 個人情報
+    upload_avatar: アバターをアップロード
+    nickname: ニックネーム
+  edit_password:
+    title: パスワードを変更する
+    old_password: 元のパスワード
+    new_password: 新しいパスワード
+    reset_new_password: 新しいパスワードをリセット
+  public:
+    user_phone_email: ユーザ電話（メールボックス）
+    protocol_for_users: 合意はユーザーグループに対して
+    all_user: すべてのユーザ
+    selected_user: バックグラウンド入力グループ
+    add: 増やす
+    address: 住所
+    all: すべて
+    back: 戻る
+    cancel: キャンセルする
+    clear_filter: フィルターをクリア
+    confirm: 確認する
+    confirm2: 決定する
+    comment: 備考
+    commission: 取扱手数料
+    currency: 通貨
+    delete: 削除する
+    delete_confirm: 本当に削除しますか？
+    details: 詳細
+    edit: 編集
+    email: メール
+    email_hint: メールボックスを入力してください
+    example: 例えば
+    export_csv: 輸出するcsv
+    family: 家族
+    from: から
+    gender: 性别
+    history_date: 歴史的記録がない
+    import_csv: 導入csv
+    list: 一覧
+    name: 名前
+    name2: お名前
+    no_result: 記録な
+    operation: 運営
+    operator: オペレーター
+    pair: 取引ペア
+    phone: 携帯電話番号
+    quantity: 数量
+    reconciliation: 和解
+    real_name_situation: 本名
+    search: 問い合わせ
+    select_coin: 通貨を選択してください
+    sign_time: 登録時間
+    status: 都道府県
+    submit: 提出する
+    time: 時間
+    to: に
+    total: 合計
+    transaction: 取引
+    types: 種類
+    upload: アップロードする
+    user: ユーザー
+    user_id: ユーザーID
+    verified: 実名認証
+    verify_time: 確認時間
+    view: 表示する
+    wallet_addr: ウォレットアドレス
+    buyer_name: 買い手の名前
+    seller_name: 売り手名
+    buyer_phone: 買主電話
+    seller_phone: 売り手電話
+    account_type: アカウントの種類
+  lever:
+    Leveraged_lending: レバー貸借
+    leverage_interest: レバー貸借利息設定
+    list_of_leveraged_loans: レバー借入リスト
+  members:
+    add_protocol_users: プロトコルユーザを追加
+    users_for_protocol: プロトコルユーザ
+    mobile: 携帯電話
+    member_list: ユーザーリスト
+    member_name: お名前
+    member_phone: 携帯電話番号
+    not_uploaded: アップロードされていません
+    passed: 認定済み
+    not_passed: 失敗しました
+    need_checked: 審査待ち
+    submit: 確認する
+    cancel: キャンセルする
+    total_users: 総ユーザー数
+    alert: このユーザーは無効になっています
+    basic_information: 基本情報
+    unique_mark: ユーザー固有のタグ/ユーザーID
+    disabled_state: 無効状態
+    disable: 無効にする
+    normal: 普通
+    registered_at: で登録
+    my_invitation_code: 私の招待コード
+    registered_invitation_code: 登録時に記入する招待コード
+    inviter: 招待者
+    verify_time: 確認時間
+    manual_confirm: 彼のために手動で確認する
+    recent_login_time: 最近のログイン時間
+    real_name_information: 本名情報
+    verified_record: 過去の実名認定記録の実名を照会する
+    home_address: 自宅住所
+    identification_number: ID番号
+    birthday: 誕生日
+    document_photo: 文書写真
+    id_card_back: IDカードバック
+    id_card_front: IDカード前面
+    in_card_inhand: 携帯IDカード
+    undone_verified: 不完全な認証
+    offline_information: オフライン情報
+    id_card_review: IDカードレビュー
+    registered_time: 登録時間
+    id_card_record: IDカード記録
+    online: オフラインなし
+    user_asset_information: 資産情報
+    query_asset_details: アセット詳細のクエリ
+    available_banlance: 利用可能な残高
+    locking_banlance: フリーズバランス
+    sum: 合計
+    recharge: コイン
+    cash: コイン
+    coin_to_coin_transaction_done: 通貨取引（完了）
+    seller: 売主(ask)
+    buyer: バイヤー(bid)
+    transaction: 取引ペア
+    price: 価格
+    sell: 売る
+    buy: 買う
+    coin_to_coin_transaction_undone: 通貨取引（未完了の注文）
+    freeze_quantity: 冷凍量
+    over_the_counter_done: 店頭取引
+    legal_currency_total: 合計法定通貨
+    digital_currency_name: デジタルコイン名
+    digital_currency_total: デジタルコインの総数
+    nil: 空の
+    IEO: 新しいヒット
+    activity_name: アクティビティ名
+    input_coin: 投資通貨
+    get_coin: 得られた通貨
+    airdrop_candy: エアドロップキャンディー
+    comment: コメント
+    inside_station_transfer: 駅内での乗り換え
+    transfer_initiator: 転送開始者
+    transfer_recipient: 転送先
+    thaw_data: 解凍データ
+    unfreeze_amount: 凍結解除量
+    release_time: リリース時間
+    generated_out_of_air: 薄い空気から生成
+    generated_out_of_air_amount: 薄い空気から生成される量
+    generated_time: 生成時間
+    forbidden_state: 無効状態
+    current: 現在の
+    new: 新しい
+    confirm: 決定する
+    back: 戻る
+    modify_password: パスワードを変更する
+    personal_reconciliation_page: 個人調整ページ
+    unique_user_id: ユーザーID（一意の識別子）
+    calculation_formula_available_amount: 利用可能な合計 = 総収入 - 総支出 - 支払手数料統計 - 天びんがロックされます + 時限融解
+    calculation_formula_locking_quantity: ロックされた数量 = ロック合計 - 時限融解
+    correct: 正解
+    error: エラー
+    calculate_balance: 残高を計算する
+    calculate_locking: 計算ロック
+    current_balance: 現在の残高
+    current_locking: 現在のロック
+    switching_currencies: 通貨を切り替える
+    current_currencies: 現在の通貨
+    available_quantity: 利用可能な数量
+    locking_quantity: ロックされた数量
+    digital_currency_amount: デジタルコインの総数
+    total_income: 総収入
+    recharge_coin: コイン
+    recharge_coin_description: ここでは、受け取ったクレジットのみがカウントされます。確認番号に到達しなかった場合（12件未満の確認など）は考慮されません。
+    income_coin_to_coin: 通貨取引収入
+    income_coin_to_coin_description: ユーザーが通貨取引を通じて取得したデジタル通貨。持っていた失われた手数料
+    income_legal_coin: 法的通貨取引収入
+    income_legal_coin_description1: 'ユーザーが法定通貨で取引していることを示します<span style="color: green">増やす</span>デジタル通貨'
+    income_legal_coin_description2: '2つの状況があります： <br/>
+                                    1. ユーザーは、「通常のユーザー」として、他の「商人」の「セールデジタルコイン」広告をクリックして、デジタル通貨を取得します。<br/>
+                                    2. ユーザーは、デジタルコインの他の「通常のユーザー」を「獲得」するための「ビジネス」として広告を吊るします。<br/>'
+    ordinary_user_buy_digital_currency: '取る"一般ユーザー"アイデンティティ購入"商人"デジタル通貨'
+    business_buy_digital_currency: '取る"商人"ID取得"一般ユーザー"デジタル通貨'
+    inside_station_transfer_income: サイト内移転収入
+    inside_station_transfer_income_description: たとえば、他の誰かがユーザーに80
+    out_of_thin_air_add_virtual_assets: 管理バックグラウンドの操作から。 任意のユーザーの「利用可能な残高」または「残高の凍結」を変更できます。
+    out_of_thin_air_add_virtual_assets_description: 管理バックグラウンドの操作から。 任意のユーザーの「利用可能な残高」または「残高の凍結」を変更できます。
+    airdrop_candy_add: エアドロップキャンディーの増加
+    airdrop_candy_add_description: 送信者は、ユーザーに舞台裏でデジタルコインを送信します。
+    old_data_migration: 古いデータの移行：利用可能な残高を埋める
+    old_data_migration_description: '古いユーザーの利用可能な残高は、「リチャージ」の形で現在の取引所に入力されます。 <br/>
+                                    メモに「古いデータからの移行、凍結された残高」と記載されている場合、そのコインはコインで満たされています。'
+    pay_total: 総支出
+    digital_currency_draw: デジタルコイン
+    digital_currency_draw_description: 'コインのステータスには、未承認、承認済み、確認済みが含まれます<br/>
+                                        ここでは、「確認済み」のステータスのみが計算されます。'
+    pay_coin_to_coin: 通貨取引支出
+    pay_coin_to_coin_description: 'ユーザーは、通貨取引を通じてデジタル通貨を削減します。 <br/>
+                                   通貨取引費用が含まれています'
+    service_charge: 費用処理手数料を含む
+    pay_legal_coin: フランスの通貨取引支出
+    pay_legal_coin_description1: 'ユーザーが法定通貨で取引していることを示します<span style="color: red">減らす</span>デジタル通貨'
+    pay_legal_coin_description2: '次の2つの状況があります: <br/>
+                                  1. ユーザーは、「通常のユーザー」として、他の「企業」の「デジタル通貨の取得」広告をクリックして、デジタル通貨をフランス通貨に交換します。 <br/>
+                                  2. ユーザーは、デジタルコインを「ビジネス」として販売するための広告を掲げます。'
+    ordinary_user_sell_digital_currency: 「通常のユーザー」として他の「ビジネス」桁に販売
+    business_sell_digital_currency: 「商用」から「通常のユーザー」のデジタル通貨として販売
+    inside_station_transfer_pay: 駅内での振込手数料
+    inside_station_transfer_pay_description: デジタルコインを他の人に譲渡すると残高が減少します。
+    out_of_thin_air_reduce_virtual_assets: 空気による資産の削減
+    out_of_thin_air_reduce_virtual_assets_description: 管理バックグラウンドの操作から。 任意のユーザーの「利用可能残高」または「凍結残高」を変更できます。
+    airdrop_candy_reduce: エアドロップキャンディーの削減
+    airdrop_candy_reduce_description: エアドロッパーが誰かにキャンディを投げると、彼のアカウントは減ります。
+    service_charge_count: 支払手数料統計
+    legal_currency_service_charge: 法的通貨取引手数料
+    legal_currency_service_charge_description: 法定通貨取引の場合、広告主の手数料が毎回請求されます。
+    cash_service_charge: コイン取扱手数料
+    cash_service_charge_description: タイトルとして。 料金は、コインが正常に発行された後にのみ請求されます。
+    station_transfer_service_charge: 駅での振込手数料
+    station_transfer_service_charge_description: タイトルとして。
+    locking_total: ロック合計
+    coin_locking: コイン保留中の注文
+    coin_locking_description: 通貨取引により、利用可能な残高が減少し、ロックされた残高が増加します
+    part_deal: 部分取引
+    never_deal: 対処されていない
+    locking_undeal: 法定通貨はロックされていません
+    locking_undeal_description: 法定通貨取引により、利用可能な残高が減少し、ロックアップ残高が増加します
+    cash_verify_locking: 保留中のロックを撤回する
+    cash_verify_locking_description: 利用可能なバランスの減少、ロックバランスの増加
+    old_data_locking_recharge: コインをロックする古いデータ
+    old_data_locking_recharge_description: '古い取引所のデータが現在の取引所に転送されると、「ロックされた残高」を「通貨を埋める」という名前でインポートする必要があります。<br/>
+                                           たとえば、古い取引所での張山の「ロックされた残高」は30で、新しい取引所でのリチャージがあります。備考は「古いデータからの移行、利用可能なロック」です'
+    generate_locking_currency: 空気から生成されたロックされた通貨
+    generate_locking_currency_description: 薄い空気から生成され、ユーザーの「ロックされた天びん」の数を増やします。
+    timing_unlock: 時限融解
+    unlock_money: 解凍量
+    unlock_money_description: 「ロックされたバランス」部分の量は、ユーザーの解凍量のために「利用可能なバランス」に移される必要があります。
+    no_calculate_part: 計算に関係しない部分
+    coin_service_charge: 通貨取引手数料
+    coin_service_charge_description: 支払われた合計料金：取引が成功した後、売り手と買い手の両方が手数料を支払う必要があります。
+    income_service_charge: 収入料
+    pay_service_charge: 経費
+    total: 合計
+    new_password: 新しいパスワード
+    repeat_new_password: 新しいパスワードを繰り返します
+    type: カテゴリー
+    income_coin_to_coin_details: 通貨取引収入の内訳
+    id_unique: ID（一意の識別子）
+    back_to_personal_reconciliation_page: 個人調整ページに戻る
+    pay_coin_to_coin_details: 通貨取引支出の詳細
+    buy_trade: 購入取引
+    sell_trade: 販売取引
+    pay: エクスペンス
+    income: 収入
+    edit_is_able_to_login: パスワードエラーステータスの編集
+    edit_is_able_assets_password: 資金の編集エラーの無効化ステータス
+  id_card_approvals:
+    id_card: IDカード
+    id_card_description: IDカードを承認すると、最新のカードを承認できます。
+    applicant: 応募者
+    auditor: レビュアー
+    audit_status: 監査状況
+    apply_submit_time: 申請提出時間
+    passport: パスポート
+    no_result: まだデータがありません
+    need_checked: 審査待ち
+    view_and_review: 表示とレビュー
+    view: 表示する
+  accounts:
+    users_assets: ユーザーの資産
+    available_balance: 利用可能な残高
+    more_than: より大きい
+    less_than: より小さい
+    freeze_balance: フリーズバランス
+    total: 合計
+    users: ユーザー
+    current_page: このページ
+    hold_available_balance: 利用可能な残高を保持
+    hold_locking_balance: ロックされたバランスを保持
+    hold_total_balance: 保有残高
+    account_id: アカウントID
+    available_banlance: 利用可能な残高
+    locking_banlance: フリーズバランス
+    sum: 合計
+  scheduled_unlockings:
+    current_unlock_sum: 解凍回数が完了しました
+    click_download: クリックしてダウンロード
+    unlock_example_csv: 8.19解凍.csvダウンロードの例
+    upload_hint: 一度クリックするだけです。 複数回クリックしないでください。 約1分かかります
+    unlock: 解凍
+    manual_unlock: 手動解凍
+    unlock_amount: 凍結解除量
+    timing_unlock: 時限融解
+    user_phone: ユーザーの電話
+    operation_type: 運営タイプ
+    unlock_entrance: 解凍入り口
+    manual_add: 手動で追加
+    info: ベーシック情報
+    unlock_time: リリース時間
+    unlock_data: 解凍データ
+  deposits:
+    index_title: コイン
+    deposits_total: 現在のページの追加合計
+    select_coin: 通貨を選択してください
+    create_time: 作成時間
+    confirm_time: 確認時間
+    process_title: 通貨請求のプロセス監視
+    process_name: プロセス名
+    process_status: プロセス状態
+    stopping: 止まった
+    title: 合計コイン
+    balance: 金額は
+  withdraws:
+    title: コインのレビューと履歴リスト
+    attention: "ご注意： <br/>
+      1. USDTコインが開始されてから1〜2分以内に、tx idのクエリに無効なxxxが表示される場合があります...開いてから1分後に、特定のtx状況を確認できます。<br/>
+      2. TXを使用しない引き出しは元に戻すことができます <br/>
+      3. USDT、BTC転送時間2〜3時間<br/>
+      4. レビューをクリックする前に、必ずユーザーの調整ボタンをクリックして見てください。 <br/>
+    "
+    apply_time: 申請/承認/実行時間
+    application: 申請
+    approval: 承認
+    execute: エグゼクティブ
+    agree: 同意する
+    undo: キャンセルする
+    check_account: アカウントを確認してください
+    history: 歴史
+    already_copied: コピー済み
+    copy: コピー
+  currencies:
+    index_title: 交換の通貨
+    name: お名前
+    icon: アイコン
+    base_factor: base factor
+    token: トークン
+    contract_address: 契約住所
+    recharge_withdraw: チャージコイン
+    is_visible: 見える？
+    yes_: はい
+    rechargeable: 充電式
+    withdrawable: 撤回できます
+    visible: 見える
+    hidden: 隠す
+    edit_title: 通貨情報を編集する
+    new_title: 新しい通貨情報
+    position: Position（上部にあるほど大きくなります）
+    code: Code(小文字、たとえば eth)
+    icon_link: 通貨アイコンのリンク
+    fullname: 通貨のフルネーム（英語）
+    symbol: Symbol (記入する必要があります)
+    release_time: リリース時間
+    release_quantity: 問題の数
+    circulation: サーキュレーション
+    site: 公式サイト
+    white_paper: ホワイトペーパー
+    block_query: ブロッククエリ
+    option: オプション
+    base_factor_hint: (小数点以下の有効桁数, ETHデフォルト18)
+    precision: 精度
+    whether: かどうか
+    eth_addr: ETH Contract 住所（erc20トークンの場合）
+    withdraw_commission: コイン取扱手数料
+    is_commission_fixed: コインの取り扱い手数料は固定されていますか
+    yes_fixed: はい、それらはすべて修正されています
+    is_rechargeable: コインをチャージできますか
+    recharge_minimum: コインの最小量
+    is_withdrawable: コインを引き出すことはできますか？
+    withdraw_minimum: 最小コイン量
+    is_within_station: ステーション内で資金を送金できますか
+    is_display_otc: OTCで表示するかどうか
+    otc_fee: OTCトランザクション率，(デフォルト0.005(5分の1)，0〜1の間である必要があります)
+    otc_minimum: OTCの最小取引額
+    otc_decimal_point: OTC取引小数点桁数(1 ~ 8 整数)
+    commission_fixed: 現地での振込手数料（固定）
+    region: 通貨エリア
+    en_intro: 通貨の紹介（英語
+    zh_intro: 通貨の説明（中国語）
+    kr_intro: 通貨の説明（韓国語）
+    ru_intro: 通貨の概要（ロシア語）
+    jp_intro: 通貨の説明（日本語）
+    exist_msg: 通貨はすでに存在します。
+  markets:
+    index_title: 取引のペア管理
+    edit_title: 取引ペアの編集
+    is_stock: 株かどうか
+    is_margin: サポートレバー
+    ask_currency_precision: 整数部(ask)精度
+    ask_currency_scale: 小数部(ask)精度
+    bid_currency_precision: 整数部(bid)精度
+    bid_currency_scale: 小数部(bid)精度
+    new_title: 新規取引ペア
+    ask_unit: 販売価格(ask)単位
+    bid_unit: 取得価額(bid)単位
+    buy_commission: 購入手数料
+    sell_commission: 販売手数料
+    buy_accuracy: 購買価格精度
+    sell_accuracy: 販売価格精度
+    unvisible: 非表示ひひょうじ
+    edit_alert: "0. 高エネルギー警告： このページを操作できるのは専門の技術者のみです<br/>
+      1. 期間： ask price: 販売者の申し出/販売価格, bid price, バイヤーのオファー/購入価格。 <br/>
+      例えば:  id:  ethbtc,   ask unit: eth,  bid unit: btc <br/>
+      2. ご注意： ask unit, bid unit, 最初にデータベースに存在する必要があります。<br/>
+    "
+    price_accuracy: 価格精度
+    quantity_accuracy: 数量精度
+    order: ソート位置（小さいほど上）
+    trade_visible: 表示可能かどうか（下位の取引の組合せ）
+    min_trade: 最小取引数
+    stock_name: ストック名
+  a2a_transfer:
+    title: 空中キャンディの記録のリスト
+    alert: キャンディはコインを置く側のステージで、コインを配る側の人が空中投下したものです。
+    sender: 送信者
+    reciver: 受信者
+    payer: 支払い人
+    payee: 受取人
+    transfer_time: 振替時間
+  IEO:
+    only_positive_integer: 正の整数のみ入力できます。
+    edit_title: 編集新規作成
+    new_title: 新規作成
+    list_title: 新規リストへの参加
+    start_time: 開始時間かいしじかん
+    end_time: 終了時間しゅうりょうじかん
+    start: 新しいゲームを開始します。
+    start_confirm: 本当に新しいことを始めますか？
+    end: 新規作成の終了
+    end_confirm: 本当に新しいことを終わらせますか？
+    view: 表示
+    title: タイトル
+    list_name: 参加者名
+    list_people: 参加者
+    list_time: 参加時間
+    list_participate: 新規数量作成への参加
+    list_gain: 新規数量の取得
+    form_hint1: TGCコインチェック開始です！
+    form_hint2: 新規通貨を選択してください。
+    form_hint3: （2,000万）
+    form_hint4: （手数料3%の場合）
+    form_hint5: 募集通貨を選択してください。
+    form_hint6: 第2段階。任意のテキストを入力します。
+    form_hint7: 20000（ETHを20000 TGCに換算する場合）
+    form_hint8: 正常終了から72時間後にロックを解除
+    only_numbers: 0~1の数字だけ入力できます
+    form_icon: iconピクチャ（事前にURLをアップロードする必要があります）
+    form_banner: bannerピクチャ（事前にurlをアップロードする必要があります）
+    form_coin: 新規通貨（TGCなど）
+    form_coin_num: 新規通貨（TGCなど）の換算済数量
+    form_fee: 手数料スケール（小数）
+    form_raise_coin: 募集通貨（ETHなど）
+    form_raise_goal: 募集通貨ターゲット数量
+    form_min: 個人の最小募集数
+    form_max: 個人の最大募集数
+    form_start_time: 開始時刻（分単位）
+    form_end_time: 終了時間（分単位）
+    form_stage: フェーズふぇーず
+    form_exchange_num: 各募集通貨で換算可能な新規通貨の数量
+    from_fake_num: 新しく終了するために表示する必要のある偽の数（0~1、使用しない場合は記入しない）
+    form_coin_unlock: 通貨ロック解除シナリオ
+    intro: の紹介
+    is_human_intervention: 人が干渉するかどうか
+  internal_transfers:
+    title: インバウンド振替リスト
+    sender_email: アカウントを送信
+    sender: 振替の作成者
+    receiver_email: 受信アカウント
+    receiver: 振替受取人
+    coin: 振替通貨
+    num: 対帳簿価額
+    fee: 振替手数料
+  system_var:
+    index_title: システム定数管理
+    new_title: 新しいシステム定数
+    edit_title: システム定数を編集する
+    alert: "ここでの変数の一部は手動で設定されます。　<br/>
+      しかし、それらの多くは外部システムでキャッチされます。例えば：high gas price, usd 人民元などへの為替レート。 手動で変更する必要があります
+    "
+    value: 値
+    update_time: 更新時刻こうしんじこく
+    order: 並べ替えならべかえ
+    status: ヘルスステータスヘルスステータス
+    lang_title: システムデフォルト言語
+    zh: 中国語
+    en: 英語
+    kr: 韓国語
+    jp: 日本語
+    ru: ロシア語
+    alarm_title: アラーム受信の設定（コンマは中国語と英語を区別しません）
+    phone_hint: 有効な数値を入力してください。
+    withdraw_title: トークン通知の受信設定（カンマは中国語と英語を区別しません）
+    transaction_title: 取引ペアのデフォルト設定
+    database_title: データベースの正常性
+    database_connect: データベース接続
+    robot_id_set: ロボット ID
+    operation: 操作
+    member_name: ユーザーID
+    add_robot: ロボットを追加 ID
+    max_failed: 最大ログインを許可する
+  slider:
+    index_title: トップページのラウンドロビン管理
+    edit_title: 最初のページのラウンドロビン図を編集します。
+    new_title: 新しい最初のページのラウンドロビン図
+    edit_show: 表示
+    title: ラウンドロビンのタイトル
+    type: ピクチャ·タイプ
+    link: 画像のジャンプリンクをクリック
+    is_display: 表示するかどうか
+    upload: 画像のアップロード
+    creator: 作成者
+    uploader: 送信者
+    preview: 画像のプレビュー
+    website_type: ウェブサイトの種類
+  progress:
+    new_title: 新しい監視プロセス
+    edit_title: プロセスの編集
+    alert: 注:プログラマ以外のユーザーは、変更または削除できません。
+    index_title1: 表示されている取引のペア
+    index_title2: 非表示の取引のペア
+    index_title3: 受注とデータベースの間の接続が取り消されていません。
+    title3_order: すべての未処理受注
+    title3_connect: データベースへの接続数
+    index_title4: 監視プロセスのリスト
+    server_name: サーバー名
+    project_name: プロジェクト名
+    name: プロセス名
+    checktime: チェック時間ちぇっくじかん
+    no_: 一時停止
+    log: ログステータス
+    log_tail: ログの最後の内容
+    monitoring_or_not: モニタをするかどうか
+  realtime:
+    new_title: リアルタイム監視の作成
+    edit_title: ライブ監視の編集
+    index_title: リアルタイムの監視
+    comment: 注釈[ちゅうしゃく:ちゅうしゃく]
+    interval: 監視要求間隔（秒）
+    url: 監視要求url
+    type: 監視タイプ
+    status: 現在の状態げんざいのじょうたい
+    error_call: 最後にエラーメッセージが表示された時刻
+    error_call_times: 最後にエラーが発生した音声メッセージのダイヤル回数
+    error_sms: 最後にエラーが発生したSMSの送信時間
+    error_sms_times: 最後にエラーが発生したSMS送信回数
+    value_string: 文字列
+    last_checked: 最終チェック時刻
+  roles:
+    index_title: ロールのリスト（このページでは技術者以外の操作は禁止されています）
+    new_title: 新規ロール
+    edit_title: ロールの編集
+    manage_permission: アクセス権管理
+    collect_permission: 権限の収集
+    set_permission: アクセス権設定
+    select_all: すべてを選択
+    hint: システムはまだパーミッションを収集していません。パーミッションを収集してください
+  app:
+    new_title: 新規APPバージョン情報
+    edit_title: APPバージョン情報の編集
+    index_title: APPバージョン管理
+    android: Android版ダウンロード接続
+    IOS: IOS版ダウンロードリンク
+    zh: 中国語版の更新手順
+    en: 英語版の更新手順
+    ver: バージョン番号
+    ver_hint: 以前のバージョン番号と異なる必要があります。
+    ready_android: Android版の準備が完了しました
+    ready_IOS: IOSのバージョンは準備完了です
+    ready: 準備完了
+    unready: 準備ができていません
+  footer_icon:
+    new_title: 新しいアイコンを作成します。
+    edit_title: 編集アイコン
+    add: 追加ついか
+    index_title: 下隅に表示されるアイコンリスト
+    index_hint: （設定されたアイコンはwww、otcなどのアイテムfooterに動的にロードされます。現在8つのアイコンしか追加できません）
+    enable: 標準
+    disable: 無効化
+    icon: アイコンあいこん
+    link: リンクりんく
+    desc: 説明せつめい
+    redirect: ジャンプリンク
+    example: ウィーチャット·アイコン
+  robots:
+    index_title: ロボットの設定
+    new_title: 新規ロボット
+    edit_title: ロボットの編集
+    market: 市場名
+    hang_interval: 保留間隔
+    trade_interval: 取引間隔
+    or: または
+  country:
+    index_title: 国コード·リスト
+    edit_title: 国コードの編集
+    new_title: 新規国コード
+    country: 国
+    code: 国コード
+    is_disable: 無効にするかどうか
+  virtual:
+    index_title: 仮想資産リスト
+    new_title: 新規
+    alert: アメを空に投げるなどの理由で、ある口座のためにデジタルコインを仮想的に出す必要があります。 管理を容易にするために統合する必要がある
+    select_coin: 通貨を選択してください。
+    select_account: アカウントを選択してください
+    beneficiary: 入金先
+    quantity_hint: 正の数は与えられ、負の数は差し引かれます。
+    is_lock: ロックするかどうか
+    income: 収支
+    add_to: 追加先
+    reduce: 削減さくげん
+    operation_time: 操作時間
+    balance: 使用可能残高
+    freeze: 残高の確定
+    account: アカウント
+  put_crypto:
+    title: チャージバック·レコードをまとめる
+    total: このページの合計金額
+    total_hint: 最初に通貨を選択すると、合計金額が表示されます。
+    time: 時間ジカン
+    wallet_addr: ウォレットのアドレス
+    amount: 金額
+    big_wallet: 大きな財布にまとめる
+    cmd: 元のコマンド
+  wallet:
+    index_title: ユーザーのウォレット
+    show_title: ウォレットの詳細
+    alert: 注意： 住所録の残高と取引所におけるユーザーの残高は2つの概念であり、直接関係はありません。
+    view: 表示
+    addrs: 個のアドレス
+    password: パスワード
+    name: ユーザー名、名前
+    available: 取引所で利用可能
+    freeze: 取引所は凍結
+    owner: 所有ユーザー
+    addr_coin: この所在地に対応する数値通貨。
+    last_check: 最終チェック時刻
+    addr_info: ETHまたはBTCまたはUSDTのアドレス情報
+    erc_info: このerc-20のアドレス情報
+    total: 合計
+  cc_unordered:
+    order_list: トランザクション·リスト
+    user_id: ユーザID
+    phone_number: 携帯電話番号
+    price_greater_than: 価格が
+    price_lower_than: 価格が次の値を下回っています。
+    commission_direction: 委任の方向
+    source: ソース
+    number_ordering: 数量ソート
+    unit_price: 単価ソート
+    hope_to_see_user: 表示するユーザID
+    user_not_watching: 表示しないユーザID
+    sell_orders: 受注
+    pay_the_bill: 請求書の作成
+    not_sorting: ソートなし
+    ascending: 昇順
+    descending: 降順
+    comma_separated: カンマ区切り
+    done: 完了
+    never_dealt: 取引なし
+    partial_deal: 部分的な成約
+    withdrawn: 注文はキャンセルされました
+    order_quantity: オーダー数量
+    bulk_revocation: 一括取消
+    order_code: オーダー·エンコーディング
+    market: 市場
+    price: 価格
+    original_quantity: 当初数量
+    commission_amount: 委任された金額
+    commission_time: 委任時間
+    unfilled_quantity: 未処理数量
+    cancel: 元に戻すもとにもどす
+    cancel_confirm: 本当にオーダーをキャンセルしますか？
+    all_cancel_confirm: このページで選択したすべての注文を取り消してよろしいですか？
+  trades:
+    order_list: トランザクション·リスト
+    choose_currency: 通貨を選択します。
+    seller: 売り手
+    buyer: バイヤー
+    time_from: 時間の経過
+    price_from: 価格は
+    confirm: OK
+    trading_volume: 取引の量
+    download: CSVのダウンロード
+    batch_rollback: 一括ロールバック
+    batch_rollback_confirm: このページで選択したトランザクションをすべてロールバックしますか？
+    market: 市場
+    price: 価格
+    number_of_transactions: 取引数量
+    handling_fee: 手数料
+    rollback: ロールバックロールバック
+  k_lines:
+    data_list: K線データ·リスト
+    transaction_pair: 取引のペア
+    interval: 間隔[interval:かんかく]
+    total: 合計
+    original_time: 元の時間
+    formatted_time: フォーマット後の時間
+    original_data: 元のデータ
+    opening_price: 始値
+    highest_price: 最高価格
+    lowest_price: 最低価格
+    closing_price: 終値
+    Volume: 出来高
+    record: レコードなし
+  preset_k_lines:
+    title: プリセットK線データリスト
+    insert_data: redisに挿入されるデータ
+    database: データが一時的に存在しない
+  otc_tradings:
+    title: 社外取引の注文
+    advertisers: 広告主
+    order_type: オーダー·タイプ
+    sell: 販売
+    buy: ユーザーが購入
+    creation_time: 作成日
+    order_number: オーダー番号
+    ransaction_type: トランザクション·タイプ（ユーザー）
+    seller: 売り手
+    buyer: バイヤー
+    coin_number: 数値通貨数量
+    fcoin_number: 法貨数量
+    advertiser: 広告主
+    status: オーダーステータス
+    wether_cancle: キャンセルしますか？
+    yes_: はい
+    not_: いいえ
+    timeout: タイムアウトするかどうか
+    extension_time: 時間を延長するかどうか
+    view: 表示
+    history_record: 履歴なし
+  disput:
+    title: 訴えのリスト
+    phone: 携帯電話
+    appeal_time: 申し立て時間
+    appeal_content: 申し立ての内容
+    status: 状態じょうたい
+    order: 注文ID
+    cancel: 元に戻す
+    reason: 理由
+    save: 保存[ほぞん:ほぞん]
+    restore: 復元[ふくげん:ふくげん]
+    details: 詳細
+  system_statistics:
+    title: システム統計
+    registered_number: 登録ユーザー数
+    legal_currency_trading: 法貨取引
+    transaction_number: 成約数
+    recharge_coin: チャージ
+    extract_coins: 引き出し
+    transfer: インバウンド振替
+  account_statistics:
+    coin_amount_today: 今日の引き出し額
+    total_amount_of_coins: 引き出し合計金額
+    currency_amount: 今日のチャージ金額
+    total_amount_coins: チャージ金額合計
+    cold_wallet_balance: コールド·ウォレット残高
+    hot_wallet_balance: ホット·ウォレット（引き出し）残高
+    total_generate: 空のまま合計を生成します。
+    total_commission: 手数料合計
+    total_balance: システム合計残高
+    income_expenditure: 今日の収支
+    record: 特定の日付のレコードの合計
+    choose_coins: 通貨を選択してください。
+    title: 総勘定元帳インタフェース
+    reconciliation_information: 対顧客勘定情報
+    remarks: コメント情報
+    calculatin_income_method: "総プラットフォーム収益（ロボットを無視） = コイン - コイン + ユーザー料金（ロボットを除く）- コインの取り扱い料金（コインコインにはすでにコイン処理手数料の収益が含まれているため、コイン処理手数料は、もう1回追加することに相当します。）<br/><br/>
+                              2019年7月22日はデータ転送の時間です"
+    success: 和解の成功
+    failure: 調整の失敗
+    real_time_information: "リアルタイムの調整<br>
+                            ご注意:<br>
+                            1.リアルタイム調整は、クエリの日付が今日の場合にのみ可能です.<br>
+                            2.リアルタイム調整にはロボット取引が含まれます。注文を結合する場合、0.1秒のエラーが発生します。確認のために複数回更新する必要があります。調整が成功した場合、調整は成功します.<br><br>
+                            計算式：（実質残高+真のロック+料金==残高の計算+ロックの計算+料金<br><br>"
+    method_one: 値1：残高の計算+ロックの計算+手数料の計算=
+    method_two: 値2：実残高+真のロック+手数料=
+    date: 日付
+    switch_currency: 通貨の切替え
+    current_currency: 現在の通貨
+    current_balance: 現行残高
+    current_lock: 現在のロック
+    balance_lock: 現行残高+ロック
+    compute_balance_lock: 残高の計算+ロックの計算
+    compute_method: （旧残高+旧ロック）+チャージ+（空白で生成された残高またはロック)-引き出し金額-すべての手数料
+    balance: 現在の残高（アンドロイドを除く）
+    lock: 現在のロック（アンドロイドを除く）
+    current_balace_lock: 現行残高+ロック（アンドロイドを除く）
+    thaw_quantity: 当日の解凍数量
+    balanced_currency: 古いデータが残高にチャージされます。
+    lock_the_coin: 古いデータはロックされています。
+    total_currency_lock: 古いデータのチャージバック合計
+    difference_reason: "当初数量22142107.268918から64500.0の差異 ，<br>
+                        これは，「7月25日にユーザ資産」が変更された最初の6つのデータは，古いデータから古いデータへの残高を直接修正し，チャージバック<br>をロックしているためである。<br>
+                        原:150860.86<br>
+                        改:86360.86<br> "
+    confirm_receipt: 当日チャージ（確認済）
+    total_confirm_receipt: チャージ金額合計（計上確認済）
+    successful_withdrawal_coins: 今日の引き出し（引き出し成功）
+    total_withdrawal_coins: 引き出し合計金額（引き出し成功）
+    groundless_balance: 空白で生成された（残高）
+    groundless_lock: 空で生成された（ロックされた）
+    cc_commission: 通貨取引手数料
+    legal_coin_commission: 法貨取引手数料
+    amount_coins_commission: 引き出し手数料
+    transfer_commission: インバウンド振替手数料
+    income: プラットフォームの総収益
+    income_norobot: プラットフォーム収益合計（ロボットは無視）
+    today_income_norobot: 当日の収益合計（アンドロイドは無視）
+    migrated_assets: データが移行された資産（取引所で7月29日に導入されたすべてのユーザー資産残高）
+
+    migrated_assets_cab: "バランス：12836786.268718000000000000<br>
+                         ロックする：9305321.000200000000000000<br>
+                         合計：22142107.268918<br><br> "
+    migrated_assets_usdt: "バランス：3218733.781133297695170301<br>
+                          ロックする：110368534.465616981480959722<br>
+                          合計：113587268.24675028<br> "
+    balance_change_file: ユーザー·アカウントの残高変更ファイル
+    second_time: 7月30日
+    total_not_grow: プラットフォームの合計が増加していません。
+    first_time: 7月25日
+    cc_robot: 貨幣取引プラットフォームロボット
+    robot: 市場開発ロボット
+    test_robot: テストロボット
+  automatic_reconciliation_list:
+    title: 日次仕訳リスト
+    description: "「これは、ユーザーに基づいて計算されます。各通貨には約10分かかります。<br/>
+    1日に何回も運行できます。人が少ない時に運行することをお勧めします。"
+    date: 日付
+    runner: 実行者
+    result: 結果けっか
+    view: 表示
+  account_statistics_in_special_date:
+    reconciliation_formula: "仕訳の式:<br/>
+                              収入:チャージ、各種手数料、仮想資産（プラス）、振替費用<br/>
+                              支出:引き出し、仮資産（マイナス）<br/>
+                              統計は当日の00:00:00秒から始まり、23:59:59.999999秒で終了<br/>"
+
+    start_date: 統計開始日
+    total_number: 日付内の統計合計数
+    no_: 一時停止
+    search_time: ルックアップ時間
+    available_balance: 当日現在の合計使用可能残高（記録が必要）
+    reference_data: 参照データ
+    freeze_balance: 当日までに凍結された合計残高（記録が必要）。
+    total_balance: 現在の合計残高+凍結合計（記録が必要）
+    today_currency_amount: 今日のチャージ金額
+    total_currency_amount: 現在の合計チャージ金額。
+    income: 収益
+    today_amount_coin: 今日の引き出し額
+    expenditure: 支払
+    virtual_asset: 今日の仮想生成資産
+    income_expenditure: 正の収益、負の支出
+    total_virtual_asset: 本日現在の合計仮想生成資産
+    cc_commission: 今日の通貨取引手数料
+    total_cc_commission: 現在の合計通貨取引手数料
+    today_lc_commission: 今日の法貨取引手数料
+    total_lc_commission: 現在の合計法貨取引手数料
+    transfer_commission: 今日のサイト内振替手数料
+    total_tranfer_commission: 当日までの合計インバウンド手数料
+    ieo_commission: 本日のIEO手数料
+    total_ieo_commission: 現在のIEO手数料合計
+    amount_commission: 今日の引き出し手数料
+    total_amount_commission: 今日までの合計引き出し手数料
+    cold_wallet_balance: 現在のコールド·ウォレット残高（記録が必要）
+    hot_wallet_balance: 現在のウォレットの残高（記録が必要）
+    transfer_fee: 当日のデジタル通貨の振替にかかる費用（現金引落し）（記録する必要があります）
+    total_transfer_fee: 当日までの合計デジタル通貨振替費用（現金引落し）（記録が必要）
+    no_search: クエリーがありません
+    report: のレポート
+  cold_wallet:
+    title: コールドウォレットの残高
+    note: このページは頻繁に更新しないでください。更新しないと、クエリ·サーバによってIPアドレスがマスクされます。
+    address: コールドウォレットのアドレス
+    balance: 残高
+    click: クエリーをクリック
+    search_holders: （クリックすると、addressに基づいてholdersが表示されます）
+  today:
+    confirm_time: 確認時間かくにんじかん
+    amount: 金額は
+    recharge: 今日のチャージ
+    withdraw: 今日の切り上げ
+    appeal_str: 購買依頼/承認/実行時間
+    appeal1: 購買依頼
+    appeal2: 承認
+    appeal3: 実行
+    agree: 同意する
+    agree_confirm: 本当によろしいですか？
+    alert: フォーミュラ:今日の収益=チャージバック-引き出し+生成された仮想資産の値
+    nodata: データが一時的にありません
+    gold: 計上済金額
+    virtual: 今日生成される仮想資産
+  hot_wallet:
+    title: ホットウォレットの残高
+    alert: "注1.このページは頻繁に更新しないでください（USDTでは10秒以内に1回までチェックする必要があります）。そうしないと、クエリ·サーバによってIPがブロックされます。<br/>
+            注意2.BTCの残高はあるアドレスの残高ではなく、BTCノード全体の残高です。このホットウォレットのノード全体がわが社の手元にあるからです。"
+    balance: 残高
+    balance_sum: BTCノードの合計残高
+    hint: クリックすると、addressに基づいてholdersが表示されます。
+  air_assert:
+    title: 空で生成された資産
+    account: アカウント
+    total: 合計
+    operation_time: 操作時間
+  total:
+    total_recharge: 合計チャージバック
+    total_withdraw: 引き出し合計金額
+    totol_commission: 手数料合計
+    sum_gold: システム合計
+    total_sum: システム合計
+    lock: ロックろっく
+    lock_total: 残高ロック合計
+    create_time: 作成時刻さくせいじこく
+    withdraw_wallet_title: 引き出しウォレット残高
+    total_money: 金額は
+    users: ユーザー
+    apply_approve_execution_time: 申請/承認/実行時間
+    apply: 購買依頼
+    approve: 承認
+    excute: 実行じっこう
+    agree: 同意する
+    confirm: 本当によろしいですか？
+    service_charge_total: 手数料合計
+    total: 合計
+    coin_to_coin_transaction: 通貨取引
+    coin_to_coin_transaction_description: 現行の通貨取引手数料は0.週明けまで課金されません。
+    legal_coin_transaction: 法貨取引
+    order_number: オーダー番号
+    transaction_type_user: トランザクション·タイプ（ユーザー）
+    digital_currency_number: 数値通貨数量
+    legal_currency_number: 法貨数量
+    service_charge: 手数料
+    advertisement_initiator: 広告スポンサー
+    station_transfer_accounts: インバウンド振替
+    station_transfer_accounts_description: 現在、インバウンド口座振替は無料です。来週から有料になります。
+  otc_fiat_advertisements:
+    advertisements_list: 法的通貨取引（市場外注文）の広告リスト
+    currency_type: デジタルコインの数
+    price: 価格
+    builder_id: リリースID
+    currency_id: デジタル通貨ID
+    unit_price: 単価
+    min_limit: 最小制限
+    max_limit: 上限
+    fiat_type: 法定通貨の種類
+    trade_type: 取引の種類
+    mode_of_trading: お支払い方法
+    is_canceled: キャンセルするかどうか
+    trading_currency_amount: デジタル通貨取引の数
+    created_at: 作成時間
+    advertisements_list_details: 広告リストの詳細
+    currency_code: デジタル通貨コード
+    updated_at: 更新時間
+    trading_remark: 取引メモ
+    trading_terms: 取引条件

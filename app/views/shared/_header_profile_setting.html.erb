@@ -1,0 +1,93 @@
+
+<style>
+  b.carets {
+    vertical-align: middle;
+    margin-bottom: 4px;
+    width: 20px;
+    height: 20px;
+    /*display: inline-block;*/
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    line-height: 14px;
+  }
+</style>
+<li class="dropdown">
+
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <img src="<%= ENV['CDN_SERVER'] %>/image/827/earth.png"/>
+    <b class="carets"><%={en: 'English', zh: '中文', jp: '日本語', kr: '한국말', ru: 'русский'}[I18n.locale.to_sym]%></b>
+  </a>
+  <%
+      current_locale_code = I18n.locale.to_s
+      full_locales = [
+        {
+          code: 'en',
+          name: 'English'
+        },
+        {
+          code: 'zh',
+          name: '中文'
+        },
+        {
+          code: 'jp',
+          name: '日本語'
+        },
+        {
+          code: 'kr',
+          name: '한국말'
+        },
+        {
+          code: 'ru',
+          name: 'русский'
+        }
+      ]
+      current_locale = full_locales.select{ |locale_hash|
+        locale_hash[:code] == current_locale_code
+      }.first
+
+      other_locales = full_locales.select{ |locale_hash|
+        locale_hash[:code] != current_locale_code
+      }
+  %>
+  <ul id="languages" class="dropdown-menu" style="width:90px">
+    <% other_locales.each do |lang| %>
+      <li>
+        <%= link_to lang[:name], params.merge(lang: lang[:code]) %>
+      </li>
+    <% end %>
+  </ul>
+</li>
+
+<li class="dropdown account-settings">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <span><%= current_manager.email %></span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="<%= edit_information_manager_path(id: current_manager.id) %>" >
+        <i class="fa fa-fw fa-info"></i>
+        <span><%= t('header.user_info') %></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= edit_password_manager_path(id: current_manager.id) %>" >
+        <i class="fa fa-fw fa-pencil-square-o"></i>
+        <span><%= t('header.edit_password') %></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= edit_google_otp_manager_path(id: current_manager.id) %>" >
+        <i class="fa fa-fw fa-google"></i>
+        <span><%= t('header.edit_google_otp') %></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= destroy_manager_session_path %>" data-method="delete">
+        <i class="fa fa-fw fa-sign-out"></i>
+        <span><%= t('header.signout') %></span>
+      </a>
+    </li>
+  </ul>
+</li>

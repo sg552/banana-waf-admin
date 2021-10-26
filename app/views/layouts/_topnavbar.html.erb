@@ -1,0 +1,58 @@
+<div class="row border-bottom">
+  <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+    </div>
+    <ul class="nav navbar-top-links navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <img src="http://showmethemoney.qianfenghuahui.com/image_after_2019_06/2386/WechatIMG364.heic"/>
+            <b class="carets"><%={en: 'English', zh: '中文', jp: '日本語', kr: '한국말', ru: 'русский'}[I18n.locale.to_sym]%></b>
+          </a>
+          <%
+            current_locale_code = I18n.locale.to_s
+            full_locales = [
+              {
+                code: 'zh',
+                name: '中文'
+              },
+              {
+                code: 'en',
+                name: 'English'
+              },
+              {
+                code: 'jp',
+                name: '日本語'
+              },
+              {
+                code: 'kr',
+                name: '한국말'
+              },
+              {
+                code: 'ru',
+                name: 'русский'
+              }
+            ]
+            current_locale = full_locales.select{ |locale_hash|
+              locale_hash[:code] == current_locale_code
+            }.first
+
+            other_locales = full_locales.select{ |locale_hash|
+              locale_hash[:code] != current_locale_code
+            }
+          %>
+          <ul class="dropdown-menu animated fadeInRight m-t-xs">
+            <% other_locales.each do |lang| %>
+              <li class="divider"><%= lang %></li>
+              <li><%= link_to lang[:name], params.to_unsafe_h.merge(lang: lang[:code]) %></a></li>
+            <% end %>
+          </ul>
+        </li>
+        <li>
+          <a href="<%= destroy_manager_session_path %>" data-method="delete">
+          <i class="fa fa-sign-out"></i><%= t('header.signout') %>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

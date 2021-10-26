@@ -1,0 +1,78 @@
+<div class="user-behavier-contailer">
+
+  <div class="user-block user-info">
+    <h2 class="user-block-title">用户信息</h2>
+    <p>
+    <%= member_detail(@member) %>
+    </p>
+  </div>
+
+  <div class="user-block user-ips">
+    <h2 class="user-block-title">常用ip</h2>
+    <% if @ip_for_members.present? %>
+      <% @ip_for_members.includes(:ip).each do |ip_for_member| %>
+        <p class="bottom-line"><%= ip_for_member.ip.try(:ip_address)%> （<%= ip_for_member.ip.try(:ip_address) %>）</p>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="user-block user-agents">
+    <h2 class="user-block-title">常用设备</h2>
+    <% if @behavier_user_agents.present? %>
+      <% @behavier_user_agents.each do |user_agent| %>
+        <p class="bottom-line"><%= user_agent[:user_agent] %></p>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="user-block user-behaviers">
+    <h2 class="user-block-title">用户行为</h2>
+    <table class="table-hover table table-stripped toggle-arrow-tiny">
+      <thead>
+        <th width="45%">用户行为</th>
+        <th width="45%">访问次数</th>
+      </thead>
+      <tbody>
+        <% if @user_behaviers.present? %>
+          <% @user_behaviers.includes(:behavier).each do |user_behavier| %>
+            <tr>
+              <td width="45%">
+                <%= user_behavier.behavier.behavier_name rescue '-'%>
+              </td>
+              <td width="45%">
+                <%= user_behavier.count %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+<style>
+.user-behavier-contailer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+    padding-bottom: 80px;
+}
+.user-block{
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 10px;
+  width: 45%;
+  height: 400px;
+}
+.bottom-line{
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 5px;
+}
+</style>
+

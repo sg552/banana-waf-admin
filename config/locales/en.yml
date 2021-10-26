@@ -1,0 +1,1059 @@
+en:
+  html:
+    lang: en
+    title: admin
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Previous"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+  google_otp:
+    i_want_to_disable: Do you want to close it?
+    please_input_otp_code: Would you like to close it, please enter the number displayed by Google authenticator
+    tips: "Would you like to close it? Enter the digital Google authenticator displayed by Google authenticator for your security. It is strongly recommended to open it．<br/>
+      After opening, you can use the withdrawal function．<br/>
+      After opening, you can use the money withdrawal function. You can unbind first, and then rebind the new mobile phone number"
+    usage: "1. Download and install　google authenticator<br/>
+      2. Make sure your mobile time is updated automatically.<br/>
+       2.1 Android ：Settings - > System - > Date and Time - > Automatic Settings <br/>
+       2.1 IOS ：Settings - > Universal - > Date and Time - > Automatic Settings <br/>
+      2. Open the authenticator and scan the two-dimensional code above. <br/>
+      3. Every time you need it, open it and use it.<br/>
+      4. If your device cannot open the two-dimensional code scanning interface, please enter your account name manually：<span style='color: red'>%{email}</span>
+      And key：<span style='color: red'>%{secret}</span>. And choose‘Based on time’.
+      "
+  header:
+    lever: Lever
+    members: Members
+    background_administrator: Background administrator
+    new_manager: New background administrator
+    passport_to_be_verified: Passport to be verified
+    lock_deducting_balance_to_another_currency: Lock operation 2：Lock deducting balance to another currency
+    locally_initiated_on_chain_transfer_records: Locally initiated on chain transfer records
+    display_settings_of_transaction_to_note_on_the_first_page: Display settings of transaction to note on the first page
+    user_security_settings: User security settings
+    file_upload: File upload
+    comment_list_of_transactions_in_French_currency: Comment list of transactions in French currency
+    app: APP
+    registered_users: Registered users
+    accounts: User assets
+    id_card_list: ID card approval list
+    crypto_transaction: Crypto and Exchange
+    scheduled_unlock: Timing Unlock
+    deposits: Coin Record
+    withdraws: Currency verification
+    currency: Currency
+    transaction_pairs: Transaction Pairs
+    a2a_transfer: Airdrop candy in coin list
+    IEO: Stagging
+    transfer_list: Transfer list
+    system: System
+    market_monitor_settings: Market monitor settings
+    system_constants: System constants
+    database_monitoring: Database monitoring
+    slider_images_management: Slider images management
+    related_progress_monitoring: Monitoring of system related processes
+    auto_operation_monitoring: Auto operation monitoring
+    roles_list: Roles list
+    app_version_management: APP version management(new edition)
+    app_version_management_old: APP version management(old edition)
+    about_us: About us
+    contact_us: Contact us
+    set_app_down_link: App download link address settings
+    ios_app_down_link: IOS app download link address
+    ios_app_down_qr_code_img_link: IOS QR code download link address
+    android_app_down_link: Android App download link address
+    android_app_down_qr_code_img_link : Android QR code download link address
+    default_language_setting: Default language setting
+    alarm_receiving_phone_setting: Alarm receiving phone setting
+    coin_receiving_phone_setting: Coin receiving phone setting
+    footer_icons_setting: Footer icons setting
+    default_pair_setting: Default pair setting
+    robots_setting: Robots setting
+    country_code: Country code
+    wallet_system: Wallet System
+    virtual_asset: Virtual asset
+    recharge_record: Recharge record
+    user_wallet: User wallet
+    company_hot_wallet: Company hot wallet
+    company_cold_wallet: Company cold wallet
+    crypto_exchange: Trading and OTC
+    orders: Coin to coin unordered
+    trades: Coin to coin order
+    k_line_editor: k line editor
+    k_line_preset: K line preset
+    fiat_trade: Fiat trade
+    appeal_list: otc transaction appeal list
+    statistics: Statistics
+    system_info: System information
+    reconciliation_manage: Reconciliation manage
+    reconciliation_list: Reconciliation list
+    user_info: user information
+    edit_password: edit password
+    edit_google_otp: edit google otp
+    signout: sign out
+    market_making: Market making
+    hedge_records: Hedge records
+  edit_google_otp:
+    title: Bind Google Captcha
+    already_bound: You have already bundled Google Authenticator. Don't have to bind again.
+    no_binding: You have not yet bound the Google Authenticator. Please bind as soon as possible.
+  personal_information:
+    title: Personal information
+    upload_avatar: Upload avatar
+    nickname: nickname
+  edit_password:
+    title: Change Password
+    old_password: old password
+    new_password: new password
+    reset_new_password: reset new password
+  public:
+    user_phone_email: User phone (email)
+    protocol_for_users: Protocol for user groups
+    all_user: All users
+    selected_user: Background entry group
+    add: add
+    address: address
+    all: all
+    back: go back
+    cancel: cancel
+    currency: currency
+    clear_filter: clear filter
+    comment: comment
+    commission: Fees
+    confirm: confirm
+    confirm2: confirm
+    delete: delete
+    delete_confirm: Are you sure you wan
+    details: Detail
+    edit: edit
+    email: Email
+    email_hint: Please enter email
+    example: example
+    export_csv: Export csv
+    family: family
+    from: From
+    gender: gender
+    history_date: No history
+    import_csv: Import csv
+    list: List
+    market: market
+    name: Full name
+    name2: name
+    no_result: No record
+    operation: operation
+    operator: operator
+    pair: pair
+    phone: phone number
+    quantity: Quantity
+    real_name_situation: Real-name case
+    reconciliation: Reconciliation
+    search: search
+    select_coin: Please select curren
+    sign_time: Registration time
+    status: status
+    submit: submit
+    time: time
+    to: To
+    total: total
+    transaction: transaction
+    types: Types of
+    upload: Upload
+    user: user
+    user_id: User ID
+    verified: Verified
+    verify_time: verify the time
+    view: View
+    wallet_addr: wallet address
+    buyer_name: buyer name
+    seller_name: seller name
+    buyer_phone: buyer phone
+    seller_phone: seller phone
+    account_type: account type
+  lever:
+    Leveraged_lending: Leveraged lending
+    leverage_interest: Leverage interest
+    list_of_leveraged_loans: List of leveraged loans
+  members:
+    add_protocol_users: Add agreement user
+    users_for_protocol: Protocol user
+    mobile: Mobile
+    IEO: The new play
+    activity_name: Event name
+    airdrop_candy: Airdrop candy
+    alert: This user has been disabled
+    available_banlance: Available Balance
+    back: return
+    basic_information: Basic Information
+    birthday: birthday
+    buy: Buy
+    buyer: Buy side (bid)
+    cancel: cancel
+    cash: Raise money
+    coin_to_coin_transaction_done: Currency currency transaction
+    coin_to_coin_transaction_undone: Currency currency transaction
+    comment: Note
+    confirm: determine
+    current: current
+    digital_currency_name: Digital currency name
+    digital_currency_total: Total digital currency
+    disable: Disable
+    disabled_state: Disabled
+    document_photo: Passport
+    forbidden_state: Disabled
+    freeze_quantity: Freezing the number of
+    generated_out_of_air: Generated out of thin air
+    generated_out_of_air_amount: Generate money out of air
+    generated_time: Generation time
+    get_coin: The resulting currency
+    home_address: Home address
+    id_card_back: ID card back
+    id_card_front: ID card front
+    id_card_record: Record ID
+    id_card_review: ID card review
+    identification_number: identification number
+    in_card_inhand: Handheld ID card
+    input_coin: Investment currency
+    inside_station_transfer: Transfer station
+    inviter: Invite people
+    legal_currency_total: The total currency law
+    locking_banlance: Freeze Balance
+    manual_confirm: He confirmed manually
+    member_list: user list
+    member_name: Full name
+    member_phone: cellphone number
+    modify_password: change Password
+    my_invitation_code: I invite code
+    need_checked: Pending
+    new: new
+    nil: nil
+    normal: normal
+    not_passed: Did not pass
+    not_uploaded: Not uploaded
+    offline_information: Offline information
+    online: Not off the assembly line
+    over_the_counter_done: OTC (transactions)
+    passed: passed
+    personal_reconciliation_page: Reconciliation personal page
+    price: price
+    query_asset_details: Queries assets details
+    real_name_information: Real-name information
+    recent_login_time: Recently logged time
+    recharge: Currency charge
+    registered_at: Sign in
+    registered_invitation_code: Fill in the registration invitation code
+    registered_time: Registration time
+    release_time: Release time
+    sell: Sell
+    seller: Sell ​​side (ask)
+    submit: confirm
+    sum: lump sum
+    thaw_data: Thaw data
+    total_users: The total number of users
+    transaction: Transactions
+    transfer_initiator: Transfer sponsor
+    transfer_recipient: Transfer recipient
+    undone_verified: Unfinished Authentication
+    unfreeze_amount: The amount of unfrozen
+    unique_mark: The unique tag user / user I
+    unique_user_id: User ID (unique identification)
+    user_asset_information: Asset Information
+    verified_record: Past inquiries real-name rea
+    verify_time: verify the time
+    calculation_formula_available_amount: Total Available = Total Revenue - Total Expenditure - Payment Fee Statistics - Locked into Balance + Timed Thaw
+    calculation_formula_locking_quantity: Locked Quantity = Locked Total - Timed Thaw
+    airdrop_candy_add: Increased drop candy
+    airdrop_candy_add_description: Currency issued by their party b
+    airdrop_candy_reduce: Reduce drop candy
+    airdrop_candy_reduce_description: When the drop side dropped candy
+    available_quantity: Quantity Available
+    back_to_personal_reconciliation_page: Return to personal reconciliatio
+    business_buy_digital_currency: To "business" status acquisition
+    business_sell_digital_currency: To "business" status to sell "or
+    buy_trade: Buy trade
+    calculate_balance: Calculation of the balance
+    calculate_locking: Lock computing
+    cash_service_charge: Mention currency fees
+    cash_service_charge_description: If that. Only after successfully
+    cash_verify_locking: Withdrawals pending locking
+    cash_verify_locking_description: Reduce the available balance, th
+    coin_locking: Currency coins pending locking
+    coin_locking_description: Because currency trading currenc
+    coin_service_charge: Currency currency transaction fe
+    coin_service_charge_description: Total fees paid after the sum of
+    correct: correct
+    current_balance: current balance
+    current_currencies: Current Currency
+    current_locking: Currently locked
+    digital_currency_amount: The total amount of digital currency
+    digital_currency_draw: Digital currency to mention coin
+    digital_currency_draw_description: Mention state currency comprisin
+    error: error
+    generate_locking_currency: Lock money generated out of thin
+    generate_locking_currency_description: Generated out of thin air
+    id_unique: ID (unique identification)
+    income: income
+    income_coin_to_coin: Currency currency trading income
+    income_coin_to_coin_description: Users through digital currency
+    income_coin_to_coin_details: Currency currency trading income
+    income_legal_coin: French currency trading income
+    income_legal_coin_description1: 'Indicates that a user through <span style="color: green">add</span>'
+    income_legal_coin_description2: 'There are two cases: <br/>
+                                    1. The user, as a "normal user", clicks on the "sale digital coin" advertisement of other "merchants" to obtain the digital currency.<br/>
+                                    2. The user hangs an advertisement as a "business" to "acquire" other "ordinary users" of digital coins.'
+    income_service_charge: Fee income
+    inside_station_transfer_income: Station transfer income
+    inside_station_transfer_income_description: 'For example, the user 80 others '
+    inside_station_transfer_pay: Transfer expenditures station
+    inside_station_transfer_pay_description: The digital currency transferred
+    legal_currency_service_charge: Legal tender transaction fees
+    legal_currency_service_charge_description: 'Legal tender transaction, every '
+    locking_quantity: Number Lock
+    locking_total: Total Lock
+    locking_undeal: Fabi not traded locking
+    locking_undeal_description: 'Since the law currency trading, '
+    never_deal: Never deal
+    new_password: new password
+    no_calculate_part: Part not involved in the calcula
+    old_data_locking_recharge: Old coins to lock data charge
+    old_data_locking_recharge_description: Old Stock Exchange to migrate data
+    old_data_migration: 'Old Data Migration: charge money'
+    old_data_migration_description: Old user's available balance, is
+    ordinary_user_buy_digital_currency: To "normal user" status to purch
+    ordinary_user_sell_digital_currency: 'To "normal user" status sold to '
+    out_of_thin_air_add_virtual_assets: Out of thin air to increase virt
+    out_of_thin_air_add_virtual_assets_description: Derived from management operation
+    out_of_thin_air_reduce_virtual_assets: Reduce assets out of thin air
+    out_of_thin_air_reduce_virtual_assets_description: Derived from management operation
+    part_deal: Part of the transaction
+    pay: expenditure
+    pay_coin_to_coin: Currency currency trading expens
+    pay_coin_to_coin_description: By reducing the user's digital c
+    pay_coin_to_coin_details: Currency currency trading expens
+    pay_legal_coin: Currency of transaction expenses
+    pay_legal_coin_description1: 'Indicates that a user through <span style="color: green">add</span>'
+    pay_legal_coin_description2: 'There are two cases: <br/>
+                                    1. The user, as a "normal user", clicks on the "sale digital coin" advertisement of other "merchants" to obtain the digital currency.<br/>
+                                    2. The user hangs an advertisement as a "business" to "acquire" other "ordinary users" of digital coins.'
+    pay_service_charge: Expenditure fee
+    pay_total: Total expenditures
+    recharge_coin: Currency charge
+    recharge_coin_description: Calculating credits have been
+    repeat_new_password: Repeat new password
+    sell_trade: Sell ​​trade
+    service_charge: Fee includes expenses
+    service_charge_count: Premium statistics
+    station_transfer_service_charge: Station transfer fee
+    station_transfer_service_charge_description: If that.
+    switching_currencies: Switch currency
+    timing_unlock: Timing thaw
+    total: total
+    total_income: Total revenue
+    type: category
+    unlock_money: Thaw amount
+    unlock_money_description: Need to thaw the amount of a use
+    edit_is_able_to_login:  Edit password error status
+    edit_is_able_assets_password: Edit funds password error disabled status
+  id_card_approvals:
+    applicant: applicant
+    apply_submit_time: Filing time
+    audit_status: Approval Status
+    auditor: Reviewer
+    id_card: ID card
+    id_card_description: Approval identity card, then approvie
+    need_checked: Pending
+    no_result: No data
+    passport: passport
+    view: View
+    view_and_review: View and audit
+  accounts:
+    account_id: Account ID
+    available_balance: Available Balance
+    available_banlance: Available Balance
+    current_page: This Page
+    freeze_balance: Freeze Balance
+    hold_available_balance: Holding the available balance
+    hold_locking_balance: Lock hold the balance
+    hold_total_balance: Total balance held
+    less_than: Less than
+    locking_banlance: Freeze Balance
+    more_than: more than the
+    sum: total
+    total: Altogether
+    users: Users
+    users_assets: Users assets
+  scheduled_unlockings:
+    click_download: click to download
+    current_unlock_sum: Currently the number of completed
+    info: Basic Information
+    manual_add: Manually add
+    manual_unlock: Manual thawing
+    operation_type: Action Type
+    timing_unlock: Timing thaw
+    unlock: thaw
+    unlock_amount: The amount of unfrozen
+    unlock_data: Thaw data
+    unlock_entrance: Entrance thaw
+    unlock_example_csv: 8.19 thaw .csv Download example
+    unlock_time: Release time
+    upload_hint: Click just once. Never multiple click
+    user_phone: Phone users
+  deposits:
+    confirm_time: verify the time
+    create_time: Created
+    deposits_total: The total recharge current page
+    index_title: Currency charge
+    process_name: Process name
+    process_status: Process conditions
+    process_title: Currency charge of monitoring the proce
+    select_coin: Please select currency
+    stopping: stopped
+    title: total recharge
+    balance: balance is
+  withdraws:
+    attention: "attention： <br/>
+      1. Within 1 to 2 minutes after the USDT coin is initiated, the query of tx id may display invalid xxx ... It doesn't matter, after a minute to open it, you can see the specific tx situation.<br/>
+      2. The withdrawal without tx can be undone <br/>
+      3. USDT, BTC transfer time 2 to 3 hours。<br/>
+      4. Before clicking on the review, be sure to click on the user’s reconciliation button to see. <br/>
+    "
+    title: Coin review and history list
+    apply_time: apply/approve/execute time
+    application: apply
+    approval: review
+    execute: execute
+    agree: agree
+    undo: undo
+    check_account: check account
+    history: history
+    already_copied: already copied
+    copy: copy
+  currencies:
+    base_factor: base factor
+    base_factor_hint: (How many children after the decimal point is valid, ETH default18)
+    block_query: Block inquiry
+    circulation: Number of outstanding
+    code: Code (lowercase, e.g. Eth)
+    commission_fixed: Station transfer fee (fixed)
+    contract_address: Contract address
+    edit_title: Edit currency data
+    en_intro: Currency presentation (English)
+    eth_addr: ETH Contract address (if it is erc20 token words)
+    exist_msg: The currency already exists
+    fullname: Currency Full Name (English)
+    hidden: hide
+    icon: icon
+    icon_link: Currency icon link
+    index_title: Currency Exchange
+    is_commission_fixed: Are mention currency fixed fee
+    is_display_otc: It is displayed in the OTC
+    is_rechargeable: Can you charge money
+    is_visible: Is visible
+    is_withdrawable: Can I put coins
+    is_within_station: Can I transfer station
+    jp_intro: Currency Introduction (Japanese)
+    kr_intro: Currency Introduction (Korean)
+    name: name
+    new_title: New currency information
+    option: Options
+    otc_decimal_point: OTC trading decimal places (integers from 1 to 8)
+    otc_fee: OTC transaction rates (default 0.005 (five thousandths), must be between0 and 1)
+    otc_minimum: OTC minimum transaction amount
+    position: Position (the greater the above)
+    precision: Accuracy
+    recharge_minimum: The minimum charge amount currency
+    recharge_withdraw: Filling mention currency
+    rechargeable: Rechargeable
+    region: Currency area
+    release_quantity: issue number
+    release_time: publish time
+    ru_intro: Currency Introduction (Russian)
+    site: Official website
+    symbol: Symbol (must be filled)
+    token: Token
+    visible: visible
+    whether: whether
+    white_paper: white paper
+    withdraw_commission: Mention currency fees
+    withdraw_minimum: The minimum amount of money put
+    withdrawable: May withdrawals
+    yes_: 'Yes'
+    yes_fixed: That are fixed
+    zh_intro: Currency Introduction (Chinese)
+  markets:
+    index_title: manage transaction
+    is_stock: Stock or not
+    is_margin: Margin or not
+    ask_currency_precision: Integer part (ask) precision
+    ask_currency_scale: Decimal part (ask) precision
+    bid_currency_precision: Integer part (bid) precision
+    bid_currency_scale: Decimal part (bid) precision
+    edit_title: edit transaction
+    new_title: new transaction
+    ask_unit: ask unit
+    bid_unit: bid unit
+    buy_commission: buy commission
+    sell_commission: sell commission
+    buy_accuracy: buy accuracy
+    sell_accuracy: sell accuracy
+    unvisible: unvisible
+    edit_alert: "0. warning: Only professional technicians can operate this page<br/>
+      1. Term: ask price: seller offer/sell price, bid price, buyer price/buy price。 <br/>
+      2. attention： ask unit, bid unit, must insert into databases first。 <br/>
+    "
+    price_accuracy: price accuracy
+    quantity_accuracy: quantity accuracy
+    order: Sort position (the smaller the more on)
+    trade_visible: Is it visible (use of the next transaction)
+    min_trade: Minimum transaction volume
+    stock_name: Stock name
+  a2a_transfer:
+    title: air drop candies list
+    alert: airdrop candies is send by Shangbi side
+    sender: sender
+    reciver: reciver
+    payer: payer
+    payee: payee
+    transfer_time: transfer time
+  IEO:
+    only_positive_integer: Only positive integers are allowed
+    edit_title: Edit dozen new
+    end: End dozen new
+    end_confirm: Are you sure you want to end the new play?
+    end_time: End Time
+    form_banner: banner pictures (need to upload in advance url)
+    form_coin: Playing the new currency (for example TGC)
+    form_coin_num: Playing the new currency (for example TGC) the number of Exchange
+    form_coin_unlock: Currency Unlock Solution
+    form_end_time: End time (accurate to a separatory)
+    form_exchange_num: Each raise convertible currency hit a new currency amount
+    form_fee: Fee ratio (decimal)
+    form_hint1: TGC play money to start it!
+    form_hint2: Please choose to play the new currency
+    form_hint3: (Twenty million)
+    form_hint4: (Fee represents 3%)
+    form_hint5: Please select the currency to raise
+    form_hint6: The second stage just fill in the text
+    form_hint7: 20,000 (ETH represent a convertible 20000 TGC)
+    form_hint8: 72 hours after successfully unlocked
+    only_numbers: Only numbers from 0 to 1 are allowed
+    form_icon: icon pictures (need to upload in advance url)
+    form_max: The maximum number of individuals to raise
+    form_min: Raise the minimum number of individuals
+    form_raise_coin: Raised currency (eg ETH)
+    form_raise_goal: Raising the number of currency target
+    form_stage: stage
+    form_start_time: Start time (to the nearest minute)
+    from_fake_num: The end of the play the new fake number to be displayed (from 0 to 1, not do not fill)
+    intro: Introduction
+    list_gain: Get to play the new number
+    list_name: Participant Name
+    list_participate: Involved in playing the new number
+    list_people: participant
+    list_time: Time involved
+    list_title: Involved in playing the new list
+    new_title: New dozen new
+    start: New start playing
+    start_confirm: Are you sure you begin playing the new?
+    start_time: Starting time
+    title: title
+    view: View
+    is_human_intervention: Human intervention or not
+  internal_transfers:
+    title: insite transfer list
+    sender: sender
+    sender_email: sender_email
+    receiver: reciver
+    receiver_email: reciver_email
+    coin: currencies type
+    num: arrival num
+    fee: transfer fee
+  system_var:
+    alert: "Some of the variables here are manually set.．　<br/>
+      But many of them are caught with external systems. For example ：high gas price, usd exchange rate for rmb, etc. Need to be manually modified
+    "
+    alarm_title: Receiving alarm call set (no distinction between the comma and English)
+    database_connect: Database Connections
+    database_title: The health of the database
+    edit_title: Constant editing system
+    en: English
+    index_title: Constant management system
+    jp: Japanese
+    kr: Korea
+    ru: Russian
+    lang_title: Default language
+    new_title: New System Constants
+    order: Sequence
+    phone_hint: Please enter a valid number
+    status: health status
+    transaction_title: Trading on the default settings
+    update_time: Updated
+    value: value
+    withdraw_title: Mention credits notification receiving telephone set (no distinction between the common)
+    zh: Chinese
+    robot_id_set: Robot ID
+    operation: Operation
+    member_name: User account
+    add_robot: Add robot ID
+    max_failed: Allow maximum logins
+  slider:
+    index_title: manage homepage slider
+    edit_title: edit homepage slider
+    new_title: new homepage slider
+    edit_show: show
+    title: slide title
+    type: image type
+    link: imgae link
+    is_display: whether show
+    upload: upload image
+    creator: creator
+    uploader: uploader
+    preview: preview
+    website_type: Website type
+  progress:
+    alert: 'Note: non-programmers, can not be changed or deleted'
+    checktime: check the time
+    edit_title: Editing Process
+    index_title1: Visible transactions
+    index_title2: Invisible transactions
+    index_title3: Orders not match the database connection
+    index_title4: Monitoring process list
+    log: Log status
+    log_tail: Finally, the contents of the log
+    name: Process Name
+    new_title: New monitoring process
+    no_: 'No'
+    project_name: Where the project name
+    server_name: name of server
+    title3_connect: Database connections
+    title3_order: All orders not match
+    monitoring_or_not: Monitoring or not
+  realtime:
+    comment: Remark
+    edit_title: Edit real-time monitoring
+    error_call: Last error messages voice call time
+    error_call_times: Last error messages voice dialing number
+    error_sms: Last wrong time to send text messages
+    error_sms_times: The number of text messages sent last error
+    index_title: real time monitoring
+    interval: Monitoring request interval (seconds)
+    last_checked: Last Checked
+    new_title: Create a real-time monitoring
+    status: Current state
+    type: Monitoring type
+    url: Monitoring request url
+    value_string: String
+  roles:
+    collect_permission: Privilege Collection
+    edit_title: Edit Role
+    hint: The system has not yet collected permissions. Please collect permissions
+    index_title: List of roles (this page non-technical personnel prohibit operation)
+    manage_permission: authority management
+    new_title: New Role
+    select_all: select all
+    set_permission: Permission settings
+  app:
+    IOS: IOS version download link
+    android: Android version download link
+    edit_title: APP edit version information
+    en: English Release Notes
+    index_title: APP version management
+    new_title: New APP version information
+    ready: Ready
+    ready_IOS: IOS version is ready
+    ready_android: Android version is ready
+    unready: Not Ready
+    ver: version number
+    ver_hint: It must be different from the previous version
+    zh: Chinese Release Notes
+  footer_icon:
+    new_title: new icon
+    edit_title: edit icon
+    add: add
+    index_title: icon list
+    index_hint: (icon will load on www/otc project，max 8 icon)
+    enable: enable
+    disable: diable
+    icon: icon
+    link: link
+    desc: description
+    redirect: link
+    example: wechat icon
+  robots:
+    index_title: robot settings
+    new_title: new robot
+    edit_title: edit robot
+    market: market name
+    hang_interval: mount order interval
+    trade_interval: transaction interval
+    or: or
+  country:
+    index_title: list of country codes
+    edit_title: edit country code
+    new_title: new country code
+    country: country
+    code: country code
+    is_disable: disable or not
+  virtual:
+    index_title: list of virtual assets
+    new_title: new
+    alert: we need to create a virtual digital currency for an account due to airdrops of candy, etc. Need unified put here, convenient management
+    select_coin: please select currency
+    select_account: please select account
+    beneficiary: collectors
+    quantity_hint: positive is given, negative is deducted
+    is_lock: lock or not
+    income: balance of payments
+    add_to: increased to
+    reduce: reduce
+    operation_time: operating time
+    balance: available balance
+    freeze: freeze the balance
+    account: account
+  put_crypto:
+    title: Collect the record of charging money
+    total: Total amount on this page
+    total_hint: After choosing the currency, you can see the total amount
+    time: time
+    wallet_addr: wallet address
+    amount: amount
+    big_wallet: Pack into a big wallet
+    cmd: The original order
+  wallet:
+    index_title: Users purse
+    show_title: Details on the wallet
+    alert: Note :the balance of address wallet is not directly related to the user's balance in the transaction
+    view: view
+    addrs: address
+    password: password
+    name: user name,name
+    available: exchange available
+    freeze: exchange frozen
+    owner: belongs to the user
+    addr_coin: the address corresponds to the digital coin
+    last_check: last inspection time
+    addr_info: ETH or BTC or USDT address information
+    erc_info: Address information for the erc-20
+    total: total
+  cc_unordered:
+    order_list: transaction list
+    user_id: User ID
+    phone_number: phone number
+    price_greater_than: the price is more than
+    price_lower_than: the price is less than
+    commission_direction: entrust the direction
+    source: source
+    number_ordering : order by number
+    unit_price: order by price
+    hope_to_see_user : the user ID you want to see
+    user_not_watching:  "the user ID you don't want to see"
+    sell_orders: sell orders
+    pay_the_bill: pay the bill
+    not_sorting: not sorting
+    ascending: ascending
+    descending: descending
+    comma_separated: split with a comma
+    done : done
+    never_dealt: never deal
+    partial_deal: partial deal
+    withdrawn: Has been removed from the single
+    order_quantity: the order quantity
+    bulk_revocation: batch cancellation
+    order_code: the order code
+    market: market
+    price: price
+    original_quantity: the original number
+    commission_amount : entrust the sum
+    commission_time: entrust the time
+    unfilled_quantity: outstanding quantity
+    cancel: cancel
+    cancel_confirm: Are you sure you want to cancel the order?
+    all_cancel_confirm: Are you sure you want to cancel all the orders selected on this page?
+  trades:
+    order_list: order list
+    choose_currency: Please select currency
+    seller: seller
+    buyer: buyer
+    time_from: time from
+    price_from: price from
+    confirm: confirm
+    trading_volume: trading volume
+    download: downloadCSV
+    batch_rollback: batch rollback
+    batch_rollback_confirm: Are you sure you want to roll back all the trades selected on this page?
+    market: market
+    price: price
+    number_of_transactions: number of transactions
+    handling_fee: service charge
+    rollback: rollback
+  k_lines:
+    data_list: K line data list
+    transaction_pair: transaction pair
+    interval: interval
+    total: total
+    original_time: original time
+    formatted_time: formatted time
+    original_data: original data
+    opening_price: opening price
+    highest_price: highest price
+    lowest_price: lowest price
+    closing_price : closing price
+    Volume: volume
+    record: no record
+  preset_k_lines:
+    title: Preset K line data list
+    insert_data: Data to be inserted into redis
+    database: Temporarily no data
+  otc_tradings:
+    title: Over the counter order
+    advertisers: advertisers
+    order_type: order type
+    sell: The user to sell
+    buy: The user to buy
+    creation_time: creation time
+    order_number: order number
+    ransaction_type: transaction type (user)
+    seller: seller
+    buyer: buyer
+    coin_number: number of digital coins
+    fcoin_number: legal tender quantity
+    advertiser: advertiser
+    status: the order status
+    wether_cancle: whether to cancel
+    yes_: yes.
+    not_: no.
+    timeout: if the timeout
+    extension_time: whether to extend the time
+    view: view
+    history_record: There is no historical record
+  otc_trading_evaluations:
+    title: OTC order reviews
+    good_or_bad: Positive / Negative
+    good: Positive
+    bad: Negative
+    content: comments
+  disput:
+    title: the complaint list
+    phone: phone
+    appeal_time: the appeal of time
+    appeal_content: the complaint content
+    status: status
+    order: order ID
+    cancel: cancle
+    reason: reason
+    save: save
+    restore: restore
+    details: details
+  system_statistics:
+    title: system of statistical
+    registered_number: registered users
+    legal_currency_trading: fiat deal
+    transaction_number: clinch a deal the number
+    recharge_coin: charge money
+    extract_coins: mention money
+    transfer: internal transfer
+  account_statistics:
+    coin_amount_today: amount to be withdrawn today
+    total_amount_of_coins: total withdrawal amount
+    currency_amount: amount charged today
+    total_amount_coins: total amount of money charged
+    cold_wallet_balance: cold purse balance
+    hot_wallet_balance: hot wallet (coin wallet) balance
+    total_generate: generating total
+    total_commission: total handling charge
+    total_balance: total system balance
+    income_expenditure: today's balance of payments
+    record: general ledger record for a specific date
+    choose_coins: please select currency
+    title: general reconciliation interface
+    reconciliation_information: check the information
+    remarks: note information
+    calculatin_income_method: "Total revenue of the platform (ignoring the robot) = charging coin - charging coin + user handling charge (excluding the robot) - charging coin handling charge (because charging coin - charging coin has included the income of charging coin handling charge, charging coin handling charge is equivalent to adding one time, to be subtracted)<br/><br/>
+                              The date of data roll-over is July 22, 2019"
+    success: check for success
+    failure: check for failure
+    real_time_information: "Real-time reconciliation<br>
+                            Notice：<br>
+                            1. Only when the date of inquiry is today can real-time reconciliation be carried out.<br>
+                            2. Real-time reconciliation includes robot transactions. If an order is matched with a 0.1 second error, it needs to refresh several times for confirmation. A successful reconciliation will be deemed as a successful reconciliation.<br><br>
+                            Formula ：(true balance + true lock + commission == calculated balance + calculated lock + commission)<br><br>"
+    method_one: Value 1:compute balance + compute lock + commission =
+    method_two: Value 2:true balance + true lock + commission =
+    date: date
+    switch_currency: switch the currency
+    current_currency: the current currency
+    current_balance: the current balance
+    current_lock: the current lock
+    balance_lock: current balance + lock
+    compute_balance_lock: compute balance + compute lock
+    compute_method: (old balance + old lock) + rechargeable coin + (balance or lock generated out of thin air) - withdrawal amount - all handling charges
+    balance: current balance (minus robot)
+    lock: current lock (minus robot)
+    current_balace_lock: current balance + lock (minus robot)
+    thaw_quantity: defrosting quantity of the day
+    balanced_currency: the old data is charged into the balance
+    lock_the_coin: old data to lock money
+    total_currency_lock: old data in total
+    difference_reason: "The initial quantity is 64500.0 different from 22142107.268918，<br>
+                       This is because 'user assets on July 25'changed the first six data directly modified the old data to the old data balance, locking the record of charging money<br>
+                       old：150860.86<br>
+                       new：86360.86<br>"
+    confirm_receipt: charge money on the day (confirm receipt)
+    total_confirm_receipt: total amount of money charged (confirmed to the account)
+    successful_withdrawal_coins: withdrawal on the day (successful withdrawal)
+    total_withdrawal_coins: total withdrawal amount (successful withdrawal)
+    groundless_balance: to create (a balance) out of thin air
+    groundless_lock: generated out of thin air
+    cc_commission: currency transaction fee
+    legal_coin_commission: handling charge for legal tender transactions
+    amount_coins_commission: handling charge
+    transfer_commission: handling charge for in-station transfer
+    income: total platform revenue
+    income_norobot: platform revenue (ignore robots)
+    today_income_norobot: total revenue of the day (ignore robots)
+    migrated_assets: Assets transferred from the data (all user asset balances imported by the exchange on July 29)
+    migrated_assets_cab: "balance ：12836786.268718000000000000<br>
+                         lock：9305321.000200000000000000<br>
+                         total：22142107.268918<br><br> "
+    migrated_assets_usdt: "balance：3218733.781133297695170301<br>
+                          lock：110368534.465616981480959722<br>
+                          total：113587268.24675028<br> "
+    balance_change_file: User account balance change file
+    second_time: July 30
+    total_not_grow: The total number of platforms is not growing
+    first_time: July 25
+    cc_robot: coin exchange platform robot
+    robot: market making robot
+    test_robot: test robot
+  automatic_reconciliation_list:
+    title: Daily reconciliation list
+    description: "Here is the reconciliation according to a user. Each currency takes about 10 minutes <br/>
+                 It can run multiple times a day. It is recommended to run when there are few people．"
+    date: date
+    runner: runner
+    result: result
+    view: view
+  account_statistics_in_special_date:
+    reconciliation_formula: "Reconciliation formula：<br/>
+                            Revenue: currency, various fees, virtual assets (positive), transfer costs <br/>
+                            Expenditure: withdrawing coins, virtual assets (negative)　　<br/>
+                            The statistics start from 00:00:00 seconds on the current day and end at 23:59:59.999999 seconds.<br/>"
+    amount_commission: Today mention currency fees
+    available_balance: As of the date of the total available balance (to be recorded)
+    cc_commission: Today currency currency transaction fees
+    cold_wallet_balance: As of the date of cold wallet balance (to be recorded)
+    expenditure: expenditure
+    freeze_balance: As of the date of the balance of the total freeze (to be recorded)
+    hot_wallet_balance: As of the date of heat wallet balance (to be recorded)
+    ieo_commission: Today IEO fee
+    income: income
+    income_expenditure: Positive revenue, negative expenditure
+    no_: 'No'
+    no_search: No search results
+    reference_data: Reference data
+    report: Reports
+    search_time: Find time
+    start_date: Statistics Start Date
+    today_amount_coin: As of the date of the total amount of money put
+    today_currency_amount: Today, the amount of money charged
+    today_lc_commission: Today legal tender transaction fees
+    total_amount_commission: As of the date of total charges to mention coins
+    total_balance: As of the date of the total balance + Total frozen (to be recorded)
+    total_cc_commission: As of the date of total coins currency transaction fees
+    total_currency_amount: The total amount of money charged as of that date
+    total_ieo_commission: As of the date of total charges IEO
+    total_lc_commission: Total legal tender as of the date of transaction fees
+    total_number: Total number of statistics for the date
+    total_tranfer_commission: As of the date of transfer fees total station
+    total_transfer_fee: 'As of the date of total digital transfer of money to spend (withdrawalsGuiLong)'
+    total_virtual_asset: Total assets as of that date virtual generation
+    transfer_commission: Transfer fee in the station today
+    transfer_fee: Day digital money transfers cost (withdrawals GuiLong) (to be recorded)
+    virtual_asset: Today's generation of virtual assets
+  cold_wallet:
+    title: cold wallet address
+    note: Note Do not refresh this page frequently, otherwise it will be blocked by the query server.ＩＰ．
+    address: cold wallet address
+    balance: balance
+    click: click to search
+    search_holders: (after click，accroding to address check holders)
+  today:
+    agree: agree
+    agree_confirm: Are you sure?
+    alert: 'Formula: Revenue = charge today coins - coins + mention generated virtual assert value'
+    amount: amount
+    appeal1: Application
+    appeal2: Approval
+    appeal3: carried out
+    appeal_str: Application / approval / execution time
+    confirm_time: verify the time
+    gold: Amount arrival
+    nodata: No data
+    recharge: Today's currency charge
+    virtual: Today's generation of virtual assets
+    withdraw: Today mention money
+  hot_wallet:
+    title: hot wallet balance
+    alert: "Note 1. This page should not be refreshed frequently (USDT requires a maximum of 10 seconds), otherwise it will be blocked by the query server.ＩＰ. <br/>
+      Note 2. The balance of BTC is not the balance of an address, it is the balance of the entire BTC node. Because the entire node of the hot wallet is in the hands of our company."
+    balance: balance
+    balance_sum: BTC node total balance
+    hint: after click，according to address view holders
+  air_assert:
+    title: virtual assert
+    account: account
+    total: total
+    operation_time: operation_time
+  total:
+    advertisement_initiator: Advertising sponsors
+    agree: agree
+    apply: Application
+    apply_approve_execution_time: Application / approval / execution time
+    approve: Approval
+    coin_to_coin_transaction: Currency currency trading
+    coin_to_coin_transaction_description: The current coin currency transaction fee is 0. From next Monday will be charged
+    confirm: Are you sure?
+    create_time: Created
+    digital_currency_number: The number of digital currency
+    excute: carried out
+    legal_coin_transaction: Currency trading law
+    legal_currency_number: The number of coins Law
+    lock: locking
+    lock_total: Total balance lock
+    order_number: order number
+    service_charge: Fees
+    service_charge_total: Total fee
+    station_transfer_accounts: Transfer station
+    station_transfer_accounts_description: Currently free transfer station. Charges next week
+    sum_gold: The total system
+    total: total
+    total_money: price is
+    total_recharge: The total charge currency
+    total_sum: Total system
+    total_withdraw: Total raise money
+    totol_commission: Total fee
+    transaction_type_user: Transaction type (user)
+    users: user
+    withdraw_wallet_title: Balance raise money wallet
+  otc_fiat_advertisements:
+    advertisements_list: otc transaction (off-market order) advertising list
+    currency_type: currency type
+    fiat_type: fiat type
+    price: price
+    builder_id: builder id
+    currency_id: currency id
+    unit_price: unit price
+    min_limit: min limit
+    max_limit: max limit
+    trade_type: trade type
+    mode_of_trading: mode of trading
+    is_canceled: is canceled
+    trading_currency_amount: trading currency amount
+    created_at: create time
+    advertisements_list_details: advertisements list details
+    currency_code: currency code
+    updated_at: updated time
+    trading_remark: trading remark
+    trading_terms: trading terms

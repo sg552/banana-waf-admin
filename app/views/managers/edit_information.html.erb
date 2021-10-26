@@ -1,0 +1,80 @@
+<style>
+.image-icon img{
+  /*position: absolute;*/
+  height: 68px;
+  width: 68px;
+  border-radius: 50%;
+  /*margin-left: 22px;*/
+  /*float: left;*/
+}
+.file-input{
+  width: 100%;
+  margin-left: 10px;
+}
+.input_file{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.icon-width{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.button{
+  position: absolute;
+  margin-top: 40px
+}
+</style>
+<h3><%= t("personal_information.title") %> </h3>
+<table>
+  <%= form_for :manager, url: update_information_manager_path(id: @manager.id) do |f|%>
+    <tr>
+      <td style="width: 100px">
+        <%= t("personal_information.upload_avatar") %>：
+      </td>
+      <td class="icon-width">
+        <p class="image-icon">
+          <img src = "<%= @manager.portrait_icon.present? ? "#{ENV['CDN_SERVER']}/#{@manager.portrait_icon}" :
+            "#{ENV['CDN_SERVER']}/image_after_2019_11/1574067153/MS5wbmc=" %>"></p>
+          <%= f.file_field :portrait_icon, accept: "image/*",onchange: "preview(this)", class: 'file-input' %>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td style="width: 100px">
+        <%= t("personal_information.nickname") %>：
+      </td>
+      <td>
+        <%= f.text_field :nick_name, class: 'form-control'%>
+      </td>
+    </tr>
+    <tr class="button">
+      <td>
+        <%= f.submit t("public.submit"), class: 'btn btn-primary', style: 'width: 60px' %>
+      </td>
+      <td>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<script>
+function preview(file){
+ var prevDiv = $('.image-icon')
+ ,img_name = prevDiv.next('.input_file').find('.img_name');
+ if (file.files && file.files[0]){
+    var reader = new FileReader();
+    reader.onload = function(evt){
+      prevDiv.html( '<img src="' + evt.target.result + '" />');
+      prevDiv.css({background:"none"})
+    }
+   reader.readAsDataURL(file.files[0]);
+   img_name.html(file.value);
+  }else{
+   prevDiv.html('<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>');
+   img_name.html(file.value);
+   prevDiv.css({background:"none"})
+  }
+}
+</script>

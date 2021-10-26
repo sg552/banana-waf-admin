@@ -1,0 +1,42 @@
+<%= form_for @footer_icon_link do |f| %>
+  <table class='table table-hover table-bordered table-striped'>
+    <tr>
+      <td style='width: 150px'>
+        <%= t("footer_icon.icon")+t("footer_icon.link") %>：
+      </td>
+      <td>
+        <%= f.text_field :icon, required: true, class: 'form-control', style: 'display: inline; width: 200px', placeholder: t("public.example")+': /image/816/facebook.jpg' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= t("footer_icon.redirect") %>：
+      </td>
+      <td>
+        <%= f.text_field :url, required: true, class: 'form-control', style: 'display: inline; width: 200px', placeholder: t("public.example")+': /image/816/facebook.jpg' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= t("public.status") %>：
+      </td>
+      <td>
+        <%= f.select :is_shown,  options_for_select([[t("footer_icon.enable"), true], [t("footer_icon.disable"), false]], @footer_icon_link.is_shown) %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= t("footer_icon.desc") %>：
+      </td>
+      <td>
+        <%= f.text_field :description, class: 'form-control', style: 'display: inline; width: 200px', placeholder: t("public.example")+": "+t("footer_icon.example") %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2>
+        <%= submit_tag t("public.submit"), class: 'btn btn-primary' %>
+        <%= link_to t("public.back"), :back, class: 'btn btn-primary' %>
+      </td>
+    </tr>
+  </table>
+<% end %>

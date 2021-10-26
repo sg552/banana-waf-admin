@@ -1,0 +1,102 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>IP白名单</h2>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="ibox-content m-b-xs border-bottom">
+    <div class="row">
+      <%= form_tag '', method: :get, id: "member_select_from" do %>
+        <div class="col-lg-11">
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="product_name">IP</label>
+              <%= text_field_tag :ip, params[:ip], class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button type="submit" class="btn btn btn-primary"> <i class="fa fa-search"></i> <%= t('public.search') %></button>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button class="btn btn-success " type="button"><i class="fa fa-download"></i>
+              <%= link_to raw("#{t('public.export_csv')}"),download_csv_white_ips_path( params.to_enum.to_h.except(:controller, :action) ), style: "color: #ffffff"%></button>
+            </div>
+          </div>
+        </div>
+      <%end%>
+
+      <div class="col-sm-1">
+        <div style="margin-top: 22px;">
+          <button class="btn btn btn-primary" type="button">
+          <%= link_to t('public.add'),new_white_ip_path, style: "color: #ffffff"%></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+        <div class="ibox-content">
+
+          <h3>已添加白名单个数: <%= @count %></h3>
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>IP</th>
+                <th>备注</th>
+                <th>时间</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if @white_ips.present? %>
+                <% @white_ips.each do |white_ip| %>
+                  <tr>
+                    <td>
+                      <%= white_ip.id %>
+                    </td>
+                    <td>
+                      <%= white_ip.ip %>
+                    </td>
+                    <td>
+                      <%= white_ip.remark %>
+                    </td>
+                    <td>
+                      <%= white_ip.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+                    </td>
+                    <td>
+                      <%= link_to raw("&#xf00d; #{t'public.delete'}"), white_ip, method: :delete, data: {confirm: t("public.delete_confirm")}, class: "fa-btn btn btn-xs btn-danger"%>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="11">
+                  <ul class="pull-right"><%= paginate @white_ips %></ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+  $(function() {
+    $('.footable').footable();
+  });
+</script>
+
+<% end %>

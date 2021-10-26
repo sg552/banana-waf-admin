@@ -1,0 +1,38 @@
+#max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
+#min_threads_count = ENV.fetch("RAILS_MIN_THREADS") { max_threads_count }
+#threads min_threads_count, max_threads_count
+#port        ENV.fetch("PORT") { 3000 }
+
+#environment ENV.fetch("RAILS_ENV") { "development" }
+
+#pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+
+#plugin :tmp_restart
+
+
+threads_count = 1
+threads 1, 8
+
+port 9708
+environment "production"
+#environment "development"
+
+app_dir = '/opt/app/cas-api-for-gly/current'
+directory app_dir
+rackup "#{app_dir}/config.ru"
+
+shared_dir = '/opt/app/cas-api-for-gly/shared'
+workers 1
+bind "unix://#{shared_dir}/sockets/puma.sock"
+stdout_redirect "#{shared_dir}/log/puma.stdout.log", "#{shared_dir}/log/puma.stderr.log", true
+pidfile "#{shared_dir}/pids/puma.pid"
+state_path "#{shared_dir}/pids/puma.state"
+#daemonize true
+
+#before_fork do
+#  ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
+#end
+
+#on_worker_boot do
+#  ActiveRecord::Base.establish_connection database: { writing: :production, reading: :production} if defined?(ActiveRecord)
+#end

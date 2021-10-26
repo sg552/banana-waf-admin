@@ -1,0 +1,18 @@
+<%= form_for(@permission) do |f| %>
+  <div class="field">
+    用户群体：<br>
+    <%= f.select :user_entity_class, options_for_select([['普通用户', 'Member'],
+                                                        ['管理员', 'Manager']]) %>
+  </div>
+  <div class="field">
+    用户：<br>
+    <%= f.text_field :user_entity_id %>
+  </div>
+  <div class="field">
+    角色<br>
+    <%= f.select :role_id, options_from_collection_for_select(Role.all, :id, :name), multiple: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,103 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-2">
+    <h2><%= t("system_var.index_title") %></h2>
+  </div>
+  <div style="margin-top: 30px">
+    <%= raw t("system_var.alert") %>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+<div class="ibox-content m-b-xs border-bottom">
+  <div class="row">
+    <%= form_tag '', method: :get, id: "search-form" do %>
+      <div class="col-sm-2">
+        <div class="form-group">
+          <label class="control-label" for="product_name">按名称或备注搜索</label>
+          <%= text_field_tag :query, params[:query], class: 'form-control'%>
+        </div>
+      </div>
+
+
+      <div class="col-sm-1">
+        <div style="margin-top: 22px;">
+        <button type="submit" class="btn btn btn-primary"> <i class="fa fa-search"></i> <%= t('public.search') %></button>
+        </div>
+      </div>
+
+      <div class="col-sm-1">
+        <div style="margin-top: 22px;">
+          <button class="btn btn-success " type="button" id="clear_filter"><i class="fa fa-trash"></i>
+          <%= link_to raw("#{t'public.clear_filter'}"), url_for, style: "color: #ffffff" %>
+          </button>
+        </div>
+      </div>
+      
+    <%end%>
+  </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-content">
+
+                <table class="table-hover table table-stripped toggle-arrow-tiny">
+                    <thead>
+                    <tr>
+                      <th>
+                        id
+                      </th>
+                      <th>
+                        <%= t("currencies.name") %>
+                      </th>
+                      <th>
+                        <%= t("system_var.value") %>
+                      </th>
+                      <th>
+                        <%= t("public.comment") %>
+                      </th>
+                      <th>
+                        <%= t("system_var.update_time") %>
+                      </th>
+                      <th>
+                        <%= t("public.operation") %>
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <% @system_variables.each do |system_variable| %>
+                        <tr>
+                          <td>
+                            <%= system_variable.id %>
+                          </td>
+                          <td>
+                            <%= system_variable.name %>
+                          </td>
+                          <td>
+                            <%= system_variable.value %>
+                          </td>
+                          <td>
+                            <%= system_variable.comment %>
+                          </td>
+                          <td>
+                            <%= system_variable.updated_at.strftime "%Y-%m-%d %H:%M:%S" %>
+                          </td>
+                          <td>
+                            <%= link_to raw("&#xf044;#{t('public.edit')}"), edit_system_variable_path(system_variable.id), class: "fa-btn btn btn-xs btn-default", target: "_blank"%>
+                          </td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="11">
+                          <ul class="pull-right"><%= paginate @system_variables %></ul>
+                        </td>
+                      </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

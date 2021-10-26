@@ -1,0 +1,53 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-2">
+    <h2>短信余额详情</h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <%if @result["msg"]%>
+              <div style="text-align: center; font-size: 25px; margin-top: 20px;"><%= @result["msg"] %></div>
+            <%else%>
+              <thead>
+                <tr>
+                  <th>
+                    名称
+                  </th>
+                  <th>
+                    手机
+                  </th>
+                  <th>
+                    邮箱
+                  </th>
+                  <th>
+                    余额
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <%= @result["nick"] %>
+                  </td>
+                  <td>
+                    <%= @result["mobile"] %>
+                  </td>
+                  <td>
+                    <%= @result["email"] %>
+                  </td>
+                  <td>
+                    <%= @result["balance"] %>
+                  </td>
+                </tr>
+              </tbody>
+            <%end%>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

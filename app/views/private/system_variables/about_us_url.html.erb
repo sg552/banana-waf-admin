@@ -1,0 +1,72 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-2">
+    <h2>关于我们url管理</h2>
+  </div>
+  <div style="margin-top: 0.8%">
+    <%= link_to raw("&#xf067; 新建"), "/system_variables/new", class: 'fa-btn btn btn-primary', id: "new_about_us_url" %>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <th>
+                id
+              </th>
+              <th>
+                <%= t("currencies.name") %>
+              </th>
+              <th>
+                <%= t("system_var.value") %>
+              </th>
+              <th>
+                <%= t("public.comment") %>
+              </th>
+              <th>
+                <%= t("system_var.update_time") %>
+              </th>
+              <th>
+                <%= t("public.operation") %>
+              </th>
+            </thead>
+            <tbody>
+              <% @about_us_urls.each do |about_us_url| %>
+                <tr>
+                  <td style="width:5%">
+                    <%= about_us_url.id %>
+                  </td>
+                  <td style="width:10%">
+                    <%= about_us_url.name %>
+                  </td>
+                  <td style="width:25%">
+                    <%= about_us_url.value %>
+                  </td>
+                  <td style="width:25%">
+                    <%= about_us_url.comment %>
+                  </td>
+                  <td style="width:25%">
+                    <%= about_us_url.updated_at.strftime "%Y-%m-%d %H:%M:%S" %>
+                  </td>
+                  <td colspan=2>
+                    <%= link_to raw("&#xf044;#{t('public.edit')}"), edit_system_variable_path(about_us_url.id),
+                        class: "fa-btn btn btn-xs btn-default", target: "_blank"%>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="19">
+                  <ul class="pull-right"><%= paginate @about_us_urls %></ul>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

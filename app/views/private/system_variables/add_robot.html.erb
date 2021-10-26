@@ -1,0 +1,43 @@
+<%= form_tag create_robot_system_variables_path, method: :post do %>
+  <table class='table table-hover table-striped' >
+    <tr>
+      <th> <%= t("system_var.robot_id_set") %> </th>
+     <td> <%= text_field :value, "", value: @draw_message_receive_phones.try(:value), class: 'form-control', style: 'display: inline; width: 100%;', placeholder: t("public.example")+"：1,2,3,48" %></td>
+    </tr>
+    <tr>
+      <td colspan=10>
+        <%= submit_tag t("public.confirm"), class: 'btn btn-primary', style: 'line-height: normal;' %>
+      </td>
+    </tr>
+  </table>
+<% end %>
+
+<h3><%= t("system_var.index_title") %></h3>
+
+<table class='table table-hover table-striped' >
+  <tr>
+    <td>
+      <%= t("system_var.robot_id_set") %>
+    </td>
+    <td>
+      <%= t("system_var.member_name") %>
+    </td>
+    <td>
+      <%= t("system_var.operation") %>
+    </td>
+  </tr>
+  <% @robots.each do |robot| %>
+  <tr>
+    <td>
+      <%= robot.value %>
+    </td>
+    <td>
+      <%= Member.find(robot.value) rescue '用户不存在' %>
+    </td>
+    <td colspan=4 style="10%">
+      <%= link_to t("public.delete"), delete_robot_system_variables_path(id:robot.id), id: "delete_#{robot.id}" %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+

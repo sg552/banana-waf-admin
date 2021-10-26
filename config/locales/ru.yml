@@ -1,0 +1,1043 @@
+ru:
+  html:
+    lang: ru
+    title: Администратор системы
+  views:
+    pagination:
+      first: "&laquo; ойк"
+      last: "ойк &raquo;"
+      previous: "&lsaquo; ойк"
+      next: "ойк &rsaquo;"
+      truncate: "&hellip;"
+  google_otp:
+    i_want_to_disable: Вы хотите закрыть его?
+    please_input_otp_code: Если вы хотите закрыть его, пожалуйста, введите число, отображаемое аутентификатором Google
+    tips: "Вы хотите закрыть его? Введите цифровой Google-аутентификатор, отображаемый Google-аутентификатором для вашей безопасности. Настоятельно рекомендуется открыть．<br/>
+      После открытия вы можете использовать функцию вывода．<br/>
+      После открытия вы можете воспользоваться функцией снятия денег. Вы можете сначала отменить привязку, а затем заново привязать новый номер мобильного телефона."
+    usage: "1. Загрузите и установите google authenticator<br/>
+      2. Убедитесь, что ваше мобильное время обновляется автоматически.<br/>
+       2.1 Android: Настройки -> Система -> Дата и время -> Автоматические настройки <br/>
+       2.1 IOS: Настройки -> Универсальные -> Дата и время -> Автоматические настройки <br/>
+      2. Откройте аутентификатор и отсканируйте двумерный код выше. <br/>
+      3. Каждый раз, когда вам это нужно, откройте его и используйте его.<br/>
+      4. Если ваше устройство не может открыть интерфейс двумерного сканирования кода, введите имя своей учетной записи вручную: <span style='color: red'>%{email}</span>
+      И ключ: <span style='color: red'>%{secret}</span>. И выберите ＂на основе времени＂.
+      "
+  header:
+    lever: рычаг
+    members: члены
+    background_administrator: фоновый администратор
+    new_manager: создать фоновый администратор
+    passport_to_be_verified: паспорт для проверки
+    lock_deducting_balance_to_another_currency: Заблокировать операцию 2：удержание остатка на другой
+    locally_initiated_on_chain_transfer_records: Локальная запись переводов
+    display_settings_of_transaction_to_note_on_the_first_page: Настройка показа заголовков
+    user_security_settings: Настройка механизма безопасности пользователя
+    file_upload: файл загружен
+    comment_list_of_transactions_in_French_currency: Список комментариев по монетам
+    app: APP
+    registered_users: Шифрование
+    accounts: Пользовательские активы
+    id_card_list: ID карты
+    crypto_transaction: криптовалюта
+    scheduled_unlock: Сроки разблокировки
+    deposits: Монета Рекорд
+    withdraws: Проверка валюты
+    currency: валюта
+    transaction_pairs: Пары транзакций
+    a2a_transfer: Конфета в виде монеты
+    IEO: спекуляция
+    transfer_list: список передачи
+    system: система
+    system_constants: система константы
+    database_monitoring: Мониторинг базы данных
+    slider_images_management: Управление изображениями слайдеров
+    related_progress_monitoring: Мониторинг системных процессов
+    auto_operation_monitoring: Авто контроль работы
+    roles_list: Список ролей
+    app_version_management: Управление версиями приложения(новое издание)
+    app_version_management_old: Управление версиями приложения(старое издание)
+    about_us: о нас
+    contact_us: Свяжитесь с нами
+    market_monitor_settings: Мониторинг торговых пар
+    set_app_down_link: настройка адреса ссылок для загрузки App
+    ios_app_down_link: Ios app скачать
+    ios_app_down_qr_code_img_link: Ios двухмерный код
+    android_app_down_link: адрес для загрузки Android app
+    android_app_down_qr_code_img_link : адрес ссылки на андроид
+    default_language_setting: Настройка языка по умолчанию
+    alarm_receiving_phone_setting: Настройка телефона для приема сигналов тревоги
+    coin_receiving_phone_setting: Настройка телефона для приема монет
+    footer_icons_setting: Настройка иконок нижнего колонтитула
+    default_pair_setting: Настройка транзакции монет
+    robots_setting: Настройка роботов
+    country_code: Код страны
+    wallet_system: система кошелька
+    virtual_asset: виртуальный актив
+    recharge_record: запись пополнения счета
+    user_wallet: пользовательский кошелек
+    company_hot_wallet: фирменный горячий кошелек
+    company_cold_wallet: фирменный холодный кошелек
+    crypto_exchange: Фиат Торги
+    orders: монета монеты неупорядоченной
+    trades: заказ монеты монете
+    k_line_editor: k редактор строк
+    k_line_preset: K редактор предустановка
+    fiat_trade: указ
+    appeal_list: Список жалоб на торговлю валютой
+    statistics: статистика
+    system_info: системная информация
+    reconciliation_manage: управление сверкой
+    reconciliation_list: контрольный список
+    risk_control: Контроль рисков
+    user_info: Личная информация
+    edit_password: Сменить пароль
+    edit_google_otp: Изменить Google Captcha
+    signout: Выйти
+    market_making: вести торговлю
+    hedge_records: хеджированная запись
+  edit_google_otp:
+    title: Привязать Google Captcha
+    already_bound: Сбросить новый пароль
+    no_binding: Вы еще не связали Google Authenticator. Пожалуйста, свяжись как можно скорее
+  personal_information:
+    title: Личная информация
+    upload_avatar: Загрузить аватар
+    nickname: кличка
+  edit_password:
+    title: Сменить пароль
+    old_password: Оригинальный пароль
+    new_password: Новый пароль
+    reset_new_password: Сбросить новый пароль
+  public:
+    user_phone_email: абонентский телефон (почтовый ящик)
+    protocol_for_users: Проток
+    all_user: все польз
+    selected_user: фоновая группа
+    add: прибавление
+    address: адрес
+    all: полный
+    back: возвращение
+    cancel: отменен
+    clear_filter: контрольный
+    currency: валюты
+    comment: замечание
+    commission: сборы
+    confirm: Подтверждение
+    confirm2: определить
+    delete: Удалить
+    delete_confirm: Вы уверены, что хотите удалить его?
+    details: подробность
+    edit: редактировать
+    email: почтовый ящик
+    email_hint: Пожалуйста, введите адрес электронной почты
+    example: например
+    export_csv: Экспорт CSV
+    family: семья
+    from: от
+    gender: пол
+    history_date: Нет истории
+    import_csv: Импорт CSV
+    list: список
+    name: Полное имя
+    name2: имя
+    no_result: Там нет записи
+    operation: операционная
+    operator: оператор
+    pair: Пара
+    phone: Телефон
+    quantity: количество
+    real_name_situation: Реальные имя случая
+    reconciliation: сверка
+    search: запрос
+    select_coin: Пожалуйста, выберите валюту
+    sign_time: зарегистрированный
+    status: состояние
+    submit: представить
+    time: время
+    to: к
+    total: общий
+    transaction: сделка
+    types: тип
+    upload: Загрузить
+    user: пользователь
+    user_id: ID пользователя
+    verified: Проверенный
+    verify_time: Время подтверждения
+    view: вид
+    wallet_addr: Кошелек адрес
+    buyer_name: имя покупателя 
+    seller_name: имя продавца 
+    buyer_phone: телефон покупателя 
+    seller_phone: Чейз 
+    account_type: Тип учетной записи
+  lever:
+    Leveraged_lending: брать взаймы
+    leverage_interest: установление процентов по кредитам
+    list_of_leveraged_loans: Список заемных средств
+  members:
+    add_protocol_users: Добавить пользователя протокола
+    users_for_protocol: пользователь протокола
+    mobile: валютные
+    IEO: Новая игра
+    activity_name: Название события
+    airdrop_candy: десантный конфеты
+    alert: Этот пользователь бы
+    available_banlance: Доступный остаток
+    back: возвращение
+    basic_information: Базовая информация
+    birthday: день рождения
+    buy: Купить
+    buyer: Купить сторона (став
+    cancel: отменен
+    cash: добывать деньги
+    coin_to_coin_transaction_done: Валюта валютные опер
+    coin_to_coin_transaction_undone: Валюта сделки (прово
+    comment: банкнота
+    confirm: определить
+    current: ток
+    digital_currency_name: Название Цифровой ва
+    digital_currency_total: Общая цифровая валют
+    disable: Отключить
+    disabled_state: инвалид
+    document_photo: паспорт
+    forbidden_state: инвалид
+    freeze_quantity: Замораживание количе
+    generated_out_of_air: Сформирован из возду
+    generated_out_of_air_amount: 'Создавать деньги из '
+    generated_time: время генерации
+    get_coin: Полученная валюта
+    home_address: собственный адрес
+    id_card_back: ID карты обратно
+    id_card_front: ID передней карты
+    id_card_record: Индентификационный
+    id_card_review: Обзор карты ID
+    identification_number: номер карты идентифи
+    in_card_inhand: Handheld удостоверен
+    input_coin: Инвестиционная валют
+    inside_station_transfer: передаточная станция
+    inviter: Пригласите людей
+    legal_currency_total: Общий закон валют
+    locking_banlance: Стоп-кадр Баланс
+    manual_confirm: Он подтвердил, вручн
+    member_list: Список пользователей
+    member_name: Полное имя
+    member_phone: Телефон
+    modify_password: Изменение пароля
+    my_invitation_code: Приглашаю код
+    need_checked: В ожидании
+    new: новый
+    nil: пустой
+    normal: нормаль
+    not_passed: Не по
+    not_uploaded: Не загружено
+    offline_information: Offline информация
+    online: Не с конвейера
+    over_the_counter_done: OTC (сделки)
+    passed: Оно прошло
+    personal_reconciliation_page: Примирение личная ст
+    price: цена
+    query_asset_details: Запросы детали актив
+    real_name_information: Информация имя-Real
+    recent_login_time: В последнее время ре
+    recharge: Валюта заряда
+    registered_at: Войти
+    registered_invitation_code: Заполните регистраци
+    registered_time: зарегистрированный
+    release_time: время выпуска
+    sell: Продать
+    seller: Продаем сторона (спр
+    submit: Подтверждение
+    sum: общий
+    thaw_data: Оттепель данные
+    total_users: Общее количество пол
+    transaction: операции
+    transfer_initiator: Передача спонсор
+    transfer_recipient: получатель Transfer
+    undone_verified: Неполное Authenticat
+    unfreeze_amount: Количество незамерзш
+    unique_mark: Пользователь уникаль
+    unique_user_id: Идентификатор пользо
+    user_asset_information: Сведения об объекте
+    verified_record: Прошлые запросы в ре
+    verify_time: Время подтверждения
+    calculation_formula_available_amount: Общая доступная = Общая выручка - Общие расходы - Статистика комиссионных сборов - Временная привязка
+    calculation_formula_locking_quantity: Заблокированное количество = Заблокированное общее количество - Оттаивание по времени
+    available_quantity: Количество доступных
+    calculate_balance: Расчет баланса
+    calculate_locking: Блокировка вычислени
+    correct: правильный
+    current_balance: сальдо текущего счет
+    current_currencies: Текущая валюта
+    current_locking: В настоящее время за
+    digital_currency_amount: Общая сумма электрон
+    error: ошибка
+    income_coin_to_coin: Валюта торговый дохо
+    income_coin_to_coin_description: Пользователи через ц
+    income_legal_coin: торговый доход франц
+    locking_quantity: Number Lock
+    recharge_coin: Валюта заряда
+    recharge_coin_description: Расчет кредитов были
+    switching_currencies: Переключатель валют
+    total_income: Общий доход
+    airdrop_candy_add: Увеличение конфеты п
+    airdrop_candy_add_description: Валюта выданные их с
+    business_buy_digital_currency: Для того, чтобы «биз
+    income_legal_coin_description1: 'Указывает, что <span style="color: green">выданные</span>польз'
+    income_legal_coin_description2: 'Есть два случая:<br/>1. ведения об объ<br/>2.следнее время'
+    inside_station_transfer_income: доходы передачи стан
+    inside_station_transfer_income_description: Например, пользовате
+    old_data_migration: Старые миграции данн
+    old_data_migration_description: Доступный остаток Ст
+    ordinary_user_buy_digital_currency: Для «обычного пользо
+    out_of_thin_air_add_virtual_assets: Из тонкого воздуха д
+    out_of_thin_air_add_virtual_assets_description: 'Производная от фона '
+    digital_currency_draw: Цифровая валюта упом
+    digital_currency_draw_description: Упоминание государст
+    pay_coin_to_coin: Курсы валют торговых
+    pay_coin_to_coin_description: Уменьшая цифровую ва
+    pay_legal_coin: Валюта расходов по с
+    pay_total: полные расходы
+    service_charge: Плата включает в себ
+    pay_legal_coin_description1: 'Указывает, что <span style="color: green">выданные</span>польз'
+    pay_legal_coin_description2: 'Есть два случая:<br/>1. ведения об объ<br/>2.следнее время'
+    airdrop_candy_reduce: Уменьшить падение ко
+    airdrop_candy_reduce_description: 'Когда сторона капли '
+    back_to_personal_reconciliation_page: Возврат к персональн
+    business_sell_digital_currency: Для того, чтобы «биз
+    buy_trade: Купить торговое
+    cash_service_charge: 'Упоминание валютные '
+    cash_service_charge_description: Если это. Только пос
+    cash_verify_locking: 'Снятие блокировки в '
+    cash_verify_locking_description: Снизить доступный ба
+    coin_locking: Currency монеты в ож
+    coin_locking_description: Поскольку валюта тор
+    coin_service_charge: операционные сборы В
+    coin_service_charge_description: Общая сумма вознагра
+    generate_locking_currency: Блокировка деньги, п
+    generate_locking_currency_description: Сформировано из возд
+    id_unique: ID (уникальный идент
+    income: доходов
+    edit_is_able_to_login: Изменить статус ошибки пароля
+    edit_is_able_assets_password: Изменить статус отключения пароля при ошибке пароля
+    income_coin_to_coin_details: Курсы валют Данные д
+    income_service_charge: Комиссионный доход
+    inside_station_transfer_pay: Расходы на пересадоч
+    inside_station_transfer_pay_description: Цифровая валюта пере
+    legal_currency_service_charge: Юридические сборы те
+    legal_currency_service_charge_description: Юридическая нежная с
+    locking_total: Всего блокировки
+    locking_undeal: Fabi не торговал зам
+    locking_undeal_description: Поскольку закон торг
+    never_deal: Никогда сделки
+    new_password: Новый пароль
+    no_calculate_part: Часть не участвует в
+    old_data_locking_recharge: Старые монеты для за
+    old_data_locking_recharge_description: Старая биржа для пер
+    ordinary_user_sell_digital_currency: Для «нормального пол
+    out_of_thin_air_reduce_virtual_assets: Сокращение активов и
+    out_of_thin_air_reduce_virtual_assets_description: 'Производная от фона '
+    part_deal: Часть сделки
+    pay: расходов
+    pay_coin_to_coin_details: Валюта торговые расх
+    pay_service_charge: плата за расходы
+    repeat_new_password: Повторите новый паро
+    sell_trade: Продать
+    service_charge_count: статистика Премиум
+    station_transfer_service_charge: Плата за трансфер во
+    station_transfer_service_charge_description: Если это.
+    timing_unlock: Сроки оттепели
+    total: общий
+    type: категория
+    unlock_money: Оттепель сумма
+    unlock_money_description: Нужно растопить коли
+  id_card_approvals:
+    applicant: заявитель
+    apply_submit_time: подачи время
+    audit_status: статус одобрения
+    auditor: рецензент
+    id_card: ID карты
+    id_card_description: Утверждение удостове
+    need_checked: В ожидании
+    no_result: Нет данных
+    passport: паспорт
+    view: вид
+    view_and_review: Просмотр и аудит
+  accounts:
+    account_id: Идентификатор аккаун
+    available_balance: Доступный остаток
+    available_banlance: Доступный остаток
+    current_page: Эта страница
+    freeze_balance: Стоп-кадр Баланс
+    hold_available_balance: Держа доступный оста
+    hold_locking_balance: Блокировка держать
+    hold_total_balance: Общий остаток провед
+    less_than: Менее
+    locking_banlance: Стоп-кадр Баланс
+    more_than: Больше
+    sum: общий
+    total: в целом
+    users: пользователей
+    users_assets: активы пользователей
+  scheduled_unlockings:
+    click_download: скачать
+    current_unlock_sum: В настоящее время ко
+    info: Базовая информация
+    manual_add: добавить вручную
+    manual_unlock: Руководство оттаиван
+    operation_type: Тип действия
+    timing_unlock: Сроки оттепели
+    unlock: оттепель
+    unlock_amount: Количество незамерзш
+    unlock_data: Оттепель данные
+    unlock_entrance: вход оттепели
+    unlock_example_csv: 8.19 оттепели .csv
+    unlock_time: время выпуска
+    upload_hint: 'Нажмите только один '
+    user_phone: пользователи телефон
+  deposits:
+    confirm_time: Время подтверждения
+    create_time: созданный
+    deposits_total: Общая страница перез
+    index_title: Валюта заряда
+    process_name: имя процесса
+    process_status: режим процесса
+    process_title: Валютный сбор наблюд
+    select_coin: Пожалуйста, выберите
+    stopping: Остановился
+    title: законным
+    balance: состоянию
+  withdraws:
+    attention: "бщая стра： <br/>
+      1. иссионный доход。<br/>
+      2. Базовая информация <br/>
+      3. пользователи телефон
+    "
+    agree: согласны
+    already_copied: Он был скопирован
+    application: приложение
+    apply_time: Применение / утвержд
+    approval: утверждение
+    check_account: аудит
+    copy: копия
+    execute: выполнение
+    history: история
+    title: Повышать деньги пров
+    undo: Отменить
+  currencies:
+    base_factor: базовый фактор
+    base_factor_hint: (Сколько детей после)
+    block_query: Блок запрос
+    circulation: Количество непогашен
+    code: Код (в нижнем регист
+    commission_fixed: Плата за трансфер ст
+    contract_address: адрес контракта
+    edit_title: Изменить данные валю
+    en_intro: Валюта презентация
+    eth_addr: 'адрес ETH контракта '
+    exist_msg: Валюта уже существуе
+    fullname: Валюта Полное имя (н)
+    hidden: Скрыть
+    icon: иконка
+    icon_link: Валюта значок ссылка
+    index_title: Обмен валюты
+    is_commission_fixed: Есть упоминание валю
+    is_display_otc: Он отображается в ОТ
+    is_rechargeable: Вы можете брать день
+    is_visible: ВИДИМО
+    is_withdrawable: Могу ли я положить м
+    is_within_station: 'Могу ли я перевести '
+    jp_intro: Валюта Введение (япо)
+    kr_intro: Валюта Введение (кор)
+    name: имя
+    new_title: Новая информация вал
+    option: опции
+    otc_decimal_point: 'OTC торговых знаков '
+    otc_fee: тарифы транзакций OT
+    otc_minimum: ОТК минимальная сумм
+    position: Положение (чем больш)
+    precision: точность
+    recharge_minimum: Минимальная сумма за
+    recharge_withdraw: Наполнение Упоминани
+    rechargeable: перезаряжаемый
+    region: Валюта область
+    release_quantity: номер выпуска
+    release_time: выпущенный
+    ru_intro: Валюта Введение (Рус)
+    site: Официальный сайт
+    symbol: 'Символ (должны быть) '
+    token: знак
+    visible: видимый
+    whether: ли
+    white_paper: белая книга
+    withdraw_commission: 'Упоминание валютные '
+    withdraw_minimum: Минимальная сумма де
+    withdrawable: водозабор мая
+    yes_: Здесь
+    yes_fixed: Это фиксированы
+    zh_intro: Валюта Введение (кит)
+  markets:
+    ask_unit: Цена продажи (ASK)
+    bid_unit: Цена покупки (BID)
+    is_stock: Показывать акции
+    is_margin: поддерживающий рычаг 
+    ask_currency_precision: точность целой части
+    ask_currency_scale: точность дроби
+    bid_currency_precision: точность целой части (bid)
+    bid_currency_scale: десятичная дробь
+    buy_accuracy: Купить точность цены
+    buy_commission: Стоимость покупки
+    edit_alert: Только профессиональ
+    edit_title: Редактирование опера
+    index_title: управление транзакци
+    min_trade: Минимальный объем то
+    new_title: Новая транзакция
+    order: Сортировка положения
+    price_accuracy: Цена Точность
+    quantity_accuracy: Количество точности
+    sell_accuracy: Точность цены продаж
+    sell_commission: комиссия за продажу
+    trade_visible: Является видимым
+    unvisible: невидимый
+    stock_name: название акции
+  a2a_transfer:
+    alert: Конфеты помещаются
+    payee: бенефициар
+    payer: Играть деньги челове
+    reciver: адресат
+    sender: отправитель
+    title: Список десантных кон
+    transfer_time: время передачи
+  IEO:
+    only_positive_integer: разрешить ввод только положительных целых чисел
+    edit_title: Редактировать десятк
+    end: Конец десятка новых
+    end_confirm: Вы уверены, что хоти
+    end_time: Время окончания
+    form_banner: баннерные изображени
+    form_coin: Играя новую валюту
+    form_coin_num: Играя новую валюту
+    form_coin_unlock: Валюта Разблокирован
+    form_end_time: Время окончания
+    form_exchange_num: Каждый подъем конвер
+    form_fee: Соотношение Платы
+    form_hint1: 'ТГК игровые деньги'
+    form_hint2: Пожалуйста, выберите
+    form_hint3: (Двадцать миллионов)
+    form_hint4: Плата представляет
+    form_hint5: Пожалуйста, выберите
+    form_hint6: Второй этап просто з
+    form_hint7: 20000 (ETH представл
+    form_hint8: 72 часов после того,
+    only_numbers: только цифры 0 ~ 1
+    form_icon: значок фотографии (н
+    form_max: Максимальное число л
+    form_min: Повышение минимально
+    form_raise_coin: Воспитанные валюты (
+    form_raise_goal: Повышение количества
+    form_stage: фаза
+    form_start_time: Время начала (с точн
+    from_fake_num: Конец игры новый ном
+    intro: Введение
+    list_gain: Получить играть новы
+    list_name: Участник Имя
+    list_participate: Участие в игре новог
+    list_people: участники
+    list_time: Время участия
+    list_title: Участие в игре новог
+    new_title: Новая десятка новых
+    start: Новое начало игры
+    start_confirm: Вы уверены, что Вы
+    start_time: Время начала
+    title: заголовок
+    view: вид
+    is_human_intervention: искусственное вмешательство 
+  internal_transfers:
+    coin: Валютные переводы
+    fee: комиссия за трансфер
+    num: Сумма зачисляется на
+    receiver: Получение счета
+    receiver_email: получатель спонсор
+    sender: Отправить счета
+    sender_email: Передача спонсор
+    title: 'Список передаточной '
+  system_var:
+    alarm_title: набор Прием вызова т
+    alert: Вот некоторые переме
+    database_connect: Соединения базы данн
+    database_title: Здоровье базы данных
+    edit_title: Постоянная система р
+    en: английский
+    index_title: Постоянная система у
+    jp: японский
+    kr: русский
+    ru: система
+    lang_title: язык по умолчанию
+    new_title: Новая система Конста
+    order: последовательность
+    phone_hint: 'Пожалуйста, введите '
+    status: состояние здоровья
+    transaction_title: Торговля на настройк
+    update_time: обновленный
+    value: значение
+    withdraw_title: Упоминание кредиты
+    zh: китайский
+    robot_id_set: робот ID
+    operation: операция 
+    member_name: номер счета пользователя 
+    add_robot: Добавить робот ID
+    max_failed: Разрешить максимальные логины
+  slider:
+    index_title: управлять слайдом домашней страницы
+    edit_title: редактировать слайд главной страницы
+    new_title: слайд новой домашней страницы
+    edit_show: шоу
+    title: Шифровальщик
+    type: Химик-технолог
+    link: Операционист
+    is_display: Крановщик
+    upload: Антрополог
+    creator: Физиотерапевт
+    uploader: Операционист
+    preview: Маркитант
+    website_type: Тип сайта
+  progress:
+    alert: 'Примечание: не-программисты, не могут быть изменены или удалены'
+    checktime: контрольный срок
+    edit_title: Редактирование процесса
+    index_title1: Видимые сделки
+    index_title2: Невидимые операции
+    index_title3: Заказы не совпадают соединения с базой данных
+    index_title4: Мониторинг списка процессов
+    log: статус журнала
+    log_tail: Наконец, содержимое журнала
+    name: Имя процесса
+    new_title: Новый процесс мониторинга
+    no_: нет
+    project_name: Если название проекта
+    server_name: Имя сервера
+    title3_connect: соединения с базой данных
+    title3_order: Все заказы не совпадают
+    monitoring_or_not: контроль выполнения
+  realtime:
+    comment: замечание
+    edit_title: Редактирование мониторинг в режиме реального времени
+    error_call: Последнее сообщение об ошибке время голосового вызова
+    error_call_times: Последние сообщения об ошибках номер голосового набора
+    error_sms: Последнее неподходящее время для отправки текстовых сообщений
+    error_sms_times: Количество текстовых сообщений, отправленных последнюю ошибку
+    index_title: Мониторинг в реальном времени
+    interval: Мониторинг интервал запроса (в секундах)
+    last_checked: Последняя проверка
+    new_title: Создать мониторинг в режиме реального времени
+    status: Текущее состояние
+    type: Тип мониторинга
+    url: Мониторинг URL запроса
+    value_string: строка
+  roles:
+    collect_permission: Последняя проверка
+    edit_title: Изменение роли
+    hint: система не имеет прав на сбор, пожалуйста, права на сбор
+    index_title: Список ролей (эта страница нетехнического персонала запретить работу)
+    manage_permission: Управление правами
+    new_title: Новая роль
+    select_all: выбрать
+    set_permission: права доступа
+  app:
+    IOS: IOS версии загрузить ссылку
+    android: Android версия скачать ссылку
+    edit_title: информация APP редактировать версия
+    en: Английское Примечание к выпуску
+    index_title: управление версиями APP
+    new_title: Информация о версии New APP
+    ready: готовый
+    ready_IOS: версия IOS готова
+    ready_android: Android версия готова
+    unready: Не готов
+    ver: Номер версии
+    ver_hint: Она должна отличаться от предыдущей версии
+    zh: Примечания к выпуску китайских
+  footer_icon:
+    new_title: Антрополог
+    edit_title: Релайтер
+    add: Учёный
+    index_title: Спортивный врач
+    index_hint: (Начальник склада)
+    enable: Фуражир
+    disable: Каменотёс
+    icon: Разведчик
+    link: Учёный
+    desc: Адвокат
+    redirect: Операционист
+    example: Крановщик
+  robots:
+    index_title: Квасник
+    new_title: Антрополог
+    edit_title: Операционист
+    market: Маркитант
+    hang_interval: Учёный
+    trade_interval: Спортивный врач
+    or: Физиотерапевт
+  country:
+    index_title: Оператор коллцентра
+    edit_title: дальних поездках
+    new_title: Начальник склада
+    country: Нейрохирург
+    code: Оператор
+    is_disable: Эксперт криминалист
+  virtual:
+    account: счета
+    add_to: увеличенный
+    alert: Так капельной конфеты и другие причины, нам нужен цифровой виртуальную валютуна счет
+    balance: Доступный остаток
+    beneficiary: векселедержатель
+    freeze: Стоп-кадр Баланс
+    income: Платежный баланс
+    index_title: список Виртуального актива
+    is_lock: запирается
+    new_title: новый
+    operation_time: время работы
+    quantity_hint: Является ли вычитается положительное число отрицательного числа
+    reduce: снижение
+    select_account: Пожалуйста, выберите учетную запись
+    select_coin: Пожалуйста, выберите валюту
+  put_crypto:
+    amount: деньги
+    big_wallet: Для того, чтобы организовать большой кошелек
+    cmd: Оригинал команды
+    time: время
+    title: GuiLong заряда денег запись
+    total: Общий объем страницы
+    total_hint: После первого выбора хорошей валюты, вы можете увидеть общее количество
+    wallet_addr: Кошелек адрес
+  wallet:
+    addr_coin: Соответствующие номера адресных кредитов
+    addr_info: ETH или адресная информация BTC или USDT
+    addrs: адрес
+    alert: 'Примечание: адрес пользователя бумажник баланса с балансом в обмене двух понятий,два'
+    available: Обмен доступен
+    erc_info: Адресная информация ERC-20
+    freeze: Обмен замороженное
+    index_title: Пользователи бумажник
+    last_check: Последняя проверка
+    name: Имя пользователя, имя
+    owner: Пользователь принадлежит
+    password: пароль
+    show_title: Кошелек Подробнее
+    view: вид
+    total: общий
+  cc_unordered:
+    all_cancel_confirm: Вы уверены, что вы хотите на этой странице, выбранные заказы аннулированногоэто?
+    ascending: восходящая
+    bulk_revocation: Пакетная отозвана
+    cancel: Отменить
+    cancel_confirm: Вы уверены, что хотите отменить сделать заказ?
+    comma_separated: Запятая разлуке
+    commission_amount: Основная сумма
+    commission_direction: Основное направление
+    commission_time: По заказу Время
+    descending: По убыванию
+    done: полный
+    hope_to_see_user: Я хотел бы видеть идентификатор пользователя
+    market: рынок
+    never_dealt: Никогда сделки
+    not_sorting: Не сортированные
+    number_ordering: правила сортировки
+    order_code: Заказы кодирования
+    order_list: Список транзакций
+    order_quantity: заказы
+    original_quantity: Оригинальный номер
+    partial_deal: Часть сделки
+    pay_the_bill: Оплатить
+    phone_number: Телефон
+    price: цена
+    price_greater_than: Цена больше
+    price_lower_than: Цены ниже
+    sell_orders: Продаем заказы
+    source: источник
+    unfilled_quantity: Количество непроданных
+    unit_price: Сортировать по Цене
+    user_id: ID пользователя
+    user_not_watching: Я не хочу видеть, идентификатор пользователя
+    withdrawn: Он имеет снятие
+  trades:
+    batch_rollback: Пакетная откат
+    batch_rollback_confirm: Вы уверены, что вы хотите на этой странице, выбранные транзакцииоткатить его?
+    buyer: покупатель
+    choose_currency: Пожалуйста, выберите валюту
+    confirm: определить
+    download: Загрузить CSV
+    handling_fee: сборы
+    market: рынок
+    number_of_transactions: Количество сделок
+    order_list: Список транзакций
+    price: цена
+    price_from: цены от
+    rollback: отмена
+    seller: продавец
+    time_from: время от
+    trading_volume: объем торгов
+  k_lines:
+    Volume: объем
+    closing_price: цена закрытия
+    data_list: Список данных K линии
+    formatted_time: Время форматируется
+    highest_price: высшая цена
+    interval: интервал
+    lowest_price: низший
+    opening_price: цена открытия
+    original_data: Исходные данные
+    original_time: Оригинальный время
+    record: Нет записи
+    total: общий
+    transaction_pair: операции
+  preset_k_lines:
+    title: Оригинальный
+    insert_data: форматируется
+    database: транзакций
+  otc_tradings:
+    advertiser: реклама
+    advertisers: Рекламодатели
+    buy: Пользователи покупают
+    buyer: Покупатели
+    coin_number: Количество цифровой валюты
+    creation_time: созданный
+    extension_time: Независимо от того, чтобы продлить время
+    fcoin_number: Количество монет закона
+    history_record: Нет истории
+    not_: нет
+    order_number: Номер для заказа
+    order_type: Типы заказов
+    ransaction_type: Тип сделки (пользователь)
+    sell: Пользователи Sell
+    seller: Продавцы
+    status: Статус заказа
+    timeout: Тайм-аут ли
+    title: OTC Заказы
+    view: вид
+    wether_cancle: Следует ли отменить
+    yes_: Здесь
+  disput:
+    title: Безработный
+    phone: Табаковод
+    appeal_time: Филолог
+    appeal_content: Фортификатор
+    status: Рефлексотерапевт
+    order: НефрологID
+    cancel: Садовод
+    reason: Гинеколог
+    save: Филолог
+    restore: Веб-интегратор
+    details: Табаковод
+  system_statistics:
+    title: Кардиохирург
+    registered_number : Слесарь
+    legal_currency_trading: Оперативный
+    transaction_number: Машинистка
+    recharge_coin: Продавец
+    extract_coins: Блоггер
+    transfer: Машинистка
+  account_statistics:
+    calculatin_income_method: "июля пользователи импортавходят во все оста<br/><br/>
+                              обменивать 29 июля пользователи импортавходят во "
+    real_time_information: "Упоминание даты валюты (успех Упоминание <br>
+                            операционные<br>
+                            1. Старые монеты положить монеты в полных данных.<br>
+                            2. Старые монеты положить настоящее время заблокирован данных.<br><br>
+                            операционные + Рассчитать блокировку = плата<br><br>"
+    method_one: Значение 1 Рассчитать операционные + Рассчитать блокировку = плата за обработку
+    method_two: Значение 1 Рассчитать баланс + Блокировка блокировку = плата за обработку
+    difference_reason: "Ребятишки цепочка парень прелесть 22142107.268918 плата 64500.0，<br>
+                       Мера соответствие скользить пятеро.<br>
+                       склада：150860.86<br>
+                       Релайтер：86360.86<br>"
+    migrated_assets_cab: "Мера：12836786.268718000000000000<br>
+                         Релайтер：9305321.000200000000000000<br>
+                         склада：22142107.268918<br><br> "
+    migrated_assets_usdt: "Мера：3218733.781133297695170301<br>
+                          ебятиш：110368534.465616981480959722<br>
+                          елайте：113587268.24675028<br> "
+    amount_coins_commission: Упоминание валютные сборы
+    balance: Текущий баланс (за вычетом роботов)
+    balance_change_file: Файл изменений баланса счета пользователя
+    balance_lock: Текущий баланс + Блокировка
+    balanced_currency: Старые монеты для заряда баланса данных
+    cc_commission: операционные сборы Валюта
+    cc_robot: Валюта платформа валюты торгового робота
+    choose_coins: Пожалуйста, выберите валюту
+    coin_amount_today: Сегодня говоря уже о количестве денег
+    cold_wallet_balance: Холодный Кошельке
+    compute_balance_lock: Расчет Расчет баланса замок +
+    compute_method: (Старый баланс + Old Lock) + стоимость денег (из тонкого воздуха генерироватьсябалан)
+    confirm_receipt: День заряд кредиты (подтверждение прибытия)
+    currency_amount: Сегодня сумма взимается
+    current_balace_lock: Текущий баланс + замок (сеть роботов)
+    current_balance: сальдо текущего счет
+    current_currency: Текущая валюта
+    current_lock: В настоящее время заблокирован
+    date: дата
+    failure: отказ Примирение
+    first_time: 25 июля
+    groundless_balance: Сформирован из воздуха (баланс)
+    groundless_lock: Сформирован из воздуха (заблокирован)
+    hot_wallet_balance: Тепловой кошелек (бумажник Упоминание денег) Баланс
+    income: Общая платформа дохода
+    income_expenditure: Сегодня, платежный баланс
+    income_norobot: Платформа валовой доход (без учета робот)
+    legal_coin_commission: Юридические сборы тендер сделки
+    lock: В настоящее время заблокирован (сеть роботов)
+    lock_the_coin: Старые монеты для заряда данных блокировки
+    migrated_assets: Перенос данных на активы (обменивать 29 июля пользователи импортавходят во все остат)
+    reconciliation_information: информация о примирении
+    record: Учет записи дат конкретных
+    remarks: Примечания Информация
+    robot: Рынок решений робот
+    second_time: 30 июля
+    success: успех Примирение
+    successful_withdrawal_coins: Упоминание даты валюты (успех Упоминание валюты)
+    switch_currency: Переключатель валют
+    test_robot: Тест робота
+    thaw_quantity: В тот же день количество оттепели
+    title: Общий интерфейс сверки
+    today_income_norobot: День общий доход (без учета робот)
+    total_amount_coins: Общая сумма денег взимается
+    total_amount_of_coins: Общая сумма денег положить
+    total_balance: Общая система баланса
+    total_commission: Общий сбор
+    total_confirm_receipt: Общая сумма денег взимается (вычитают подтверждение)
+    total_currency_lock: Старые монеты положить монеты в полных данных заряда
+    total_generate: Общее генерируется из воздуха
+    total_not_grow: Сумма платформы не рост
+    total_withdrawal_coins: Общая сумма денег положить (успех Упоминание денег)
+    transfer_commission: Плата за трансфер вокзал
+  automatic_reconciliation_list:
+    title: Упоминание
+    description: "Старые монеты положить монеты в полных <br/>
+                 монеты положить монеты в полных данных заряда．"
+    date: господь
+    runner: мелькнуть
+    result: расстегнуть
+    view: уронить
+  account_statistics_in_special_date:
+    reconciliation_formula: "соответствие：<br/>
+                            Плясать прежде песенка неудобно потянуться слишком. <br/>
+                            Непривычный монета редактор тута ярко плавно.　<br/>
+                            Сходить научить выразить одиннадцать совещание пламя карман.<br/>"
+    start_date: одиннадцать совещание
+    total_number: песенка неудобно
+    no_: прелесть
+    amount_commission: Сегодня сборы Упоминание валюты
+    available_balance: По состоянию на дату общего доступного остатка (для записи)
+    cc_commission: операционные сборы Валюта Сегодня
+    cold_wallet_balance: По состоянию на дату холодного бумажника баланса (для записи)
+    expenditure: расходов
+    freeze_balance: По состоянию на дату баланса общего замораживания (для записи)
+    hot_wallet_balance: На дату теплового баланса кошелька (для записи)
+    ieo_commission: Плата за сегодня НОО
+    income: доходов
+    income_expenditure: Положительный доход, отрицательные расходы
+    no_search: Нет результатов поиска
+    reference_data: Справочные данные
+    report: Отчеты
+    search_time: Найти время
+    today_amount_coin: По состоянию на сегодняшний день от общей суммы денег положить
+    today_currency_amount: Сегодня сумма взимается
+    today_lc_commission: Сегодня операционные сборы законным платежным
+    total_amount_commission: По состоянию на дату общих расходов упомянуть монеты
+    total_balance: По состоянию на дату общего баланса + Total замороженная (для записи)
+    total_cc_commission: По состоянию на дату полной стоимости сделки монеты валюты
+    total_currency_amount: Общая сумма денежных средств взимается по состоянию на этудату
+    total_ieo_commission: По состоянию на сегодняшний день в общем объеме расходов НОО
+    total_lc_commission: Всего законным платежным средством по состоянию на дату сделки сборов
+    total_tranfer_commission: По состоянию на дату таксы тахеометра
+    total_transfer_fee: По состоянию на дату полной цифровой передачи денег, чтобы тратить(снятие GuiLong)
+    total_virtual_asset: Общая сумма активов по состоянию этого виртуального поколениядате
+    transfer_commission: Стоимость трансфера на станции сегодня
+    transfer_fee: День цифровой денежные переводы стоимость (снятие GuiLong) (для записи)
+    virtual_asset: Сегодняшнее поколение виртуальных активов
+  cold_wallet:
+    title: поколение
+    note: сумма активов по состоянию этого виртуального
+    address: состоянию
+    balance: законным
+    click: результатов
+    search_holders: (Мера мелькнуть растеряться рот разводить новый.)
+  today:
+    agree: согласны
+    agree_confirm: Вы уверены?
+    alert: 'Формула: Доход = Charge сегодня монеты - монеты + упоминают сгенерированноезначение '
+    amount: Сумма
+    appeal1: приложение
+    appeal2: утверждение
+    appeal3: выполнение
+    appeal_str: Применение / утверждение / время выполнения
+    confirm_time: Время подтверждения
+    gold: Сумма прибытия
+    nodata: Нет данных
+    recharge: Сегодня валютный сбор
+    virtual: Сегодняшнее поколение виртуальных активов
+    withdraw: Сегодня упоминание денег
+  hot_wallet:
+    title: поколение
+    alert: "Слишком танцевать торговля построить.. <br/>
+      Сегодняшнее. Какой выразить легко термин труп."
+    balance: выполнение
+    balance_sum: BTCпоколение виртуальных
+    hint: сегодня монеты - монеты + упоминают
+  air_assert:
+    title: Количество
+    account: уверены
+    total: упоминают
+    operation_time: понедельника
+  total:
+    advertisement_initiator: Рекламные спонсоры
+    agree: согласны
+    apply: приложение
+    apply_approve_execution_time: Применение / утверждение / время выполнения
+    approve: утверждение
+    coin_to_coin_transaction: Валюта валюта
+    coin_to_coin_transaction_description: Плата за сделкой текущей монеты валюты 0. Соследующего понедельника будет снята
+    confirm: Вы уверены?
+    create_time: созданный
+    digital_currency_number: Количество цифровой валюты
+    excute: выполнение
+    legal_coin_transaction: Торговля валютой закон
+    legal_currency_number: Количество монет закона
+    lock: запирающий
+    lock_total: Общий замок баланса
+    order_number: Номер для заказа
+    service_charge: сборы
+    service_charge_total: Общий сбор
+    station_transfer_accounts: передаточная станция
+    station_transfer_accounts_description: В настоящее время свободная передача станции.Расходы на следующей неделе
+    sum_gold: Общая система
+    total: общий
+    total_money: Сумма
+    total_recharge: Общая валюта заряда
+    total_sum: Общая система
+    total_withdraw: Всего деньги рейза
+    totol_commission: Общий сбор
+    transaction_type_user: Тип сделки (пользователь)
+    users: пользователь
+    withdraw_wallet_title: Баланс поднимают деньги бумажник
+  otc_fiat_advertisements:
+    advertisements_list: Валютная транзакция (внебиржевой заказ) рекламный лист
+    currency_type: Количество цифровых монет
+    fiat_type: Тип юридической валюты
+    price: цена
+    builder_id: издателя ID
+    currency_id: Цифровая валюта ID
+    unit_price: Цена за единицу
+    min_limit: Минимальный лимит
+    max_limit: Максимальный лимит
+    trade_type: Тип транзакции
+    mode_of_trading: Тип оплаты
+    is_canceled: Ли отменить
+    trading_currency_amount: Количество транзакций в цифровой валюте
+    created_at: Время создания
+    advertisements_list_details: Детали списка объявлений
+    currency_code: Код цифровой валюты
+    updated_at: Время обновления
+    trading_remark: Операционная заметка
+    trading_terms: Торговые условия

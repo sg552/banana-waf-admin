@@ -1,0 +1,21 @@
+<%= form_tag create_and_new_locale_system_variables_path, method: :post do %>
+  <table class='table table-hover table-striped' >
+    <tr>
+      <th> <%= t("system_var.lang_title") %> </th>
+      <td> <%= select_tag :value, options_for_select(
+        [
+          [t("system_var.zh"), 'zh'],
+          [t("system_var.en"), 'en'],
+          [t("system_var.kr"), 'kr'],
+          [t("system_var.jp"), 'jp'],
+          [t("system_var.ru"), 'ru']
+        ], @default_locale.try(:value)), class: 'form-control', style: 'display: inline; width: 120px' %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=10>
+        <%= submit_tag t("public.confirm"), class: 'btn btn-primary', style: 'line-height: normal;' %>
+      </td>
+    </tr>
+  </table>
+<% end %>

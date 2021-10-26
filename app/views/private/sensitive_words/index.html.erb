@@ -1,0 +1,80 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-11">
+    <h2>敏感词列表</h2>
+  </div>
+  <div style="margin-top: 0.8%">
+    <%= link_to "添加", new_sensitive_word_path, class: "fa-btn btn btn-xs btn-primary"%>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>敏感词</th>
+                <th>是否启用</th>
+                <th>创建日期</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if @sensitive_words.present? %>
+                <% @sensitive_words.each do |sensitive_word| %>
+                  <tr>
+                    <td>
+                      <%= sensitive_word.id %>
+                    </td>
+                    <td>
+                      <%= sensitive_word.name %>
+                    </td>
+                    <td>
+                      <%= sensitive_word.is_able ? '是' : '否' %>
+                    </td>
+                    <td>
+                      <%= sensitive_word.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+                    </td>
+                    <td>
+                      <%= link_to "编辑", edit_sensitive_word_path(sensitive_word.id), class: "fa-btn btn btn-xs btn-primary"%>
+                      <%= link_to "删除", sensitive_word, method: :delete, data: {confirm: t("public.delete_confirm")}, class: "fa-btn btn btn-xs btn-danger"%>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="12">
+                  <ul class="pull-right"><%= paginate @sensitive_words %></ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+.html-content img{
+  width: 50px;
+  height: 50px;
+}
+</style>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+  $(function() {
+    $('.footable').footable();
+    $(".data-alert").click(function(){
+      $(".hidden-id").val(this.id)
+    });
+  });
+  $('.datepicker').datepicker({dateFormat: "yy-mm-dd"})
+</script>
+
+<% end %>

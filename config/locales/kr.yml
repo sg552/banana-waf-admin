@@ -1,0 +1,1058 @@
+kr:
+  html:
+    lang: kr
+    title: 관리자 배경
+  views:
+    pagination:
+      first: "&laquo; 제1장"
+      last: "마지막 페이지 &raquo;"
+      previous: "&lsaquo; 앞쪽"
+      next: "다음 페이지 &rsaquo;"
+      truncate: "&hellip;"
+  google_otp:
+    i_want_to_disable: 닫고 싶습니까?
+    please_input_otp_code: Google 인증자가 표시 한 번호를 입력하십시오
+    tips: "보안을 위해 Google 인증자가 설정되었습니다. 열 것을 적극 권장합니다. <br/>
+      열면 코인 기능을 사용할 수 있습니다. <br/>
+      새 휴대 전화 번호를 푼 다음 다시 바인딩 할 수 있습니다."
+    usage: "1. Google 인증 자 다운로드 및 설치 <br/>
+      2. 전화 시간이 자동으로 업데이트되는지 확인하십시오. <br/>
+       2.1 안드로이드：설정 -> 시스템 -> 날짜와 시간 -> 자동 설정 <br/>
+       2.1 IOS ：설정 -> 범용 -> 날짜와 시간 -> 자동 설정 <br/>
+      2. 인증자를 열고 위의 QR 코드를 스캔하십시오. <br/>
+      3. 필요할 때마다 엽니 다. <br/>
+      4.장치가 QR 코드 스캔 인터페이스를 열 수없는 경우 계정 이름을 수동으로 입력하십시오： <span style='color: red'>%{email}</span>
+      그리고열쇠：<span style='color: red'>%{secret}</span>. 그리고 선택＂시간 기반＂
+      "
+  header:
+    lever: 지렛대
+    members: 사용자
+    background_administrator: 배경 관리자
+    new_manager: 새 배경 관리자
+    passport_to_be_verified: 심 사 를 기다 리 는 여권
+    lock_deducting_balance_to_another_currency: 잠 금 조작 2：잔액 이 다른 화폐 로 된 잠 금 을 공제 합 니 다
+    locally_initiated_on_chain_transfer_records: 현지 발기인 체인 이체 기록
+    display_settings_of_transaction_to_note_on_the_first_page: 첫 페이지 의 거래 에 대한 메모 표시 설정
+    user_security_settings: 사용자 보안 메커니즘 설정
+    file_upload: 파일 업로드
+    comment_list_of_transactions_in_French_currency: 법정 통화 거래 평론 리스트
+    app: APP
+    registered_users: 등록 된 사용자
+    accounts: 사용자 자산
+    id_card_list: 신분증
+    crypto_transaction: 디지털 통화 및 거래
+    scheduled_unlock: 정해진 해동
+    deposits: 통화 기록
+    withdraws: 동전 검토
+    currency: 화폐
+    transaction_pairs: 거래 쌍
+    a2a_transfer: 사탕 목록에 현금
+    IEO: 새로운 설정을
+    transfer_list: 현장 이체 목록
+    system: 시스템
+    market_monitor_settings: 거래 쌍 모니터링
+    system_constants: 시스템 상수
+    database_monitoring: 데이터베이스 모니터링
+    slider_images_management: 집 회전 목마 관리
+    related_progress_monitoring: 시스템 관련 프로세스 모니터링
+    auto_operation_monitoring: 자동화 된 운영 및 유지 보수 모니터링
+    roles_list: 역할 목록
+    app_version_management: APP 버전 관리(신 판)
+    app_version_management_old: APP 버전 관리(헌 판)
+    about_us: 우리
+    contact_us: 연락 주세요
+    set_app_down_link: App 다운로드 링크 주소 설정
+    ios_app_down_link: ios app 다운로드 링크 주소
+    ios_app_down_qr_code_img_link: ios QR 코드 다운로드 링크 주소
+    android_app_down_link: Android app 다운로드 링크 주소
+    android_app_down_qr_code_img_link : Android 2 차원 코드 다운로드 링크 주소
+    default_language_setting: 기본 언어 설정
+    alarm_receiving_phone_setting: 알람 수신 전화 설정
+    coin_receiving_phone_setting: 전화 설정 수신 돈 받기
+    footer_icons_setting: 하단 모서리 아이콘 세트
+    default_pair_setting: 점프 코인 거래 쌍 설정
+    robots_setting: 로봇 설정
+    country_code: 국가 코드
+    wallet_system: 월렛 시스템
+    virtual_asset: 얇은 공기에서 생성 된 가상 자산
+    recharge_record: 충전 추적 기록
+    user_wallet: 사용자 지갑
+    company_hot_wallet: 회사 핫 월렛
+    company_cold_wallet: 회사 콜드 지갑
+    crypto_exchange: 통화 및 장외 거래
+    orders: 코인 주문 목록 (비 충전)
+    trades: 코인 주문리스트 (완료)
+    k_line_editor: 코인 거래 K 라인 수정 자 (완료)
+    k_line_preset: 통화 트레이딩 K 라인 프리셋
+    fiat_trade: 법정 통화 거래 목록 (카운터에서)
+    appeal_list: 법폐거래신고목록
+    statistics: 통계
+    system_info: 시스템 개요
+    reconciliation_manage: 조정 관리 (전체)
+    reconciliation_list: 자동 조정 목록 (사용자 용)
+    user_info: 트레이딩
+    edit_password: 주문리스트
+    edit_google_otp: 주문 목록
+    signout: 라인 프리셋
+    market_making: 장 이 서다.
+    hedge_records: 로그 기록
+  edit_google_otp:
+    title: Google 보안 문자 바인딩
+    already_bound: 이미 Google OTP를 번들로 제공했습니다. 다시 묶을 필요가 없습니다
+    no_binding: 아직 Google OTP를 바인딩하지 않았습니다. 가능한 빨리 묶어주세요
+  personal_information:
+    title: 개인 정보
+    upload_avatar: 아바타 업로드
+    nickname: 닉네임
+  edit_password:
+    title: 비밀번호 변경
+    old_password: 원래 비밀번호
+    new_password: 새로운 비밀번호
+    reset_new_password: 새 비밀번호 재설정
+  public:
+    user_phone_email: 사용자 전화 (메 일)
+    protocol_for_users: 프로 토 콜 사용자 대상 그룹
+    all_user: 모든 사용자
+    selected_user: 백그라운드 입력 그룹
+    add: 증가
+    address: 주소
+    all: 모두
+    back: 귀국
+    cancel: 취소
+    clear_filter: 트레이딩 라
+    confirm: 확인
+    confirm2: 결정
+    comment: 비고
+    commission: 취급 수수료
+    currency: 화폐
+    delete: 삭제
+    delete_confirm: 정말로 삭제 하시겠습니까?
+    details: 세부 사항
+    edit: 편집
+    email: Email
+    email_hint: 메일박스 입력
+    example: 예를 들어
+    export_csv: 수출csv
+    family: 가족
+    from: 부터
+    gender: 성별
+    history_date: 역사가 없다
+    import_csv: 수입csv
+    list: 리스트
+    name: 이름
+    name2: 이름
+    no_result: 기록이 없습니다
+    operation: 조작
+    operator: 운영자
+    pair: 거래종
+    phone: 핸드폰 번호
+    quantity: 수량
+    reconciliation: 정산
+    real_name_situation: 실명 상황
+    search: 조회
+    select_coin: 화폐의 종류를 선택하십시오
+    sign_time: 등록 시간
+    status: 상태
+    submit: 제출
+    time: 시간
+    to: 까지
+    total: 합계
+    transaction: 거래
+    types: 유형
+    upload: 업로드
+    user: 사용자
+    user_id: 사용자ID
+    verified: 실명 인증
+    verify_time: 시간을 확인하다
+    view: 보기
+    wallet_addr: 지갑 주소
+    buyer_name: 바이어 이름
+    seller_name: 판매자 이름
+    buyer_phone: 구매자 전화
+    seller_phone: 판매자 전화
+    account_type: 계정 유형
+  lever:
+    Leveraged_lending: 지렛대 로 돈 을 빌리다
+    leverage_interest: 레버 리 지 대출 이자 설정
+    list_of_leveraged_loans: 지렛대 차관 목록
+  members:
+    add_protocol_users: 프로 토 콜 사용자 추가
+    users_for_protocol: 프로 토 콜 사용자
+    mobile: 사용자ID
+    member_list: 사용자 목록
+    member_name: 이름
+    member_phone: 핸드폰 번호
+    not_uploaded: 업로드하지 않음
+    passed: 통과됨
+    not_passed: 통과되지 않음
+    need_checked: 심의를 기다리다
+    submit: 확인
+    cancel: 취소
+    total_users: 총 사용자 수
+    alert: 사용자가 비활성화됨
+    basic_information: 기본 정보
+    unique_mark: 이 사용자의 유일한 태그/사용자 ID
+    disabled_state: 사용 안함
+    disable: 사용 안 함
+    normal: 정상적인
+    registered_at: 다음으로 등록
+    my_invitation_code: 본인의 초대코드
+    registered_invitation_code: 등록시 기입하는 초대장 코드
+    inviter: 초청인
+    verify_time: 시간을 확인하다
+    manual_confirm: 수동으로 확인해 주기
+    recent_login_time: 최근 로그인 시간
+    real_name_information: 실명 정보
+    verified_record: 실명 통과 실명 인증 기록을 조회하다
+    home_address: 가정 주소
+    identification_number: 신분증 번호
+    birthday: 생일
+    document_photo: 증명사진
+    id_card_back: 신분증 뒷면
+    id_card_front: 신분증 앞면
+    in_card_inhand: 신분증을 지참하다
+    undone_verified: 인증서가 완료되지 않았습니다
+    offline_information: 온라인 정보
+    id_card_review: 신분증 심사
+    registered_time: 등록 시간
+    id_card_record: 신분증 기록
+    online: 다음 라인 없음
+    user_asset_information: 자산 정보
+    query_asset_details: 자산 상세한 상황을 조회하다
+    available_banlance: 가용잔고
+    locking_banlance: 잔액을 동결하다
+    sum: 총액
+    recharge: 충전 머니
+    cash: 티 머니
+    coin_to_coin_transaction_done: 화폐 거래 완료
+    seller: 매출처방(ask)
+    buyer: 매입자(bid)
+    transaction: 거래가 성립되다
+    price: 가격
+    sell: 팔
+    buy: 매입
+    coin_to_coin_transaction_undone: 화폐거래 (주문서 미수)
+    type: 유형
+    freeze_quantity: 동결 수량
+    over_the_counter_done: 장외 교역
+    legal_currency_total: 법폐 총액
+    digital_currency_name: 디지털 코인
+    digital_currency_total: 디지털 머니 총액
+    input_coin: 투입되는 화폐의 종류
+    nil: 빈
+    IEO: 새를
+    activity_name: 활동 이름
+    get_coin: 화폐의 종류를 얻다
+    airdrop_candy: 사탕을 공수하다
+    comment: 주석
+    inside_station_transfer: 사이트 이체
+    transfer_initiator: 대체 발기인
+    transfer_recipient: 대체 수취인
+    thaw_data: 해동 데이터
+    unfreeze_amount: 동결 해제 금액
+    release_time: 해제 시간
+    generated_out_of_air: 무턱대고 생성하다
+    generated_out_of_air_amount: 터무니없이 많은 금액 생성
+    generated_time: 생성 시간
+    forbidden_state: 사용 안함
+    current: 현재
+    new: 새로 운
+    confirm: 확정
+    back: 돌아가
+    modify_password: 암호 수정
+    personal_reconciliation_page: 개인 계정 페이지
+    unique_user_id: 사용자 ID (유일한 표시)
+    calculation_formula_available_amount: 총량 = 수입합계-지출합계-수수료지불통계-잔고가 변한 잠금장치 + 시한풀림
+    calculation_formula_locking_quantity: 갯수 잠그기 = 잠금 합계 - 정해진 시간에 해동하다
+    correct: 정확하게
+    error: 오류
+    calculate_balance: 잔액을 계산하다
+    calculate_locking: 잠금 계산
+    current_balance: 현재 잔고
+    current_locking: 현재 잠그기
+    switching_currencies: 화폐종류 전환
+    current_currencies: 현재 화폐종류
+    available_quantity: 사용 가능한 갯수
+    locking_quantity: 갯수 잠그기
+    digital_currency_amount: 디지털 화폐 총량
+    total_income: 수입 합계
+    recharge_coin: 충전 머니
+    recharge_coin_description: 이것은 이미 계정에 도달한 충전액만을 계산한다. 확인수에 도달하지 않은 경우 (례컨대 12회 이하는)는 고려하지 않는다
+    income_coin_to_coin: 화폐 거래 수입
+    income_coin_to_coin_description: 사용자가 화폐 거래를 통해 얻는 디지털 화폐。수속비는 이미 덜었다
+    income_legal_coin: 법폐 거래 수입
+    income_legal_coin_description1: '어떤 사용자가 법폐를 통해<span style="color: green">늘디</span>디지털 화폐'
+    income_legal_coin_description2: '두 가지 경우가 있다： <br/>
+                                    1. 이 사용자는"일반 사용자"의 신분으로 기타"상가"의"디지털 화폐 판매"광고를 클릭하여 디지털 화폐를 얻는다。<br/>
+                                    2. 이 사용자는"상가"의 신분으로 광고를 내어, 기타"보통 사용자"의 디지털 화폐를"구입"하였다。<br/>'
+    ordinary_user_buy_digital_currency: "'보통 사용자'의 신분으로'상가'의 디지털 화폐를 구매하다"
+    business_buy_digital_currency: "'상가'의 신분으로'보통 사용자'의 디지털 화폐를 매입하다"
+    inside_station_transfer_income: 역내 이체수입
+    inside_station_transfer_income_description: 예를 들어, 다른 사람이 80에게
+    out_of_thin_air_add_virtual_assets: 터무니없이 증가한 가상 자산
+    out_of_thin_air_add_virtual_assets_description: '뒷배를 관리하는 작업에서 시작되었습니다.사용자의"사용 가능한 잔액"이나"잔액 동결"을 수정할 수 있다。'
+    airdrop_candy_add: 공수사탕의 증가
+    airdrop_candy_add_description: 발권자는 그들의 카운터를 통해, 공중투하된 디지털 지폐를。
+    old_data_migration: 오래된 데이터 이전:사용 가능한 잔액으로 대체
+    old_data_migration_description: '구가입자의 가용 잔액은"충전"의 형식을 통해 현재 거래소에 들어온 것이다。 <br/>
+                                   「 이전의 데터로부터 이전하여 동결한 잔액 」 이라고 비고하면 된다。'
+    pay_total: 지출을 합산하다
+    digital_currency_draw: 디지털 태환
+    digital_currency_draw_description: '화페인출 상태에는 심사비준하지 않고 심사비준한 상태, 이미 확인 <br/>
+                                        확인 된"상태만"계산합니다。'
+    pay_coin_to_coin: 화폐거래지출
+    pay_coin_to_coin_description: '사용자가 화폐 거래를 통해 감소하는 디지털 화폐。 <br/>
+                                   코인 거래 지출 수수료 포함'
+    service_charge: 지출 수수료 포함
+    pay_legal_coin: 법페 거래 지출
+    pay_legal_coin_description1: '어떤 사용자가 법폐를 통해<span style="color: red">줄해</span>디지털 화폐'
+    pay_legal_coin_description2: '두 가지 경우가 있다： <br/>
+                                  1. 이 사용자는"일반사용자"의 신분으로 기타"상가"의"디지털화페 구입"광고를 클릭하여 디지털화페로 법페를 교환한다。 <br/>
+                                  2. 이 사용자는"상가"의 신분으로 디지털 화폐 판매 광고를 내걸었다。'
+    ordinary_user_sell_digital_currency: "'보통 사용자'의 신분으로 다른'상가'에게 디지털 화폐를 팔다"
+    business_sell_digital_currency: "'상가'의 신분으로'보통 사용자'에게 디지털 화폐를 팔다"
+    inside_station_transfer_pay: 사이트 내 이체지출
+    inside_station_transfer_pay_description: 디지털 화폐를 다른 사람에게 넘기면, 자신의 잔고가 줄어든다。
+    out_of_thin_air_reduce_virtual_assets: 근거 없이 자산을 줄이다
+    out_of_thin_air_reduce_virtual_assets_description: "뒷배를 관리하는 작업에서 시작되었습니다。임의 사용자의'가용 잔액'또는'잔액 동결'을 수정할 수 있다。"
+    airdrop_candy_reduce: 사탕의 공수 감소
+    airdrop_candy_reduce_description: 항공 항공 투자자가 사탕을 다른 사람에게 공수할 때, 자신의 계정은 줄어들 것이다。
+    service_charge_count: 수수료지불통계
+    legal_currency_service_charge: 프랑스화폐거래수수료
+    legal_currency_service_charge_description: 법폐 거래에서, 매번 광고주의 수수료를 받는다。
+    cash_service_charge: 인출 수수료
+    cash_service_charge_description: 제목과 같다。화폐 인상에 성공해야만 수수료를 받을 수 있다。
+    station_transfer_service_charge: 역내 이체수수료
+    station_transfer_service_charge_description: 례를들면 문제。
+    locking_total: 잠금 합계
+    coin_locking: 화폐명세서 잠그기
+    coin_locking_description: 화폐 거래로 가용 잔액이 감소하여 잠금 잔액이 증가하다
+    part_deal: 부분 거래
+    never_deal: 거래가 성사되지 않았다
+    locking_undeal: 법폐는 거래가 성사되지 않아 잠그지 않았다
+    locking_undeal_description: 법폐 거래로 가용 잔액이 감소하여 잠금 잔액이 증가하다
+    cash_verify_locking: 현금을 인출하여 심사에 의해 고정시켜야 한다
+    cash_verify_locking_description: 사용가능한 잔액 감소, 잠금 잔액 증가
+    old_data_locking_recharge: 오래된 데이터 자동 충전
+    old_data_locking_recharge_description: '옛 거래소의 자료가 지금의 거래소로 옮겨갈 때"잔액 잠그기"를 도입해야 하는데, 이것은"화폐 충전"의 명목이다。<br/>
+                                           예를, 들어 장씨가 옛 거래소에서"잠금 잔고"가 30 이면 새 거래소에서는 충전이 생긴다."오래된 데이터로부터 이동, 잠금 가능한 잠금"이라고 적습니다。'
+    generate_locking_currency: 아무 이유없이 만들어진 고정화
+    generate_locking_currency_description: 사용자의"잠금 잔액"을 증가시키는 방법을 고안했습니다。
+    timing_unlock: 정해진 시간에 해동하다
+    unlock_money: 해동 금액
+    unlock_money_description: 어떤 사용자의 해빙 금액을 위하여'부분 잠금'의 수량을 확정하여'사용 가능한 잔액'으로 이동시켜야 한다。
+    no_calculate_part: 계산에 참여하지 않는 부분
+    coin_service_charge: 화폐거래수수료
+    coin_service_charge_description:  한 건의 거래가 성공하면 판매자와 구매자 모두 수수료를 지불해야 합니다。
+    income_service_charge: 수입 수수료
+    pay_service_charge: 수수료를 지출하다
+    total: 합계
+    new_password: 새 암호
+    repeat_new_password: 새 암호 반복
+    income_coin_to_coin_details: 화폐거래수입내역
+    id_unique: ID (유일한 표시)
+    back_to_personal_reconciliation_page: 개인 계정 페이지로 돌아가기
+    pay_coin_to_coin_details: 화폐거래지출내역
+    buy_trade: 매입 거래
+    sell_trade: 매도 거래
+    pay: 지출
+    income: 소득
+    edit_is_able_to_login: 비밀번호 오류 상태 수정
+    edit_is_able_assets_password: 자금 암호 수정 오류 비활성화 상태
+  id_card_approvals:
+    id_card: 신분증
+    id_card_description: 신분증을 심사비준하려면 최신 것 하나만 심사비준하면 됩니다。
+    applicant: 신청인
+    auditor: 심사인
+    audit_status: 심사 상태
+    apply_submit_time: 신청 제출 시간
+    passport: 여권
+    no_result: 잠시 증거를 무수히 찾다
+    need_checked: 심의를 기다리다
+    view_and_review: 검사하고 확인하다
+    view: 보기
+  accounts:
+    users_assets: 사용자의 자산
+    available_balance: 가용잔고
+    more_than: 보다
+    less_than: 보다
+    freeze_balance: 잔액을 동결하다
+    total: 모두
+    users: 개인 사용자
+    current_page: 페이지
+    hold_available_balance: 가용 잔액을 소지하다
+    hold_locking_balance: 잠금장치 잔고
+    hold_total_balance: 총계 잔액을 가지다
+    account_id: 계정 ID
+    available_banlance: 가용잔고
+    locking_banlance: 잔액을 동결하다
+    sum: 합계
+  scheduled_unlockings:
+    current_unlock_sum: 현재 해동 완료
+    click_download: 클릭 다운로드
+    unlock_example_csv: 8.19 해동.csv 다운로드 사례
+    upload_hint: 클릭 한 번으로 해주세요.절대로 여러 번 클릭하지 마세요.약 1분 정도 걸립니다.
+    unlock: 해제
+    manual_unlock: 수동으로 해동하다
+    unlock_amount: 동결 해제 금액
+    timing_unlock: 정해진 시간에 해동하다
+    user_phone: 사용자 전화
+    operation_type: 작업 유형
+    unlock_entrance: 입구 해동
+    manual_add: 수동 추가
+    info: 기본 정보
+    unlock_time: 해제 시간
+    unlock_data: 해동 데이터
+  deposits:
+    index_title: 충전 머니
+    deposits_total: 현재 페이지 충전 총액
+    select_coin: 화폐의 종류를 선택하십시오.
+    create_time: 생성 시간
+    confirm_time: 시간을 확인하다
+    process_title: 패스워크 프로세스
+    process_name: 프로세스 이름
+    process_status: 프로세스 상황
+    stopping: 정지됨
+    title: 총 충전
+    balance: 금액은
+  withdraws:
+    title: 인출 심사와 과거 기록 목록
+    attention: "주의： <br/>
+      1. USDT 태환 발기 후 1~2분 내에 tx id 조회시 인발id xxx를 보일듯 …괜찮습니다. 1분 후에 열어서 보면 구체적인 tx의 상황을 볼 수 있을 겁니다.<br/>
+      2. tx를 시작하지 않은 withdraw는 사용할 수 없습니다 <br/>
+      3. USDT, BTC이체시간 2~3시간。<br/>
+      4. 심사 확인하기 전에 반드시 사용자의 계정 버튼을 클릭하여 한 번 살펴보시오。 <br/>
+    "
+    apply_time: 신청/승인/집행 시간
+    application: 신청
+    approval: 심사 비준
+    execute: 집행
+    agree: 동의
+    undo: 취소
+    check_account: 장부를 조사
+    history: 역사
+    already_copied: 복사됨
+    copy: 복사
+  currencies:
+    index_title: 거래소의 화폐종류
+    name: 이름
+    icon: 아이콘
+    base_factor: base factor
+    token: 토큰
+    contract_address: 계약 주소
+    recharge_withdraw: 화폐 충전
+    is_visible: 보이는 곳 여부
+    yes_: 은
+    rechargeable: 충전 가능
+    withdrawable: 현금 인출 가능
+    visible: 이로부터
+    hidden: 숨기기
+    edit_title: 화폐 종류 자료를 편집하다
+    new_title: 새로운 화폐종류 자료
+    position: Position (크면 클수록 위)
+    code: Code (예. eth)
+    icon_link: 통화 icon 링크
+    fullname: 화폐종류 전명 (영어)
+    symbol: Symbol (반드시 기입해야 함)
+    release_time: 발행 시간
+    release_quantity: 발행 수량
+    circulation: 유통 수량
+    site: 홈페이지
+    white_paper: 백서
+    block_query: 블록 조회
+    option: 옵션
+    base_factor_hint: (소수점 뒤쪽 자리는 유효함, ETH 기본값 18)
+    precision: 정밀도
+    whether: 여부
+    eth_addr: ETH Contract 주소 (erc20세대 통화인 경우)
+    withdraw_commission: 통화 수수료
+    is_commission_fixed: 통화 수수료 고정 여부
+    yes_fixed: 네, 모두 고정되어 있습니다.
+    is_rechargeable: 통화 충전 가능 여부
+    recharge_minimum: 최소 충전 금액
+    is_withdrawable: 통화 인출 가능 여부
+    withdraw_minimum: 최소 통화 금액
+    is_within_station: 역내 이체 가능 여부
+    is_display_otc: OTC에 표시되는지 여부
+    otc_fee: OTC 거래 비율(기본 0.005(천분의 5), 0~1 사이)
+    otc_minimum: OTC 최소 거래 금액
+    otc_decimal_point: OTC 거래 소수점 자릿수 (1-8 정수)
+    commission_fixed: 역내 이체 수수료(고정)
+    region: 통화 영역
+    en_intro: 통화 소개 (영문)
+    zh_intro: 통화 소개 (중국어)
+    kr_intro: 통화 소개 (한국어)
+    ru_intro: 통화 소개 (러시아어)
+    jp_intro: 통화 소개 (일본어)
+    exist_msg: 이 통화는 이미 존재합니다
+  markets:
+    index_title: 거래 관리
+    edit_title: 거래 쌍 편집
+    is_stock: 주식 여부
+    is_margin: 지지 지렛대
+    ask_currency_precision: 정수 부분
+    ask_currency_scale: 소수 부분
+    bid_currency_precision: 정수 부분 (bid) 정밀도
+    bid_currency_scale: 소수 부분 (bid) 정자
+    new_title: 새 거래 쌍
+    ask_unit: 판매가격(ask)단위
+    bid_unit: 구매가격(bid)단위
+    buy_commission: 구매 수수료
+    sell_commission: 판매 수수료
+    buy_accuracy: 구매 가격 정밀도
+    sell_accuracy: 판매 가격 정밀도
+    unvisible: 보이지 않음
+    edit_alert: "0. 고에너지 조기경보： 전문적인 기술자만이이 페이지를 조작할 수 있다<br/>
+      1. 전문 용어： ask price：매주 가격, bid price, 구입 가격。 <br/>
+      례 컨 대 ： id：  ethbtc,   ask unit：eth,  bid unit：btc <br/>
+      2. 주의： ask unit, bid unit, 데이터베이스에 먼저 존재해야 합니다。 <br/>
+    "
+    price_accuracy: 가격 정밀도
+    quantity_accuracy: 수량 정밀도
+    order: 정렬 위치(작을수록 위)
+    trade_visible: 표시 여부 (다음 거래 대용)
+    min_trade: 최소 거래량
+    stock_name: 주식 이름
+  a2a_transfer:
+    title: 투하 사탕 기록 목록
+    alert: 사탕은 화폐방출자의 백스테이지에서 화폐발행자의 인원이 투하한 것입니다.
+    sender: 발신자
+    reciver: 수신자
+    payer: 현금인출자
+    payee: 수취인
+    transfer_time: 이체 시간
+  IEO:
+    only_positive_integer: 정수 입력 만 허용
+    edit_title: 새 편집
+    new_title: 새로 만들기
+    list_title: 새 목록 만들기 참여
+    start_time: 시작 시간
+    end_time: 종료 시간
+    start: 새것을 시작하다
+    start_confirm: 새 출발을 하시겠습니까?
+    end: 새것을 끝내다
+    end_confirm: 새로운 전화를 끊겠습니까?
+    view: 보기
+    title: 제목
+    list_name: 참여자 이름
+    list_people: 참여자
+    list_time: 참여 시간
+    list_participate: 새 수량 참여
+    list_gain: 새 수량 가져오기
+    form_hint1: TGC 통화 시작!
+    form_hint2: 새 통화 선택
+    form_hint3: (2000만)
+    form_hint4: (수수료 3% 표시)
+    form_hint5: 통화 모집을 선택하십시오
+    form_hint6: 2단계. 마음대로 기입한 문자
+    form_hint7: 2000 (ETH 2000 TGC)
+    form_hint8: 성공 후 72시간 후 잠금 해제
+    only_numbers: 0 ~ 1 의 숫자 만 입력 할 수 있 습 니 다
+    form_icon: icon 그림 (미리 url을 업로드해야 함)
+    form_banner: banner 그림 (미리 url을 업로드해야 함)
+    form_coin: TGC와 같은 새 통화(예TGC)
+    form_coin_num: TGC와 같은 새 통화의 환전 수량
+    form_fee: 수수료 비율 (소수)
+    form_raise_coin: ETH와 같은 통화 모집
+    form_raise_goal: 통화 모집 대상 수
+    form_min: 개인 최소 모집 수량
+    form_max: 개인 최대 모집 수량
+    form_start_time: 시작 시간 (정확도)
+    form_end_time: 종료 시간 (정확도)
+    form_stage: 단계
+    form_exchange_num: 각 모집된 통화에서 새 통화로 환전할 수 있는 수량
+    from_fake_num: 새로 종료할 때 표시해야 할 가짜 수량(0~1, 기입하지 않음)
+    form_coin_unlock: 통화 잠금 해제 방안
+    intro: 소개
+    is_human_intervention: 인위적 개입 여부
+  internal_transfers:
+    title: 역내 이체 목록
+    sender: 계정 보내기
+    sender_email: 이체 발기인
+    receiver: 계정 수신
+    receiver_email: 이체 수신자
+    coin: 이체 통화
+    num: 입금 금액
+    fee: 대체 수수료
+  system_var:
+    index_title: 시스템 상수 관리
+    new_title: 새 시스템 상수
+    edit_title: 시스템 상수 편집
+    alert: "이곳의 변수는 인공적으로 만든 것도 있다．　<br/>
+      하지만 대부분은 외부 시스템과 연결되어 있습니다．례 컨 대：high gas price, usd 에 대한rmb환율 등등입니다.수동으로 수정해야 함
+    "
+    value: 값
+    update_time: 시간 업데이트
+    order: 정렬
+    status: 건강 상태
+    lang_title: 시스템 기본 언어
+    zh: 중국어
+    en: 영어
+    kr: 한국어
+    jp: 일본어
+    ru: 러시아어
+    alarm_title: 수신전화 설정(쉼표는 중영문을 구분하지 않음)
+    phone_hint: 유효한 숫자를 입력하십시오.
+    withdraw_title: 통화 수신 전화 설정(쉼표는 중영문을 구분하지 않음)
+    transaction_title: 거래의 기본 설정
+    database_title: 데이터베이스 건강 수준
+    database_connect: 데이터베이스 연결 개수
+    robot_id_set: 로봇 ID
+    operation: 조작
+    member_name: 사용자 계정
+    add_robot: 로봇 추가 ID
+    max_failed: 최대 로그인 허용
+  slider:
+    index_title: 첫 번째 페이지 재생 그림 관리
+    edit_title: 첫 번째 페이지 재생 그림 편집
+    new_title: 첫 번째 페이지 재생 그림
+    edit_show: 표시
+    title: 리플릿 제목
+    type: 그림 유형
+    link: 그림 건너뛰기 링크 클릭하기
+    is_display: 표시 여부
+    upload: 그림 올리기
+    creator: 설립자
+    uploader: 업로드
+    preview: 그림 미리 보기
+    website_type: 웹 사이트 유형
+  progress:
+    new_title: 새로 추가된 모니터링 프로세스
+    edit_title: 프로세스 편집
+    alert: 참고： 프로그래머가 아니면 변경 또는 삭제할 수 없습니다.
+    index_title1: 보이는 거래 쌍
+    index_title2: 보이지 않는 거래
+    index_title3: 주문과 데이터베이스의 연결 없음
+    title3_order: 모든 미지정 주문
+    title3_connect: 데이터베이스의 연결 개수
+    index_title4: 모니터링 프로세스 목록
+    server_name: 서버 이름
+    project_name: 프로젝트 이름
+    name: 프로세스 이름
+    checktime: 검사 시간
+    no_: 아직 없음
+    log: 로그 상태
+    log_tail: 로그 마지막 내용
+    monitoring_or_not: 모니터링 하 시 겠 습 니까
+  realtime:
+    new_title: 실시간 모니터링 생성
+    edit_title: 실시간 모니터링 편집
+    index_title: 실시간 모니터링
+    comment: 메모
+    interval: 모니터링 요청 간격(초)
+    url: 모니터링 요청 url
+    type: 모니터링 유형
+    status: 현재 상태
+    error_call: 마지막 오류 음성 메시지 통화 시간
+    error_call_times: 마지막 오류 음성 메시지 전화 횟수
+    error_sms: 마지막 메시지 전송 시간
+    error_sms_times: 마지막 오류 메시지 전송 횟수
+    value_string: 문자열
+    last_checked: 마지막 검사 시간
+  roles:
+    index_title: 역할 목록 (이 페이지는 기술자가 아닌 경우)
+    new_title: 새 역할
+    edit_title: 역할 편집
+    manage_permission: 권한 관리
+    collect_permission: 권한 수집
+    set_permission: 권한 설정
+    select_all: 전체 선택
+    hint: 시스템이 아직 권한을 수집하지 않으니 권한을 수집하십시오
+  app:
+    new_title: 새 APP 버전 정보
+    edit_title: APP 버전 정보 편집
+    index_title: APP 판본 관리
+    android: 안드로이드 버전 다운로드 연결
+    IOS: IOS 버전 다운로드 링크
+    zh: 중국어판 업데이트 설명
+    en: 영문판 갱신 설명
+    ver: 버전 번호
+    ver_hint: 이전 버전 번호와 달라야 합니다.
+    ready_android: 안드로이드 버전이 준비되었습니다.
+    ready_IOS: IOS 버전이 완료되었습니다.
+    ready: 준비됐습니다.
+    unready: 준비되지 않았습니다.
+  footer_icon:
+    new_title: 새 아이콘 만들기
+    edit_title: 아이콘 편집
+    add: 추가
+    index_title: 아래 각도 아이콘 목록
+    index_hint: (구성의 아이콘은 www, otc 등 프로젝트 footter에서 동적으로 로드되며 현재 8개의 아이콘만 추가됨)
+    enable: 정상입니다.
+    disable: 비활성화됨
+    icon: 아이콘
+    link: 링크
+    desc: 설명
+    redirect: 링크 건너뛰기
+    example: 위챗 아이콘
+  robots:
+    index_title: 로봇 설정
+    new_title: 새 로봇
+    edit_title: 로봇 편집
+    market: 시장명
+    hang_interval: 청구 간격
+    trade_interval: 거래 간격
+    or: 또는
+  country:
+    index_title: 국가 코드 목록
+    edit_title: 국가 코드 편집
+    new_title: 새 국가 코드
+    country: 국가
+    code: 내셔널 코드
+    is_disable: 비활성화됨
+  virtual:
+    index_title: 가상 자산 목록
+    new_title: 새로 만들기
+    alert: 사탕을 투하하는 등의 이유로 우리는 어떤 계정을 위해 디지털 화폐를 가상화해야 합니다. 통일적으로 여기에 두어 관리에 편리하게 해야 한다
+    select_coin: 통화 종류 선택
+    select_account: 계정을 선택하십시오.
+    beneficiary: 수취인
+    quantity_hint: 양수는 주고 음수는 공제합니다.
+    is_lock: 잠금 여부
+    income: 수지
+    add_to: 증가
+    reduce: 감소
+    operation_time: 작업 시간
+    balance: 사용 가능한 잔고
+    freeze: 잔고 동결
+    account: 계정
+  put_crypto:
+    title: 통화 기록 모음
+    total: 이 페이지의 금액 합계
+    total_hint: 먼저 통화 선택 후 금액 합계가 표시됩니다.
+    time: 시간
+    wallet_addr: 지갑 주소
+    amount: 금액
+    big_wallet: 큰 지갑으로 정리
+    cmd: 원래 명령
+  wallet:
+    index_title: 사용자 지갑
+    show_title: 지갑 상세내역
+    alert: 주소지갑의 잔액과 거래소에서의 사용자의 잔액은 두 가지 개념으로 양자는 직접적인 관계가 없습니다.
+    view: 보기
+    addrs: 주소
+    password: 비밀번호
+    name: 사용자 이름, 이름
+    available: 거래소에서 사용할 수 있는
+    freeze: 거래소에서 동결된
+    owner: 사용자
+    addr_coin: 이 주소에 해당하는 디지털 통화
+    last_check: 마지막 검사 시간
+    addr_info: ETH 또는 BTC 또는 USDT의 주소 정보
+    erc_info: 이 erc-20의 주소 정보
+    total: 합계
+  cc_unordered:
+    order_list: 거래 목록
+    user_id: 사용자 ID
+    phone_number: 핸드폰 번호
+    price_greater_than: 가격이 더 높음
+    price_lower_than: 가격 이하
+    commission_direction: 위탁 방향
+    source: 소스
+    number_ordering: 수량 정렬
+    unit_price: 단가 정렬
+    hope_to_see_user: 보고 싶은 사용자 ID
+    user_not_watching: 원하지 않는 사용자 ID
+    sell_orders: 판매 목록
+    pay_the_bill: 구매
+    not_sorting: 정렬 안함
+    ascending: 오름차순
+    descending: 내림차순
+    comma_separated: 쉼표 구분
+    done: 완료
+    never_dealt: 거래된 적이 없습니다.
+    partial_deal: 일부 거래
+    withdrawn: 취소됨
+    order_quantity: 주문량
+    bulk_revocation: 대량 해제
+    order_code: 주문 코딩
+    market: 시장
+    price: 가격
+    original_quantity: 원래 수량
+    commission_amount: 위탁 금액
+    commission_time: 위탁 시간
+    unfilled_quantity: 미거래 수량
+    cancel: 취소
+    cancel_confirm: 주문을 취소하시겠습니까?
+    all_cancel_confirm: 이 페이지에서 선택한 주문을 모두 취소하시겠습니까?
+  trades:
+    order_list: 거래 목록
+    choose_currency: 통화 종류 선택
+    seller: 판매자
+    buyer: 구매자
+    time_from: 시간은
+    price_from: 가격은
+    confirm: 확인
+    trading_volume: 거래량
+    download: CSV 다운로드
+    batch_rollback: 대량 롤백
+    batch_rollback_confirm: 이 페이지에서 선택한 거래를 모두 롤업하시겠습니까?
+    market: 시장
+    price: 가격
+    number_of_transactions: 거래량
+    handling_fee: 수수료
+    rollback: 롤백
+  k_lines:
+    data_list: K선 데이터 목록
+    transaction_pair: 거래 쌍
+    interval: 간격
+    total: 합계
+    original_time: 원래 시간
+    formatted_time: 포맷된 시간
+    original_data: 원본 데이터
+    opening_price: 개장가격
+    highest_price: 최고가
+    lowest_price: 최저가
+    closing_price: 종가
+    Volume: 거래량
+    record: 레코드 없음
+  preset_k_lines:
+    title: 사전 설정 K선 데이터 목록
+    insert_data: redis에 삽입된 데이터
+    database: 데이터가 없습니다.
+  otc_tradings:
+    title: 장외거래 주문
+    advertisers: 광고주
+    order_type: 주문 유형
+    sell: 사용자 판매
+    buy: 사용자 구매
+    creation_time: 생성 시간
+    order_number: 주문 번호
+    ransaction_type: 거래 유형(사용자)
+    seller: 판매자
+    buyer: 구매자
+    coin_number: 디지털 통화 수량
+    fcoin_number: 프랑스 화폐 수량
+    advertiser: 광고인
+    status: 주문 상태
+    wether_cancle: 취소 여부
+    yes_: 은
+    not_: 아니 오
+    timeout: 시간 초과 여부
+    extension_time: 시간 연장 여부
+    view: 보기
+    history_record: 기록이 없습니다.
+  disput:
+    title: 제소 목록
+    phone: 핸드폰
+    appeal_time: 제소시간
+    appeal_content: 제소 내용
+    status: 상태
+    order: 주문 ID
+    cancel: 취소
+    reason: 원인
+    save: 저장
+    restore: 복구
+    details: 자세한 정보
+  system_statistics:
+    title: 시스템 통계
+    registered_number: 등록 사용자 수
+    legal_currency_trading: 프랑스 통화 거래
+    transaction_number: 거래수
+    recharge_coin: 충전
+    extract_coins: 통화 인출
+    transfer: 역내 이체
+  account_statistics:
+    coin_amount_today: 오늘 통화 인출 금액
+    total_amount_of_coins: 총 통화 금액
+    currency_amount: 오늘 충전 금액
+    total_amount_coins: 총 충전 금액
+    cold_wallet_balance: 콜드 지갑 잔고
+    hot_wallet_balance: 핫지갑(통화 지갑) 잔고
+    total_generate: 근거 없이 합계 생성
+    total_commission: 수수료 합계
+    total_balance: 시스템 합계 잔액
+    income_expenditure: 오늘의 수지
+    record: 특정 일자에 대한 원장 기록
+    choose_coins: 통화 종류 선택
+    title: 전체 계정 인터페이스
+    reconciliation_information: 계정 정보
+    remarks: 메모 정보
+    calculatin_income_method: "플랫폼 총소득 (로봇 무시) = 충전-인출 + 사용자 수수료 (로봇을 제외한)-인출 수수료 (충전-인출 수수료 수익 포함, 인출 수수료는 한 차례 더 붙는 셈이므로 빼야 한다)<br/><br/>
+                              2019년 7월 22일은 데이터 전송 기간입니다"
+    success: 계정의 성공
+    failure: 결제 실패
+    real_time_information: "실시간 계정 <br>
+                            주의하다 ：<br>
+                            1. 조회 일자가 오늘일 때만 실시간 장부를 대조할 수 있습니다.<br>
+                            2. 실시간 대장은 로봇 거래를 포함합니다. 만약 주문이 주선되고 있을 때 0.1초 오차가 있을 경우 여러 번 새로 고쳐서 확인해야 합니다. 대장에 성공하면 대장에 성공합니다..<br><br>
+                            공식：(실제 잔액+실제 잠금+수수료 = = 계산 잔액+계산 잠금+수수료) <br><br>"
+    method_one: 값 1:잔액 계산 + 잠금 계산 + 수수료 =
+    method_two: 값 2:실제 잔액+실제 잠금+수수료 =
+    date: 날짜
+    switch_currency: 통화 전환
+    current_currency: 현재 통화
+    current_balance: 현재 잔액
+    current_lock: 현재 잠금
+    balance_lock: 현재 잔액+잠금
+    compute_balance_lock: 잔액 계산 + 잠금 계산
+    compute_method: (오래된 잔액+오래된 잠금)+충전 + (근거 없이 생성된 잔액이나 잠금)-모든 수수료
+    balance: 현재 잔액 (로봇 공제)
+    lock: 현재 잠금 (로봇 공제)
+    current_balace_lock: 현재 잔액+잠금 (로봇 공제)
+    thaw_quantity: 당일 해동 수량
+    balanced_currency: 이전 데이터 잔액 충전
+    lock_the_coin: 오래된 데이터 잠금 충전
+    total_currency_lock: 이전 데이터 통화 충전 합계
+    difference_reason: "초기 수량은 22142107.268918에 비해 64500.0이 떨어졌습니다，<br>
+                       이는 '7월 25일 사용자자산'이 변경되기 전 6가지 데터를 직접 수정하여 낡은 데터를 낡은 데터로 전환하고 통화충전기록을 잠갔기때문이다<br>
+                       원 ：150860.86<br>
+                       고치다 ：86360.86<br>"
+    confirm_receipt: 당일 충전 (계정 확인)
+    total_confirm_receipt: 총 충전 금액(계정 확인)
+    successful_withdrawal_coins: 당일 통화 인출(성공 통화)
+    total_withdrawal_coins: 총 통화 금액 (성공 통화)
+    groundless_balance: 터무니없이 생성됨 (잔액)
+    groundless_lock: 터무니없이 생성됨 (잠금)
+    cc_commission: 화폐 거래 수수료
+    legal_coin_commission: 프랑스 통화 거래 수수료
+    amount_coins_commission: 통화 수수료
+    transfer_commission: 역내 이체 수수료
+    income: 플랫폼 총 수입
+    income_norobot: 플랫폼 총수입(로봇 무시)
+    today_income_norobot: 당일 총 수익 (로봇 무시)
+    migrated_assets: 데이터 마이그레이션 자산 (거래소 7월 29일 모든 사용자 자산 잔액 가져오기)
+    migrated_assets_cab: "잔고 ：12836786.268718000000000000<br>
+                         잠그다 ：9305321.000200000000000000<br>
+                         총계 ：22142107.268918<br><br> "
+    migrated_assets_usdt: "잔고：3218733.781133297695170301<br>
+                          잠그다：110368534.465616981480959722<br>
+                          총계：113587268.24675028<br> "
+    balance_change_file: 사용자 계정 잔액 변경 파일
+    second_time: 7월 30일
+    total_not_grow: 플랫폼 합계가 증가하지 않음
+    first_time: 7월 25일
+    cc_robot: 화폐 거래 플랫폼 로봇
+    robot: 도시 로봇을 만듭니다.
+    test_robot: 로봇 테스트
+  automatic_reconciliation_list:
+    title: 종류당 약 10분
+    description: "여기는 어느 한 사용자에 따라 장부를 대조하는 거예요. 화폐 종류당 약 10분 정도 걸립니다 <br/>
+                 매일 여러 번 실행할 수 있다. 사람이 적었을 때 운행할 것을 건의합니다．"
+    date: 날짜
+    runner: 운영자
+    result: 결과
+    view: 보기
+  account_statistics_in_special_date:
+    reconciliation_formula: "장부대조공식 ：<br/>
+                            소득 ：충전, 각종 수수료, 가상 자산(정수), 이체 비용  <br/>
+                            지출 ：통화, 가상 자산(음수) 　　<br/>
+                            통계는 이날 00：00：00부터 23：59：59.99999초까지 진행되었습니다<br/>"
+    start_date: 통계 시작 날짜
+    total_number: 날짜 통계 합계 개수
+    no_: 아직 없음
+    search_time: 시간 찾기
+    available_balance: 당일 현재 사용 가능한 잔액(기록 필요)
+    reference_data: 참조 데이터
+    freeze_balance: 당일 현재 총 동결 잔액(기록 필요)
+    total_balance: 당일 현재 총 잔액+총 동결(기록 필요)
+    today_currency_amount: 오늘 충전 금액
+    total_currency_amount: 당일 현재 총 충전 금액
+    income: 소득
+    today_amount_coin: 오늘 통화 인출 금액
+    expenditure: 지출
+    virtual_asset: 오늘날 가상 자산으로 생성됨
+    income_expenditure: 양수 소득, 음수 지출
+    total_virtual_asset: 당일까지 총 가상 생성 자산
+    cc_commission: 금일 통화 거래 수수료
+    total_cc_commission: 당일까지 총 통화 거래 수수료
+    today_lc_commission: 오늘 프랑스 화폐 거래 수수료
+    total_lc_commission: 당일까지 총 법정 통화 거래 수수료
+    transfer_commission: 오늘 역내 이체 수수료
+    total_tranfer_commission: 당일 현재 총 역내 이체 수수료
+    ieo_commission: 오늘 IEO 수수료
+    total_ieo_commission: 당일 현재 총 IEO 수수료
+    amount_commission: 오늘 통화 수수료
+    total_amount_commission: 당일까지 총 통화 수수료
+    cold_wallet_balance: 당일 냉각 지갑 잔액 (기록 필요)
+    hot_wallet_balance: 당일 핫지갑 잔액 (기록 필요)
+    transfer_fee: 당일 디지털 통화 이체 비용 (인출 합계) (기록 필요)
+    total_transfer_fee: 당일 현재 총 디지털 통화 이체 비용 (인출 합계) (기록 필요)
+    no_search: 조회되지 않음
+    report: 보고서
+  cold_wallet:
+    title: 차가운 지갑 잔고
+    note: 이 페이지를 자주 새로 고치지 마십시오. 그렇지 않으면 조회된 서버에 의해 IP가 차단됩니다.
+    address: 콜드 지갑 주소
+    balance: 잔액
+    click: 조회 클릭
+    search_holders: (클릭한 후 address에 따라 holders 보기)
+
+  today:
+    confirm_time: 시간 확인
+    amount: 금액은
+    recharge: 오늘 충전
+    withdraw: 오늘 통화
+    appeal_str: 신청/승인/실행 시간
+    appeal1: 신청
+    appeal2: 승인
+    appeal3: 실행
+    agree: 동의합니다.
+    agree_confirm: 확실합니까?
+    alert: 현재 영업 수익 = 충전-통화 + 생성된 가상 자산의 값
+    nodata: 데이터가 없습니다.
+    gold: 입금 금액
+    virtual: 오늘날 생성되는 가상 자산
+  hot_wallet:
+    title: 핫지갑잔고
+    alert: "주의하다 1. 이 페이지는 자주 업데이트되지 않습니다(USDT 요구 사항 10초 이내에 최대 한 번 검색). 그렇지 않으면 질의 서버에 의해 IP 차단 . <br/>
+      주의하다 2. BTC의 잔액은 한 주소의 잔액이 아니라 전체 BTC 노드의 잔액이다. 왜냐하면 이 핫지갑의 전체 노드가 우리 회사의 수중에 있기 때문입니다."
+    balance: 잔액
+    balance_sum: BTC 노드 총 잔고
+    hint: 클릭한 후 address에 따라 holders를 봅니다.
+  air_assert:
+    title: 터무니없이 생성된 자산
+    account: 계정
+    total: 합계
+    operation_time: 작업 시간
+  total:
+    total_recharge: 총 충전
+    total_withdraw: 총 통화 인출 금액
+    totol_commission: 총 수수료
+    sum_gold: 시스템 총액
+    total_sum: 시스템 합계
+    lock: 잠금
+    lock_total: 잔액 잠금 합계
+    create_time: 생성 시간
+    withdraw_wallet_title: 화폐 지갑 잔고
+    total_money: 금액은
+    users: 사용자
+    apply_approve_execution_time: 신청/승인/실행 시간
+    apply: 신청
+    approve: 승인
+    excute: 실행
+    agree: 동의합니다.
+    confirm: 확실합니까?
+    service_charge_total: 수수료 합계
+    total: 합계
+    coin_to_coin_transaction: 통화 거래
+    coin_to_coin_transaction_description: 현재 통화 거래 수수료는 0입니다. 다음 주 월요일부터 받습니다.
+    legal_coin_transaction: 프랑스 통화 거래
+    order_number: 주문 번호
+    transaction_type_user: 거래 유형(사용자)
+    digital_currency_number: 디지털 통화 수량
+    legal_currency_number: 법폐 수량
+    service_charge: 수수료
+    advertisement_initiator: 광고 발기인
+    station_transfer_accounts: 역내 이체
+    station_transfer_accounts_description: 현재 역내 이체는 무료입니다. 다음 주부터 요금을 받습니다.
+  otc_fiat_advertisements:
+    advertisements_list: 법정 통화 거래 (시장 외 주문) 광고 목록
+    currency_type: 디지털 코인 수
+    price: 가격
+    builder_id: 출판사ID
+    currency_id: 디지털 통화ID
+    unit_price: 단가
+    min_limit: 최소 한도
+    max_limit: 최대 한도
+    fiat_type: 합법적 통화 유형
+    trade_type: 거래 유형
+    mode_of_trading: 지불 유형
+    is_canceled: 취소 여부
+    trading_currency_amount: 디지털 통화 거래 수
+    created_at: 제작 시간
+    advertisements_list_details: 광고 목록 세부 사항
+    currency_code: 디지털 통화 코드
+    updated_at: 업데이트 시간
+    trading_remark: 거래 메모
+    trading_terms: 거래 조건

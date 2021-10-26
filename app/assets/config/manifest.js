@@ -1,0 +1,12 @@
+//= link application.css
+//= link application.js
+//= link commerce.css
+//= link commerce.js
+//= link tables.css
+//= link tables.js
+//= link uielements.css
+//= link uielements.js
+//= link forms.css
+//= link forms.js
+//= link appviews.css
+//= link appviews.js

@@ -1,0 +1,74 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+  <%= form_tag save_pair_tab_setting_system_variables_path, id: "pair_tab_setting_system_variables_form", method: :post do %>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>五个交易对价格变动显示</h5>
+          </div>
+          <div class="ibox-content">
+            <div class="form-group" style="margin-top: 20px">
+              <% 5.times do |index| %>
+                <%= select_tag "pair_#{index}".to_sym, options_from_collection_for_select(@pairs_options, :id, :id, @markets[index]), {:class => 'form-control', :style => 'width: 80px; display:inline;'} %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>行情中心主区的三个便签页</h5>
+          </div>
+          <div class="ibox-content">
+            <div class="form-group" style="margin-top: 20px">
+              <% 3.times do |index| %>
+                <%= select_tag "main_#{index}".to_sym, options_from_collection_for_select(@currency_options, :code, :code, @main_tabs[index]), {:class => 'form-control', :style => 'width: 80px; display:inline;'} %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= submit_tag raw("&#xf00c;#{t("public.submit")}"), class: 'fa-btn btn btn-primary' %>
+  <%end%>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>上述设置在 www.cadae.top 中的显示位置</h5>
+        </div>
+        <div class="ibox-content">
+          <div class="form-group" style="margin-top: 20px">
+            <div>
+              <img src="<%= ENV['CDN_SERVER'] %>/image_after_2019_06/1930/pari_main_tab.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(function() {
+
+    $('.i-checks').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green',
+    });
+
+});
+
+</script>
+
+<% end %>
+
+

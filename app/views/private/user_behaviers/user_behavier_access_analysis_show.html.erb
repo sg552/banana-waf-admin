@@ -1,0 +1,51 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>访问频率排序列表（行为：<%= @behavier.behavier_name%>）</h2>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <tr>
+                <th>用户</th>
+                <th>总访问次数</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if @user_user_behavier_access_analysis_show.present? %>
+                <% @user_user_behavier_access_analysis_show.each do |user_behavier| %>
+                  <% if user_behavier.member.present? %>
+                    <tr>
+                      <td>
+                        <%= link_to member_detail(user_behavier.member), members_path(:id => user_behavier.member.try(:id)), target: '_blank' %>
+                        <%#= link_to user_detail(user_behavier.member), member_path(:id => member.id), target: '_blank' %>
+                      </td>
+                      <td>
+                        <%= user_behavier.count %>
+                      </td>
+                    </tr>
+                  <% end %>
+                <% end %>
+              <% end %>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+  $(function() {
+    $('.footable').footable();
+  });
+</script>
+
+<% end %>

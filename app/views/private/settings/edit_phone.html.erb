@@ -1,0 +1,117 @@
+<div class='alert alert-info' style='width: 100%'>
+  <%= t 'settings.info2' %>
+</div>
+
+<%= form_tag update_phone_settings_path, method: :put do %>
+  <table class='table table-bordered table-hover table-striped'>
+    <tr>
+      <td style='width: 100px'>
+        <%= t 'settings.mobile' %>
+      </td>
+      <td>
+        <%= text_field_tag "calling_code", current_manager.calling_code, style: 'width: 50px; display: inline-block', class: 'form-control', readonly: true %>
+        <%= text_field_tag "mobile", current_manager.mobile || params[:mobile], class: 'form-control', style: 'width: 150px; display: inline-block' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= t 'settings.verify_code' %>
+      </td>
+      <td>
+        <%= text_field_tag "validation_code", '', class: 'form-control', style: 'width: 103px; display: inline-block'%>
+        <%= link_to t("settings.send_verify_code"), 'javascript:send_validation_code()', class: 'btn btn-default btn-small',
+          id: 'send_validation_code',
+          style: 'width: 96px; text-align: center'
+      %>
+      </td>
+    </tr>
+  </table>
+  <%= submit_tag t("settings.submit"), class: 'btn btn-primary btn-small' %>
+  <%= link_to t("settings.cancel"), settings_path, class: 'btn btn-default btn-small' %>
+
+<% end %>
+<script>
+function send_validation_code(){
+  mobile = $('#mobile').val()
+  url = "<%= send_validation_code_settings_path() %>?mobile=" + mobile
+
+  jQuery.get(url, function(data){
+    if(data.code == 0){
+      alert('<%= t "settings.code_is_sent"  %>：' + mobile)
+      $('#send_validation_code').bind('click', function(e){
+        e.preventDefault();
+      })
+      clock()
+    }else{
+      alert(data.msg)
+    }
+  })
+}
+
+
+  // 先为当前table 每个tr后面都添加 td
+$("form table tr").each(function(i, e){
+  $(e).append("<td style='width: 150px'></td>")
+})
+
+  // 然后开始验证
+  $("form").validate({
+    rules: {
+      mobile: {
+        required: true,
+        number: true
+      },
+      validation_code: {
+        required: true,
+        number: true
+      }
+    },
+    messages: {
+      mobile: {
+        required: "请填写手机号",
+        number: "只能是数字"
+      },
+      validation_code: {
+        required: "请填写验证码",
+        number: "只能是数字"
+      }
+    },
+    // 验证通过后，该怎么办
+    success: function(label) {
+      // 这里的 &nbsp; 是不能省略的．否则会导致　对号看不到．（label的样式在某些情况下是display:inline-block的)
+      label.html("&nbsp;").addClass("checked");
+    },
+    // 验证失败后，该怎么办　（注意：这里对于ＤＯＭ的安排，要略加调整)
+    highlight: function(element, errorClass) {
+      // 适用于把　错误信息，显示在隔壁tr中，　例如：
+      /*   <tr>  <td>输入框</td><td> 　Ｘ不能为空</td>   <tr/> */
+      $(element).parent().next().find("." + errorClass).removeClass("checked");
+
+      // 适用于　紧挨着。输入框显示错误信息
+      $(element).next().removeClass("checked");
+    },
+     // 这个函数很重要,就是确定把出错提示显示在哪里的.  默认放在input紧挨着的后面．
+     // 如果你的表单嵌套在　ｔａｂｌｅ中，类似于milk demo, 则务必使用下面这句话，否则会找不到．　
+     errorPlacement: function(error, element) {
+       error.appendTo(element.closest('td').next());
+     }
+  })
+
+
+var myTimer;
+function clock() {
+   myTimer = setInterval(myClock, 1000);
+   var c = 30;
+
+   function myClock() {
+
+     $('#send_validation_code').text('<%= t "settings.please_wait" %>'+ (--c) + '<%= t "settings.second"  %>')
+     if (c == 0) {
+       clearInterval(myTimer);
+       $('#send_validation_code').text("<%= t 'settings.send_verify_code' %>")
+       $('#send_validation_code').unbind('click')
+     }
+   }
+}
+</script>
+

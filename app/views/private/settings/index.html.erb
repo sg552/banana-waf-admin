@@ -1,0 +1,175 @@
+<style>
+.is_done {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+}
+
+.is_done img{
+  margin-right: 20px;
+}
+
+.illustration{
+  color: #8c8c8c;
+  font-size: 14px;
+  width: 350px;
+}
+
+.settings_table  tr{
+    /*
+  border-image: url(http://showmethemoney.xyxiugaiqi.com/image/713/dashed_border.png) 30 30  round;
+    */
+  border: 2px dashed #e4e5f5;
+  border-width: 0 0 2px 0;
+  height: 91px;
+}
+
+.settings_table{
+  font-size: 18px;
+  color: #4d4d4d;
+}
+.icon {
+  width: 71px; text-align: right; padding-right: 23px
+}
+.operation {
+  width: 130px; text-align: right;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+.operation a{
+  color: #7297FF;
+  text-decoration: none;
+}
+.operation a:hover{
+  color: #2764B0;
+}
+</style>
+
+<div style='
+  float: left;
+  width: 100%; height: 728px; border-color: #C9CCFA; border-radius: 3px;
+  border-width: 1px;
+  padding: 26px 26px;
+  background-color: white;
+  border: 1px solid #C9CCFA;
+  border-radius: 3px;
+'>
+  <div style='float: right; font-size: 18px; color: #666666'>
+    <img src='<%= ENV['CDN_SERVER'] %>/image/719/settings_icon.png'/>
+    <%= t 'settings.setting' %>
+  </div>
+  <div style='clear: both; margin: 20px 0 20px 0; height: 1px;'>
+  </div>
+  <div class='alert alert-info' style='width: 100%'>
+    <%= t 'settings.info' %>
+  </div>
+
+  <table class='settings_table' style='width: 100%;
+    border: 1px solid #e4e5f5;
+    border-width: 1px 0 0 0;
+    '>
+    <tr>
+      <td class='icon'>
+        <img src='<%= ENV['CDN_SERVER'] %>/image/714/email_icon.png'/>
+      </td>
+      <td style='width: 200px; color: 4d4d4d'>
+      <%= t 'settings.bind_email' %>
+      </td>
+      <td>
+        <div class='is_done'>
+        <img src='<%= ENV['CDN_SERVER'] %>/image/712/good_icon.png'/>
+        <span style='color: #8AB507'>
+          <%= t 'settings.binded' %>
+        </span>
+        </div>
+      </td>
+      <td class='illustration'>
+        <%= t 'settings.your_binded_email' %>
+        : <%= current_manager.email %>
+      </td>
+      <td class='operation' style='color: grey'>
+        <%= t 'settings.not_modifiable' %>
+      </td>
+    </tr>
+    <tr>
+      <td class='icon'>
+        <img src='<%= ENV['CDN_SERVER'] %>/image/715/phone_icon.png'/>
+      </td>
+      <td>
+        <%= t 'settings.bind_mobile' %>
+      </td>
+      <td>
+        <div class='is_done'>
+        <% if current_manager.mobile.present? %>
+          <img src='<%= ENV['CDN_SERVER'] %>/image/712/good_icon.png'/>
+          <span style='color: #8AB507'>
+            <%= t 'settings.binded' %>
+          </span>
+        <% else %>
+          <img src='<%= ENV['CDN_SERVER'] %>/image/711/error_icon.png'/>
+          <span style='color: #FF001E'>
+            <%= t 'settings.not_binded' %>
+          </span>
+        <% end %>
+        </div>
+      </td>
+      <td class='illustration' >
+        <% if current_manager.mobile.present? %>
+          <%= t 'settings.your_mobile_is' %>
+          : <%= current_manager.calling_code%> <%= current_manager.mobile %>
+        <% else %>
+          <%= t 'settings.please_bind' %>
+        <% end %>
+      </td>
+      <td class='operation'>
+        <%= link_to t("settings.modify"), edit_phone_settings_path %>
+      </td>
+    </tr>
+    <tr>
+      <td class='icon'>
+        <img src='<%= ENV['CDN_SERVER'] %>/image/716/password_icon.png'/>
+      </td>
+      <td>
+        <%= t 'settings.password' %>
+      </td>
+      <td>
+        <div class='is_done'>
+          <img src='<%= ENV['CDN_SERVER'] %>/image/712/good_icon.png'/>
+          <span style='color: #8AB507'>
+            <%= t 'settings.is_set' %>
+          </span>
+        </div>
+      </td>
+      <td class='illustration' >
+        <%= t 'settings.used_when_login' %>
+      </td>
+      <td class='operation'>
+        <%= link_to t('settings.modify'), edit_password_settings_path %>
+      </td>
+    </tr>
+    <tr>
+      <td class='icon'>
+        <img src='<%= ENV['CDN_SERVER'] %>/image/717/google_icon.png'/>
+      </td>
+      <td>
+        <%= t 'settings.bind_google_f2a' %>
+      </td>
+      <td>
+        <div class='is_done'>
+          <img src='<%= ENV['CDN_SERVER'] %>/image/711/error_icon.png'/>
+          <span style='color: #FF001E'>
+            <%= t 'settings.not_binded' %>
+          </span>
+        </div>
+      </td>
+      <td class='illustration' >
+        <%= t 'settings.google_f2a_text' %>
+      </td>
+      <td class='operation'>
+        <%= link_to t('settings.comming_soon'), "javascript:alert('#{t('settings.comming_soon_text')}')" %>
+      </td>
+    </tr>
+  </table>
+</div>

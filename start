@@ -1,0 +1,1 @@
+RAILS_ENV=production bundle exec puma start -C config/puma.rb

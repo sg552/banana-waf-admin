@@ -1,0 +1,60 @@
+<style>
+  .icon img{
+    background: blue; 
+    width: 30px;
+  }
+</style>
+<h3>
+  <%=t("footer_icon.index_title")%>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to t("footer_icon.add"), new_footer_icon_link_path , class: 'btn btn-primary', style: 'width: 60px' %>
+</h3>
+  <%=t("footer_icon.index_hint")%>
+<span></span>
+<table class='table table-hover table-striped'>
+  <tr>
+    <td><%=t("footer_icon.icon")%></td>
+    <td><%=t("footer_icon.link")%></td>
+    <td><%=t("footer_icon.desc")%></td>
+    <td><%=t("public.status")%></td>
+    <td><%=t("public.operation")%></td>
+  </tr>
+  <tbody id="footer_icon_link">
+    <% @footer_icon_links.each do |footer_icon_link| %>
+      <tr data-id = '<%= footer_icon_link.id %>'>
+        <td class="icon"><img src =<%= ENV['CDN_SERVER'] %><%= footer_icon_link.icon %>></td>
+        <td><%= link_to footer_icon_link.url, footer_icon_link.url %></td>
+        <td><%= footer_icon_link.description %></td>
+        <td><%= footer_icon_link.is_shown ? t("footer_icon.enable") : t("footer_icon.disable") %></td>
+        <td><%= link_to t('public.edit'), edit_footer_icon_link_path(id: footer_icon_link.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<script>
+  $('#footer_icon_link').sortable({
+    opacity: 0.6,
+    revert: true,
+    cursor: 'move',
+    update: function() {
+      neworder = new Array();
+      $(this).children().each(function() {
+        id = $(this).attr("data-id");
+        neworder.push({
+            id: id
+        });
+      });
+
+      $.ajax({
+        url: "/footer_icon_links/sort",
+        type: "POST",
+        data: {
+          footer_icon_links: JSON.stringify(neworder)
+        },
+        success: function (data) {
+          if(data != ''){
+            window.location.href = "/permission_refuse.html";
+          }
+        }
+      });
+    }
+  }).disableSelection();
+</script>

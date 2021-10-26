@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @role.name
+
+=> link_to 'Edit', edit_role_path(@role)
+'|
+=< link_to 'Back', roles_path

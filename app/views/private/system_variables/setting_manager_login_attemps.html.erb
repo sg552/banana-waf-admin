@@ -1,0 +1,24 @@
+<%= form_tag creat_manager_login_attemps_system_variables_path, method: :post do %>
+  <table class='table table-hover table-striped' >
+    <tr>
+      <th style="width: 300px;"> <%= t("system_var.max_failed") %> </th>
+      <td> <%= text_field :max_failed_manager_login_attemps, '', value: @max_failed_manager_login_attemps.try(:value), class: 'form-control', style: 'display: inline; width: 100%;', placeholder: t("public.example")+"：5" %></td>
+    </tr>
+    <tr>
+      <td colspan=10>
+        <%= submit_tag t("public.confirm"), class: 'btn btn-primary', style: 'line-height: normal;' %>
+      </td>
+    </tr>
+  </table>
+<% end %>
+<script>
+  $("form").validate({
+    rules: {
+      "max_failed_manager_login_attemps[]": {
+        required: false,
+        number: true,
+        // member_true: true
+      }
+    }
+  })
+</script>

@@ -1,0 +1,64 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-10">
+    <h2><%= t("header.set_app_down_link") %></h2>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+            <!-- <form method="get" class="form-horizontal"> -->
+          <%= form_for "", url:create_app_download_link_system_variables_path, html:{class: "form-horizontal"} do |f| %>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group"><label class="col-sm-2 control-label"><%= t("header.ios_app_down_link")%></label>
+              <div class="col-sm-10">
+                <%= f.text_field :ios_app_down_link, value: @ios_app_down_link.try(:value), class: "form-control", required: true %>
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+            <div class="form-group"><label class="col-sm-2 control-label"><%= t("header.ios_app_down_qr_code_img_link")%></label>
+              <div class="col-sm-10">
+                <%= f.text_field :ios_app_down_qr_code_img_link, value: @ios_app_down_qr_code_img_link.try(:value), class: "form-control", required: true %>
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+            <div class="form-group"><label class="col-sm-2 control-label"><%= t("header.android_app_down_link")%></label>
+              <div class="col-sm-10">
+                <%= f.text_field :android_app_down_link, value: @android_app_down_link.try(:value), class: "form-control", required: true %>
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+            <div class="form-group"><label class="col-sm-2 control-label"><%= t("header.android_app_down_qr_code_img_link")%></label>
+              <div class="col-sm-10">
+                <%= f.text_field :android_app_down_qr_code_img_link, value: @android_app_down_qr_code_img_link.try(:value), class: "form-control", required: true %>
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+              <div class="col-sm-4 col-sm-offset-2">
+                <%= f.submit t("public.confirm"), class: 'btn btn-white' %>
+              </div>
+            </div>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+</script>
+
+<% end %>
+
+

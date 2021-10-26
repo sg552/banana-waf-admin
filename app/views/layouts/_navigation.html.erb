@@ -1,0 +1,82 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav metismenu" id="side-menu">
+      <li class="nav-header">
+        <div class="dropdown profile-element">
+          <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <span class="clear">
+              <span class="block m-t-xs">
+                <strong class="font-bold"><%= current_manager.email%></strong>
+              </span>
+              <span class="text-muted text-xs block"><%= current_manager.role.comment%><b class="caret"></b></span>
+            </span>
+          </a>
+          <ul class="dropdown-menu animated fadeInRight m-t-xs">
+            <li><a href="<%= edit_password_manager_path(id: current_manager.id) %>"><%= t('header.edit_password') %></a>
+            </li>
+            <li><a href="<%= edit_google_otp_manager_path(id: current_manager.id) %>"><%= t('header.edit_google_otp') %></a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="<%= destroy_manager_session_path %>" data-method="delete"><%= t('header.signout') %></a>
+            </li>
+          </ul>
+        </div>
+        <div class="logo-element">
+          IN+
+        </div>
+      </li>
+        <li class="<%= get_menu_cookie.include?('menu1') ? "active" : "" %>">
+          <a href=""><i class="fa fa-dedent"></i>
+            <span class="nav-label" data-i18n="nav.dashboard">
+              风控系统
+            </span>
+            <span class="fa arrow"></span>
+          </a>
+          <ul class="nav nav-second-level collapse">
+            <li class="<%= get_menu_cookie.include?('menu1_1') ? "active" : "" %>">
+              <%= link_to "被封的IP", blocked_ips_path, id: "menu1_1" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_2') ? "active" : "" %>">
+              <%= link_to "用户模板行为设置", behaviers_path, id: "menu1_2" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_3') ? "active" : "" %>">
+              <%= link_to "单位时间访问限制", url_visit_limits_path, id: "menu1_3" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_4') ? "active" : "" %>">
+              <%= link_to "用户行为记录", user_behaviers_path, id: "menu1_4" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_5') ? "active" : "" %>">
+              <%= link_to "白名单设置", white_ips_path, id: "menu1_5" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_6') ? "active" : "" %>">
+              <%= link_to "用户IP访问分析", ip_statistical_analysis_user_behaviers_path, id: "menu1_6" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_7') ? "active" : "" %>">
+              <%= link_to "行为访问频率排序分析", user_behavier_access_analysis_user_behaviers_path, id: "menu1_7" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_8') ? "active" : "" %>">
+              <%= link_to "设备列表", devices_path, id: "menu1_8" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_9') ? "active" : "" %>">
+              <%= link_to "错误的登录信息", login_attemps_path, id: "menu1_9" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_10') ? "active" : "" %>">
+              <%= link_to "IP数与密码错误数量表", ip_login_error_count_login_attemps_path, id: "menu1_10" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_11') ? "active" : "" %>">
+              <%= link_to "设备数与密码错误数量表", device_login_error_count_login_attemps_path, id: "menu1_11" %>
+            </li>
+            <li class="<%= get_menu_cookie.include?('menu1_12') ? "active" : "" %>">
+              <%= link_to "用户数与密码错误数量表", member_login_error_count_login_attemps_path, id: "menu1_12" %>
+            </li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+</nav>
+<script>
+  $("a").click(function(){
+    var code = $(this).attr("id")
+    $.cookie('selected_menu', code, {path:"/"});
+  })
+</script>

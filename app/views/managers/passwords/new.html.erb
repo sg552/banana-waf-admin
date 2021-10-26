@@ -1,0 +1,54 @@
+<h3>找回密码</h3>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'devise-form' }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field" id="phone_field">
+    <%= f.label :phone, '手机号', :for=>'phone' %><br />
+    <%= f.phone_field :phone, autofocus: true, id: 'phone', class: 'form-control' %>
+  </div>
+  <div class="field" id="token_field">
+    <%= f.label :token, '验证码', :for=>'token' %><br />
+    <%= f.text_field :token, id: 'token', class: 'form-control', style: "vertical-align: top; display: inline-block; width: 200px;" %>
+    <a class='btn btn-default' style='display: inline-block;' id="send_sms_token"> 发送验证码</a>
+  </div>
+  <div class="divider"></div>
+  <div class="actions">
+    <%= f.submit "提交", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+<div class="divider"></div>
+<%= render "managers/shared/links" %>
+<script>
+$('#new_manager').submit(function(e){
+  e.preventDefault(e)
+  $.ajax({
+    type: 'post',
+    url: $(this).attr('action'),
+    data: $(this).serialize(),
+    success: function(data) {
+      if (data.path !== undefined) {
+        window.location.href = data.path
+      }
+    },
+    error: function(data){
+      alert('验证码有误')
+    }
+  });
+})
+$('#send_sms_token').click(function(){
+  var phone = $('#phone').val()
+  $.ajax({
+    type: 'post',
+    url: '/send_manager_sms_token',
+    data: { phone: phone },
+    success: function(data) {
+      if (data.code == 0) {
+        alert('发送成功')
+      } else if (data.code != undefined ) {
+        alert('发送失败，请联系管理员')
+      }
+    }
+  })
+})
+</script>

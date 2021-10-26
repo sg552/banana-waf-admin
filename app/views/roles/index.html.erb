@@ -1,0 +1,68 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-11">
+    <h2><%= t("roles.index_title") %></h2>
+  </div>
+  <div style="margin-top: 0.7%">
+    <%= link_to raw("&#xf067; #{t("roles.new_title")}"), new_role_path, class: 'fa-btn btn btn-primary' %>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-content">
+
+                <table class="table-hover table table-stripped toggle-arrow-tiny">
+                    <thead>
+                    <tr>
+                      <th><%= t("public.name2") %></th>
+                      <th><%= t("public.comment") %></th>
+                      <th><%= t("public.operation") %></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <% @roles.each do |role| %>
+                        <tr>
+                          <td><%= role.name %></td>
+                          <td><%= role.comment %></td>
+                          <td>
+                            <%= link_to raw("&#xf044; #{t("roles.edit_title")}"), edit_role_path(role),class: 'fa-btn btn btn-default btn-xs' %>
+                            <%= link_to raw("&#xf023; #{t('roles.manage_permission')}"), setting_role_permission_roles_path(id: role.id),class: 'fa-btn btn btn-primary btn-xs', id: "collection_#{role.id}" %>
+                            <% if role.name != 'super_admin'%>
+                              <%= link_to raw("&#xf00d;#{t("public.delete")}"), role, data: { confirm: t("public.delete_confirm") }, method: :delete,class: 'fa-btn btn btn-danger btn-xs', id: "delete_#{role.id}" %>
+                            <% end %>
+                          </td>
+                        </tr>
+                      <% end %>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td colspan="11">
+                          <ul class="pull-right"><%= paginate @roles %></ul>
+                        </td>
+                      </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+
+
+$(function() {
+
+    $('.footable').footable();
+
+});
+
+</script>
+
+<% end %>

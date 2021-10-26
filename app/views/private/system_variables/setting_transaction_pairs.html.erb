@@ -1,0 +1,16 @@
+<%= form_tag create_transaction_pairs_system_variables_path, method: :post do %>
+  <table class='table table-hover table-striped' >
+    <tr>
+      <th style="width: 300px;"> <%= t("header.default_pair_setting") %> </th>
+      <td>
+        <%= select_tag :value, options_from_collection_for_select( Market.all, :id, :id, @transaction_pairs.try(:value)), 
+          class: 'form-control', style: 'display: inline; width: 120px' %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=10>
+        <%= submit_tag t("public.confirm"), class: 'c-btn primary', style: 'line-height: normal;' %>
+      </td>
+    </tr>
+  </table>
+<% end %>

@@ -1,0 +1,58 @@
+<h3><%= t("edit_google_otp.title") %></h3>
+<% if current_manager.is_otp_binded %>
+<div class='alert alert-success '>
+  <%= t("edit_google_otp.already_bound") %>
+</div>
+<% else %>
+<div class='alert alert-danger '>
+  <%= t("edit_google_otp.no_binding") %>
+</div>
+<% end %>
+
+<div>
+
+</div>
+<style>
+.show_bind_container {
+  padding: 40px;
+  background: #fff;
+  border-radius: 10px;
+}
+.show_bind_container .hint {
+  line-height: 2;
+  font-size: 16px;
+  color: #1e194a;
+}
+</style>
+<div class="token-wrap">
+  <div class="c-container show_bind_container">
+    <div class='c-alert info'>
+      <%= raw t('google_otp.tips') %>
+    </div>
+
+    <canvas width="180" height="180" style="display: none;"></canvas>
+    <img src='<%= ENV['CDN_SERVER'] %>/otp-manual.jpg' style='float: right; width: 270px; margin-left: 100px'/>
+    <%= image_tag generate_qr_code(@otp_url)%>
+    <br/>
+    <div class="hint">
+      <%= raw t("google_otp.usage", email: current_manager.email, secret: current_manager.opt_secret) %>
+    </div>
+    <br>
+    <br>
+    <br>
+    <%= form_tag update_google_otp_manager_path(id: current_manager.id), method: :put do %>
+      <div class="hint" style="margin-bottom: 10px;">
+        <%= raw t("google_otp.please_input_otp_code") %><br/>
+      </div>
+      <%= text_field_tag :otp_code, '', placeholder: "e.g. 123456", class: 'form-control',
+        style: 'width: 300px; display: inline' %><br/>
+      <div style="margin-top: 50px;">
+        <%= submit_tag t("public.confirm2"), class: 'btn btn-primary', style: 'line-height: normal;' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<script>
+document.getElementsByTagName('html')[0].classList.remove('black')
+document.getElementsByTagName('html')[0].classList.add('gray')
+</script>

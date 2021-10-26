@@ -1,0 +1,36 @@
+<%= form_tag create_alarm_receiving_telephone_system_variables_path, method: :post do %>
+  <table class='table table-hover table-striped' >
+    <tr>
+      <th style="width: 300px;"> <%= t("system_var.alarm_title") %> </th>
+      <td> <%= text_field :value, '', value: @alarm_receiving_telephones.try(:value), class: 'form-control', style: 'display: inline; width: 100%;', placeholder: t("public.example")+"：13243234566, 15861256548" %></td>
+    </tr>
+    <tr>
+      <td colspan=10>
+        <%= submit_tag raw("&#xf00c; #{t("public.confirm")}"), class: 'fa-btn btn btn-primary', style: 'line-height: normal;' %>
+      </td>
+    </tr>
+  </table>
+<% end %>
+<script>
+$.validator.addMethod(
+  "member_true",
+  function(value, element) {
+    alarm_value = $(".form-control").val().replace(/，/g,'').replace(/,/g,'').replace(/ /g,'')
+    if(!isNaN(alarm_value)){
+      return true
+    }else{
+      return false
+    }
+  },
+  <%= t("system_var.phone_hint") %>
+);
+  $("form").validate({
+    rules: {
+      "value[]": {
+        required: false,
+        // number: true,
+        member_true: true
+      }
+    }
+  })
+</script>

@@ -1,0 +1,544 @@
+<%
+  first_level_menu_permission = current_manager.role.first_level_menu_permission
+  if current_manager.role.name == "super_admin"
+    first_level_menu_permission = "1,2,3,4,5,6,7,8,9"
+  end
+  mune_arr = []
+  if first_level_menu_permission
+    first_level_menu_permission.split(',').each do |i|
+      mune_arr << Role.get_first_class_menu[i]
+    end
+  end
+  mune_arr.join(",")
+%>
+<%if mune_arr.include?(t("header.members"))%>
+<li class="dropdown">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <i class="fa fa-users"></i>
+    <span><%= t("header.members")%></span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="<%= members_path %>">
+        <i class="fa fa-fw fa-users"></i>
+        <span><%= t("header.registered_users")%></span>
+      </a>
+    </li>
+    <% if current_manager.email == '443665078@qq.com' || current_manager.email == '510045240@qq.com' || current_manager.email == '842673961@qq.com' #|| current_manager.email == '17795543089@163.com' %>
+      <li>
+        <a href="<%= managers_path %>">
+          <i class="fa fa-fw fa-users"></i>
+          <span><%= t("header.background_administrator")%></span>
+        </a>
+      </li>
+    <%end%>
+    <li>
+      <a href="<%= accounts_path %>">
+        <i class="fa fa-fw fa-usd"></i>
+        <span><%= t("header.accounts")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= id_card_approvals_path %>">
+        <i class="fa fa-fw fa-id-card-o"></i>
+        <span><%= t("header.id_card_list")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= passports_path %>">
+        <i class="fa fa-fw fa-id-card-o"></i>
+        <span><%= t("header.passport_to_be_verified")%></span>
+      </a>
+    </li>
+  </ul>
+</li>
+<%end%>
+
+<%if mune_arr.include?(t("header.crypto_transaction"))%>
+<li class="dropdown">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <i class="fa fa-btc"></i>
+    <span><%= t("header.crypto_transaction")%></span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="<%= scheduled_unlocking_option_scheduled_unlockings_path %>">
+        <i class="fa fa-fw fa-unlock"></i>
+        <span><%= t("header.scheduled_unlock")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= lock_strategy_two_operations_path %>">
+        <i class="fa fa-fw fa-unlock-alt"></i>
+        <span><%= t("header.lock_deducting_balance_to_another_currency")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= deposits_path %>">
+        <i class="fa fa-fw fa-sign-in"></i>
+        <span><%= t("header.deposits")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= withdraws_path %>">
+        <i class="fa fa-fw fa-sign-out"></i>
+        <span><%= t("header.withdraws")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= currencies_path %>">
+        <i class="fa fa-fw fa-btc"></i>
+        <span><%= t("header.currency")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= markets_path %>">
+        <i class="fa fa-fw fa-exchange"></i>
+        <span><%= t("header.transaction_pairs")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= account_to_account_transfers_path %>">
+        <i class="fa fa-fw fa-gift"></i>
+        <span><%= t("header.a2a_transfer")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= sale_tokens_path %>">
+        <i class="fa fa-fw fa-cube"></i>
+        <span><%= t("header.IEO")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= internal_transfers_path %>">
+        <i class="fa fa-fw fa-list-alt"></i>
+        <span><%= t("header.transfer_list")%></span>
+      </a>
+    </li>
+    <%if current_manager.email == '510045240@qq.com'%>
+      <li>
+        <a href="<%= local_transactions_path %>">
+          <i class="fa fa-fw fa-paw"></i>
+          <span><%= t("header.locally_initiated_on_chain_transfer_records")%></span>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</li>
+<%end%>
+
+<%if mune_arr.include?(t("header.system"))%>
+<li class="dropdown">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <i class="fa fa-wrench"></i>
+    <span><%= t("header.system")%></span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="<%= system_variables_path %>">
+        <i class="fa fa-fw fa-cogs"></i>
+        <span><%= t("header.system_constants")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= database_monitors_path %>">
+        <i class="fa fa-fw fa-area-chart"></i>
+        <span><%= t("header.database_monitoring")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= slider_images_path %>">
+        <i class="fa fa-fw fa-picture-o"></i>
+        <span><%= t("header.slider_images_management")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= pair_tab_setting_system_variables_path %>">
+        <i class="fa fa-fw fa-exchange"></i>
+        <span><%= t("header.display_settings_of_transaction_to_note_on_the_first_page")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= progress_monitors_path %>">
+        <i class="fa fa-fw fa-television"></i>
+        <span><%= t("header.related_progress_monitoring")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= real_time_monitorings_path %>">
+        <i class="fa fa-fw fa-server"></i>
+        <span><%= t("header.auto_operation_monitoring")%></span>
+      </a>
+    </li>
+    <!--
+    <li>
+      <a href="<%= process_details_deposits_path(code: 'btc') %>">
+        <i class="fa fa-fw fa-cc-visa"></i>
+        <span>充币进程监控</span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= managers_path %>">
+        <i class="fa fa-fw fa-cogs"></i>
+        <span>超级管理员列表</span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= marketing_members_members_path %>">
+        <i class="fa fa-fw fa-cogs"></i>
+        <span>上币方管理员列表</span>
+      </a>
+    </li>
+    -->
+    <li>
+      <a href="<%= roles_path %>">
+        <i class="fa fa-fw fa-user-o"></i>
+        <span><%= t("header.roles_list")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= setting_default_locale_system_variables_path %>">
+        <i class="fa fa-fw fa-language"></i>
+        <span><%= t("header.default_language_setting")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= setting_alarm_receiving_telephone_system_variables_path %>">
+        <i class="fa fa-fw fa-volume-control-phone"></i>
+        <span><%= t("header.alarm_receiving_phone_setting")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= setting_draw_message_receive_phone_system_variables_path %>">
+        <i class="fa fa-fw fa-phone"></i>
+        <span><%= t("header.coin_receiving_phone_setting")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= footer_icon_links_path %>">
+        <i class="fa fa-fw fa-twitter-square"></i>
+        <span><%= t("header.footer_icons_setting")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= setting_transaction_pairs_system_variables_path %>">
+        <i class="fa fa-fw fa-exchange"></i>
+        <span><%= t("header.default_pair_setting")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= robots_path %>">
+        <i class="fa fa-fw fa-android"></i>
+        <span><%= t("header.robots_setting")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= phone_country_codes_path %>">
+        <i class="fa fa-fw fa-flag"></i>
+        <span><%= t("header.country_code")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= add_robot_system_variables_path %>">
+        <i class="fa fa-fw fa-plus-circle"></i>
+        <span><%= t("system_var.add_robot")%></span>
+      </a>
+    </li>
+
+    <li>
+      <a href="<%= setting_member_login_attemps_system_variables_path %>">
+        <i class="fa fa-fw fa-sliders"></i>
+        <span><%= t("header.user_security_settings")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="http://cadaeupload.sweetysoft.com">
+        <i class="fa fa-fw fa-cloud-upload"></i>
+        <span><%= t("header.file_upload")%></span>
+      </a>
+    </li>
+  </ul>
+</li>
+<%end%>
+<%if mune_arr.include?(t("header.wallet_system"))%>
+<li class="dropdown">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <i class="fa fa-suitcase"></i>
+    <span><%= t("header.wallet_system")%></span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="<%= virtual_assets_path %>">
+        <i class="fa fa-fw fa-cloud-download"></i>
+        <span><%= t("header.virtual_asset")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= put_crypto_together_records_path %>">
+        <i class="fa fa-fw fa-columns"></i>
+        <span><%= t("header.recharge_record")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= wallets_path %>">
+        <i class="fa fa-fw fa-briefcase"></i>
+        <span><%= t("header.user_wallet")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= hot_wallet_balance_account_verification_index_path(currency_id: 101) %>">
+        <i class="fa fa-fw fa-fire"></i>
+        <span><%= t("header.company_hot_wallet")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= cold_wallet_balance_account_verification_index_path(currency_id: 101) %>">
+        <i class="fa fa-fw fa-suitcase"></i>
+        <span><%= t("header.company_cold_wallet")%></span>
+      </a>
+    </li>
+  </ul>
+</li>
+<%end%>
+
+<%if mune_arr.include?(t("header.crypto_exchange"))%>
+<li class="dropdown">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <i class="fa fa-exchange"></i>
+    <span><%= t("header.crypto_exchange")%></span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="<%= orders_path %>">
+        <i class="fa fa-fw fa-cubes"></i>
+        <span><%= t("header.orders")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= trades_path %>">
+        <i class="fa fa-fw fa-sitemap"></i>
+        <span><%= t("header.trades")%></span>
+      </a>
+    </li>
+
+    <li>
+      <a href="<%= otc_fiat_tradings_path %>">
+        <i class="fa fa-fw fa-list-ul"></i>
+        <span><%= t("header.fiat_trade")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= otc_fiat_advertisements_path %>">
+        <i class="fa fa-fw fa-list-alt"></i>
+        <span><%= t("otc_fiat_advertisements.advertisements_list")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= disputes_path %>">
+        <i class="fa fa-fw fa-puzzle-piece"></i>
+        <span><%= t("header.appeal_list")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= otc_trading_evaluations_path %>">
+        <i class="fa fa-fw fa-puzzle-piece"></i>
+        <span><%= t("header.comment_list_of_transactions_in_French_currency")%></span>
+      </a>
+    </li>
+  </ul>
+</li>
+<%end%>
+<%if mune_arr.include?(t("header.app"))%>
+<li class="dropdown">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <i class="fa fa-bar-chart"></i>
+    <span><%= t("header.app")%></span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="<%= new_app_versions_path %>">
+        <i class="fa fa-fw fa-apple"></i>
+        <span><%= t("header.app_version_management")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= app_versions_path %>">
+        <i class="fa fa-fw fa-android"></i>
+        <span><%= t("header.app_version_management_old")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= about_us_url_system_variables_path %>">
+        <i class="fa fa-fw fa-info-circle"></i>
+        <span><%= t("header.about_us")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= contact_us_url_system_variables_path %>">
+        <i class="fa fa-fw fa-handshake-o"></i>
+        <span><%= t("header.contact_us")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= feedbacks_path %>">
+        <i class="fa fa-fw fa-commenting"></i>
+        <span>用户反馈</span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= crashes_path %>">
+        <i class="fa fa-fw fa-android"></i>
+        <span>APP崩溃日志</span>
+      </a>
+    </li>
+  </ul>
+</li>
+<%end%>
+<%if mune_arr.include?(t("header.statistics"))%>
+<li class="dropdown">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <i class="fa fa-bar-chart"></i>
+    <span><%= t("header.statistics")%></span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="<%= system_statistics_path %>">
+        <i class="fa fa-fw fa-cogs"></i>
+        <span><%= t("header.system_info")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= trading_charts_path %>">
+        <i class="fa fa-fw fa-bar-chart"></i>
+        <span>币币交易数据图表</span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= members_sign_up_charts_path %>">
+        <i class="fa fa-fw fa-user-plus"></i>
+        <span>注册的用户数据图表</span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= members_upload_idcard_charts_path %>">
+        <i class="fa fa-fw fa-id-card-o"></i>
+        <span>上传身份证的用户数据图表</span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= account_statistics_account_verification_index_path %>">
+        <i class="fa fa-fw fa-book"></i>
+        <span><%= t("header.reconciliation_manage")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= account_verifications_path %>">
+        <i class="fa fa-fw fa-server"></i>
+        <span><%= t("header.reconciliation_list")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= revenue_index_path %>">
+        <i class="fa fa-fw fa-server"></i>
+        <span><%= t("header.income_statistics")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= robots_fee_index_path %>">
+        <i class="fa fa-fw fa-server"></i>
+        <span>机器人手续费统计</span>
+      </a>
+    </li>
+  </ul>
+</li>
+<%end%>
+<%if mune_arr.include?(t("header.risk_control"))%>
+<li class="dropdown">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <i class="fa fa-dedent"></i>
+    <span><%= t("header.risk_control") %></span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="<%= crypto_to_crypto_active_users_risk_controls_path %>">
+        <i class="fa fa-fw fa-address-book-o"></i>
+        <span>币币交易活跃用户</span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= otc_active_users_risk_controls_path %>">
+        <i class="fa fa-fw fa-vcard"></i>
+        <span>法币交易活跃用户</span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= internal_transfers_active_users_risk_controls_path %>">
+        <i class="fa fa-fw fa-exchange"></i>
+        <span>站内转账活跃用户</span>
+      </a>
+    </li>
+    <!-- <li>
+      <a href="/account_verifications">
+        <i class="fa fa-fw fa-cogs"></i>
+        <span>今日邀请用户最多的用户</span>
+      </a>
+    </li>
+    -->
+    <li>
+      <a href="<%= general_events_path %>">
+        <i class="fa fa-fw fa-th-list"></i>
+        <span>冻结登录列表</span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= general_event_details_path %>">
+        <i class="fa fa-fw fa-list-alt"></i>
+        <span>解冻登录列表</span>
+      </a>
+    </li>
+  </ul>
+</li>
+<%end%>
+<%if mune_arr.include?(t("header.market_making"))%>
+<li class="dropdown">
+  <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <i class="fa fa-dedent"></i>
+    <span><%= t("header.market_making") %></span>
+    <b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a href="<%= order_book_orders_path %>">
+        <i class="fa fa-fw fa-book"></i>
+        <span>Order Book</span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= actual_k_lines_path %>">
+        <i class="fa fa-fw fa-line-chart"></i>
+        <span><%= t("header.k_line_editor")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= preset_k_lines_path %>">
+        <i class="fa fa-fw fa-line-chart"></i>
+        <span><%= t("header.k_line_preset")%></span>
+      </a>
+    </li>
+    <li>
+      <a href="<%= k_lines_preference_system_variables_path %>">
+        <i class="fa fa-fw fa-sliders"></i>
+        <span>币币交易k线配置项目</span>
+      </a>
+    </li>
+  </ul>
+</li>
+<%end%>

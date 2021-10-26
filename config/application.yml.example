@@ -1,0 +1,28 @@
+defaults: &defaults
+
+  CDN_SERVER: http://showmethemoney.yoursite.com
+
+  # 主要用于读取pc端登录用户信息  st
+  PC_MEMBER_REDIS_URL: redis://ip:port/3
+
+  # 读取lua脚本存的数据
+  WAF_REDIS_URL:  redis://ip:port
+
+  # 获取IP归属地接口
+  GET_IP_OWNERSHIP_URL: http://ip-api.com/json
+
+  # 记得这里，可能要设置IP白名单
+  SMS_URL: 'https://sms.yunpian.com/v1/sms/send.json'
+  SMS_KEY: '5de19ff4e855'
+  SMS_SIGNATURE: YHTECH
+
+  GOOGLE_OTP_ISSUER: 'your_site'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

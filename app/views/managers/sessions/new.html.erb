@@ -1,0 +1,23 @@
+<div class="middle-box text-center loginscreen  animated fadeInDown">
+  <div style="margin-top: 200px;">
+    <!-- <div>
+      <h5 class="logo-title">WAF</h5>
+    </div> -->
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: "devise-form"}) do |f| %>
+      <div class="form-group">
+        <input type="text" name="manager[email]" class="form-control" placeholder="登录账号" required="true"/>
+      </div>
+      <div class="form-group">
+        <input type="password" name="manager[password]" class="form-control" placeholder="密码" required="true"/>
+      </div>
+      <div class="form-group">
+        <input type="text" name="manager[otp_code]" class="form-control" placeholder="谷歌验证码"/>
+      </div>
+      <% if flash[:warning] %>
+        <p class="text-warning text-center"><small><%= flash[:warning] %></small></p>
+      <% end %>
+      <%= submit_tag "登录", class: "btn btn-success block full-width m-b" %>
+      <!--<a href="<%#= forget_password_merchant_agent_index_path %>"><small>忘记密码?</small></a>-->
+    <% end %>
+  </div>
+</div>

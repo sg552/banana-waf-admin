@@ -1,0 +1,2 @@
+class SensitiveWord < ApplicationRecord
+end

@@ -1,0 +1,151 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-2">
+    <h2>错误的登录尝试</h2>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="ibox-content m-b-xs border-bottom">
+    <%= form_tag '', method: :get, id: "select_from" do %>
+      <div class="row">
+        <div class="col-sm-1">
+          <div class="form-group">
+            <label class="control-label" for="product_name"><%= t("public.user_id")%></label>
+            <%= text_field_tag :member_ids, params[:member_ids], class: 'form-control', placeholder: "#{t("public.user_id")},1,2,3"%>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="form-group">
+            <label class="control-label" for="quantity"><%= t("members.member_name") %></label>
+            <%= text_field_tag :name, params[:name], class: 'form-control', placeholder: "#{t("members.member_name")}" %>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label class="control-label" for="quantity"><%= t("public.email") %></label>
+            <%= text_field_tag :email, params[:email], class: 'form-control', placeholder: "#{t("public.email")}" %>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label class="control-label" for="quantity"><%= t("members.member_phone") %></label>
+            <%= text_field_tag :mobile, params[:mobile], class: 'form-control', placeholder: "#{t("members.member_phone")}" %>
+          </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label class="control-label"><%= t("public.time_interval") %></label>
+            <div class="input-daterange input-group">
+              <%= text_field_tag :from, params[:from], class: 'input-sm form-control datepicker', autocomplete: 'off' %>
+              <span class="input-group-addon">to</span>
+              <%= text_field_tag :to, params[:to], class: 'input-sm form-control datepicker', autocomplete: 'off' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-1">
+          <div class="form-group">
+            <label class="control-label" for="price"><%= "设备系统类型" %></label>
+            <%= select_tag :os_type, options_for_select([["pc", 'pc'], ["ios", 'ios'], ["android", 'android'], ["admin-管理员", 'admin']], params[:os_type]), include_blank: t("public.all"), class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="col-sm-1">
+          <div style="margin-top: 22px;">
+            <button type="submit" class="btn btn btn-primary"> <i class="fa fa-search"></i> <%= t('public.search') %></button>
+          </div>
+        </div>
+
+        <div class="col-sm-1">
+          <div style="margin-top: 22px;">
+            <button class="btn btn-success " type="button"><i class="fa fa-download"></i>
+              <%= link_to t('public.export_csv'), download_csv_login_attemps_path(params.to_enum.to_h.except(:controller, :action)), style: "color: #ffffff" %>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <tfoot>
+            <tr>
+              <th colspan="19">
+                <ul class="pull-right"><%= paginate @login_attemps %></ul>
+              </th>
+            </tr>
+          </tfoot>
+          <div><h3><%= @login_attemps.count %>条数据<h3></div>
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <th>ID</th>
+              <th>情况</th>
+              <th>IP</th>
+              <th>Comment(结果)</th>
+              <th>错误密码</th>
+              <th>时间</th>
+              <th style="width: 300px">设备信息</th>
+            </thead>
+            <tbody>
+              <% @login_attemps.each do |login_attemp| %>
+                <tr>
+                  <td><%= login_attemp.id %></td>
+                  <td>
+                    <% if login_attemp.os_type != 'admin' %>
+                      <%= link_to member_detail(login_attemp.member), members_path(:id => login_attemp.member_id), target: '_blank' %>
+                    <% else %>
+                      管理员：<%= login_attemp.manager.try(:email) %>
+                    <% end %>
+                  </td>
+                  <td>
+                    <%= login_attemp.ip %>
+                  </td>
+                  <td>
+                    <%= login_attemp.comment %>
+                  </td>
+                  <td>
+                    <%= login_attemp.wrong_password %>
+                  </td>
+                  <td>
+                    <%= login_attemp.created_at.strftime '%Y-%m-%d %H:%M:%S' %>
+                  </td>
+                  <td>
+                    <% if login_attemp.os_type == 'admin' %>
+                      后端管理员
+                    <% else %>
+                      User-Agent: <%= login_attemp.user_agent rescue '-' %> <br/>
+                      设备类型:<%= login_attemp.device_type rescue '-' %><br/>
+                      app版本:<%= login_attemp.app_version rescue '-' %><br/>
+                      设备系统类型:<%= login_attemp.os_type rescue '-' %><br/>
+                      设备系统版本:<%= login_attemp.os_version rescue '-' %>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="19">
+                  <ul class="pull-right"><%= paginate @login_attemps %></ul>
+                </th>
+              </tr>
+            </tfoot>
+           
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $('form').validate()
+  $('.datepicker').datetimepicker({
+    format: "Y-m-d H:i"
+  })
+</script>

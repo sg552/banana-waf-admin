@@ -1,0 +1,14 @@
+kill -9 `ps -ef | grep waf-rails-admin | awk '{print $2}'`
+# nohup bundle exec puma -C config/puma.rb &
+
+kill -9 `ps -ef | grep sync_redis_user_behavier_to_mysql | awk '{print $2}'`
+# nohup bundle exec ruby scripts/sync_redis_user_behavier_to_mysql.rb &
+
+kill -9 `ps -ef | grep sync_redis_blocked_ips_to_mysql | awk '{print $2}'`
+# nohup bundle exec ruby scripts/sync_redis_blocked_ips_to_mysql.rb &
+
+kill -9 `ps -ef | grep update_ip_attribution| awk '{print $2}'`
+# nohup bundle exec ruby scripts/update_ip_attribution.rb &
+
+kill -9 `ps -ef | grep one_day_once_analyze_user_agent| awk '{print $2}'`
+# nohup bundle exec ruby scripts/one_day_once_analyze_user_agent.rb &

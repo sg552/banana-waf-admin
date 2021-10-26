@@ -1,0 +1,174 @@
+<script src=https://files.sweetysoft.com/image_after_2021_07_05/3833/select2.min.js></script>
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>用户行为记录</h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="ibox-content m-b-xs border-bottom">
+    <div class="row">
+      <%= form_tag '', method: :get do %>
+        <div class="col-lg-11">
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="ip">IP</label>
+              <%= text_field_tag :ip, params[:ip],  class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="member_id">用户ID</label>
+              <%= text_field_tag :member_id, params[:member_id], class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="member_id">用户邮箱或手机号</label>
+              <%= text_field_tag :account, params[:account], class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label class="control-label" for="uri">用户行为</label>
+              <%= select_tag :behavier_id, options_from_collection_for_select(Behavier.all, :id, :behavier_name, params[:behavier_id]), include_blank: '全部',  class:'form-control'  %>
+            </div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="user_agent">设备ID</label>
+              <%= text_field_tag :device_id, params[:device_id], class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="font-noraml"><%= t("public.time_interval")%></label>
+              <div class="input-daterange input-group">
+                <%= text_field_tag :from, params[:from], class: 'input-sm form-control datepicker', autocomplete: 'off'%>
+                <span class="input-group-addon">to</span>
+                <%= text_field_tag :to, params[:to], class: 'input-sm form-control datepicker', autocomplete: 'off'%>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="control-label" for="uri">域名</label>
+              <%= select_tag :host_id, options_from_collection_for_select(Host.all, :id, :name, params[:host_id]), include_blank: '全部',  class:'form-control'  %>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+            <button type="submit" class="btn btn btn-primary"> <i class="fa fa-search"></i> <%= t('public.search') %></button>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button class="btn btn-success " type="button"><i class="fa fa-download"></i>
+              <%= link_to raw("#{t('public.export_csv')}"),download_csv_user_behaviers_path( params.to_enum.to_h.except(:controller, :action) ), style: "color: #ffffff"%></button>
+            </div>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <thead>
+            <tr>
+              <td colspan="11">
+                <!-- <ul class="pull-left" ><h3> 共 <%#= @count %> 条记录</h3></ul> -->
+                <ul class="pull-right">
+                  <%= link_to_prev_page @behaviers, "上一页" %>
+                  <%= link_to_next_page @behaviers, "下一页" %>
+                </ul>
+              </td>
+            </tr>
+          </thead>
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <th width="90px">ID</th>
+              <th width="120px">IP</th>
+              <th width="13%">用户信息</th>
+              <th width="150px">设备信息</th>
+              <th width="160px">访问时间</th>
+              <th width="60px">请求方式</th>
+              <th width="150px">访问域名</th>
+              <th >用户行为</th>
+            </thead>
+            <tbody>
+              <% if @behaviers.present? %>
+                <% @behaviers.includes(:behavier, :ip, :device).each do |user_behavier| %>
+                  <tr>
+                    <td >
+                      <%= user_behavier.id%>
+                    </td>
+                    <td >
+                      <%= link_to ip_infomation(user_behavier.ip), ip_statistical_analysis_user_behaviers_path(ip: user_behavier[:ip])%>
+                    </td>
+                    <td >
+                      <% if user_behavier.member_id.present? && user_behavier.try(:member_id) > 0 %>
+                        <%= link_to member_detail(user_behavier.member), members_path(:id => user_behavier.member.try(:id)), target: '_blank' %>
+                      <% else %>
+                         未登录
+                      <% end %>
+                    </td>
+                    <td >
+                      <%= link_to device_detail(user_behavier.device), devices_path(:id=> user_behavier.device_id), target: '_blank' %>
+                    </td>
+                    <td >
+                      <%= user_behavier.time.strftime '%Y-%m-%d %H:%M:%S' %>
+                    </td>
+                    <td >
+                      <%= user_behavier.http_method%>
+                    </td>
+                    <td >
+                      <%= user_behavier.host.try(:name)%>
+                    </td>
+                    <td >
+                      <%= link_to user_behavier.behavier.behavier_name, user_behavier_access_analysis_show_user_behaviers_path(:behavier_id => user_behavier.behavier.id), target: '_blank' rescue '-'%>
+                      <br/>
+                      <%= user_behavier.uri%> <br/>
+                      <%= user_behavier.params_text %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="11">
+                  <ul class="pull-right">
+                  <%= link_to_prev_page @behaviers, "上一页" %>
+                  <%= link_to_next_page @behaviers, "下一页" %>
+                  </ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+  $(function() {
+    $('.footable').footable();
+  });
+  $('.datepicker').datepicker({
+    dateFormat: "yy-mm-dd"
+  })
+  $('#behavier_id').select2()
+</script>
+
+<% end %>

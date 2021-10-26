@@ -1,0 +1,172 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>设备列表</h2>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="ibox-content m-b-xs border-bottom">
+    <div class="row">
+      <%= form_tag '', method: :get, id: "member_select_from" do %>
+        <div class="col-lg-12">
+
+          <div class="col-sm-1">
+            <div class="form-group">
+              <label class="control-label" for="product_name">ID</label>
+              <%= text_field_tag :id, params[:id], class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="control-label" for="product_name">User-agent</label>
+              <%= text_field_tag :user_agent, params[:user_agent], class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="font-noraml">User-agent长度区间</label>
+              <div class="input-daterange input-group">
+                <%= text_field_tag :length_from, params[:length_from], class: 'input-sm form-control', autocomplete: 'off'%>
+                <span class="input-group-addon">to</span>
+                <%= text_field_tag :length_to, params[:length_to], class: 'input-sm form-control', autocomplete: 'off'%>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="quantity">UA Type</label>
+              <%= select_tag :ua_type, options_for_select([["请选择", ""],
+                                                           ["browser", 'browser'],
+                                                           ["mobile-browser", "mobile-browser"],
+                                                           ["email-client", "email-client"],
+                                                           ["app", "app"],
+                                                           ["feed-reader", "feed-reader"],
+                                                           ["crawler", "crawler"],
+                                                           ["offline-browser", "offline-browser"],
+                                                           ["unknown", "unknown"]],
+              params[:ua_type]), class: 'form-control' %>
+          </div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="quantity">Device Type</label>
+              <%= select_tag :device_type, options_for_select([["请选择", ""],
+                                                               ["desktop", 'desktop'],
+                                                               ["tablet", "tablet"],
+                                                               ["smartphone", "smartphone"],
+                                                               ["console", "console"],
+                                                               ["smarttv", "smarttv"],
+                                                               ["crawler", "crawler"],
+                                                               ["wearable", "wearable"],
+                                                               ["unknown", "unknown"]],
+              params[:device_type]), class: 'form-control' %>
+          </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button type="submit" class="btn btn btn-primary"> <i class="fa fa-search"></i> <%= t('public.search') %></button>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button class="btn btn-success " type="button"><i class="fa fa-download"></i>
+              <%= link_to raw("#{t('public.export_csv')}"),download_csv_devices_path( params.to_enum.to_h.except(:controller, :action) ), style: "color: #ffffff"%></button>
+            </div>
+          </div>
+        </div>
+    </div>
+  <%end%>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="ibox">
+      <div class="ibox-content">
+        <table class="table-hover table table-stripped toggle-arrow-tiny">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th style="width: 300px">User-agent</th>
+              <th>基本信息</th>
+              <th>操作系统</th>
+              <th>设备</th>
+              <th>浏览器</th>
+              <th>备注</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if @devices.present? %>
+              <% @devices.each do |device| %>
+                <tr>
+                  <td>
+                    <%= device.id %>
+                  </td>
+                  <td>
+                    <%= device.user_agent %> <br/><br/>
+                  </td>
+                  <td>
+                    类型: <%= device.ua_type %><br/>
+                    品牌: <%= device.brand %> <br/>
+                    名称: <%= device.brand_name %>
+                </td>
+                <td>
+                  <% if device.os_icon.present? %>
+                    <p >
+                    <img style="width:20px;height:20px"  src=" <%= device.os_icon %>" />
+                    </p>
+                  <% end %>
+                  操作系统名称: <%= device.os_name %> <br/>
+                  操作系统代码: <%= device.os_code %> <br/>
+                  操作系统系列: <%= device.os_family %> <br/>
+                  操作系统系列代码: <%= device.os_family_code %> <br/>
+                  供应商: <%= device.os_family_vendor %> <br/>
+                  <% if device.os_url.present? %>
+                    <%= link_to "操作系统官网",  device.os_url , :target=>"new"%>
+                  <% end %>
+                </td>
+                <td>
+                  设备名称: <%= device.device_name %> <br/>
+                  设备类型: <%= device.device_type %> <br/>
+                  设备品牌: <%= device.device_brand %> <br/>
+                  设备品牌代码: <%= device.device_brand_code %> <br/>
+                  <% if device.device_brand_url.present? %>
+                    <%= link_to "设备品牌官网",  device.device_brand_url, :target=>"new" %>
+                  <% end %>
+                </td>
+                <td>
+                  浏览器名称: <%= device.browser_name %> <br/>
+                  浏览器版本: <%= device.browser_version %> <br/>
+                  浏览器主板本: <%= device.browser_version_major %> <br/>
+                  浏览器引擎: <%= device.browser_engine %> <br/>
+                </td>
+                <td>
+                  <%= device.comment %>
+                </td>
+                <td>
+                  <%= link_to raw("&#xf044;#{t'public.edit'}"), edit_device_path(device), class: 'fa-btn btn btn-default btn-xs', id:"edit_#{device.id}" %>
+                </td>
+                </tr>
+              <% end %>
+            <% end %>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="11">
+                <ul class="pull-right"><%= paginate @devices %></ul>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

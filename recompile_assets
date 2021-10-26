@@ -1,0 +1,6 @@
+echo "== 使用本命令来修改 js i18n, angular i18n"
+rm tmp/cache/assets/ -rf
+rm public/assets/locales/* -f
+bundle exec rails tmp:create assets:precompile RAILS_ENV=production
+
+echo "== 编译完毕,请重新启动rails"

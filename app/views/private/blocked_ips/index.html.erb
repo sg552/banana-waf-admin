@@ -1,0 +1,247 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>被封ip列表（被封禁的IP总数: <%= @count %>）</h2>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="ibox-content m-b-xs border-bottom">
+    <div class="row">
+      <%= form_tag '', method: :get, id: "member_select_from" do %>
+        <div class="col-lg-12">
+          <div class="col-sm-1">
+            <div class="form-group">
+              <label class="control-label" for="product_name">IP</label>
+              <%= text_field_tag :ip, params[:ip], class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div class="form-group">
+              <label class="control-label" for="product_name">解封人邮箱</label>
+              <%= text_field_tag :unblocked_by, params[:unblocked_by], class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <div class="form-group">
+              <label class="control-label" for="price">封禁人邮箱</label>
+              <%= text_field_tag :blocked_by, params[:blocked_by], class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <div class="form-group">
+              <label class="control-label" for="status">是否被封禁</label>
+              <%= select_tag :is_blocked, options_for_select([["请选择", ""], ["是", 1], ["否", 0]], params[:is_blocked]), class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label class="control-label" for="status"><%= t("public.time_interval")%></label>
+              <div class="input-daterange input-group">
+                <%= text_field_tag :from, params[:from], class: 'input-sm form-control datepicker', autocomplete: 'off'%>
+                <span class="input-group-addon">to</span>
+                <%= text_field_tag :to, params[:to], class: 'input-sm form-control datepicker', autocomplete: 'off'%>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="status">封禁理由</label>
+              <%= select_tag :blocked_reason, options_for_select((BlockedIp.all.map{ |ip| [ip.blocked_reason, ip.blocked_reason]}.uniq << ['请选择','']).reverse , params[:blocked_reason]), class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button type="submit" class="btn btn btn-primary"> <i class="fa fa-search"></i> <%= t('public.search') %></button>
+            </div>
+
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button class="btn btn btn-primary" type="button">
+              <%= link_to t('public.add'),new_blocked_ip_path, style: "color: #ffffff"%></button>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button class="btn btn-success " type="button"><i class="fa fa-edit"></i>
+              <%= link_to raw("#{t('public.export_csv')}"),download_csv_blocked_ips_path( params.to_enum.to_h.except(:controller, :action) ), style: "color: #ffffff"%></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <%end%>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+    <thead>
+      <tr>
+        <td colspan="10">
+          <!-- <ul class="pull-left" ><h3> 共 <%#= @count %> 条记录</h3></ul> -->
+          <ul class="pull-right">
+            <%= link_to_prev_page @blocked_ips, "上一页" %>
+            <%= link_to_next_page @blocked_ips, "下一页" %>
+          </ul>
+        </td>
+      </tr>
+    </thead>
+      <div class="ibox">
+        <div class="ibox-content">
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th style="width: 200px">IP</th>
+                <th>封禁人</th>
+                <th>封禁的时间</th>
+                <th>封禁理由</th>
+                <th style="width: 300px" >封禁信息</th>
+                <th style="width: 300px">
+                  解封人<br/>
+                  解封时间<br/>
+                  解封理由<br/>
+                </th>
+                <th>被封禁</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if @blocked_ips.present? %>
+                <% @blocked_ips.includes(:blocked_manager).each do |blocked_ip| %>
+                  <tr>
+                    <td>
+                      <%= blocked_ip.id %>
+                    </td>
+                    <td>
+                      <%= blocked_ip.ip %></br>
+                      <%= blocked_ip.address %>
+                    </td>
+                    <td>
+                      <%= blocked_ip.blocked_manager.try(:email) %>
+                    </td>
+                    <td>
+                      <%= blocked_ip.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+                    </td>
+                    <td>
+                      <%= blocked_ip.blocked_reason %>
+                    </td>
+                    <td class='html-content'>
+                      <%= blocked_ip.get_comment.html_safe%>
+                    </td>
+                    <td>
+                        解封人：<%= blocked_ip.unblocked_manager.try(:email) %> <br/>
+                        解封时间：<%= blocked_ip.unblocked_at.try('strftime','%Y-%m-%d %H:%M:%S') %> <br/>
+                        解封原因：<%= blocked_ip.unblocked_reason %> <br/>
+                    </td>
+
+                    <td>
+                      <%= blocked_ip.is_blocked? ? "是":"否" %>
+                    </td>
+                    <td>
+                      <% if blocked_ip.is_blocked? %>
+                        <button class="btn btn btn-primary data-alert" type="button" data-toggle="modal" id="<%= blocked_ip.id%>" data-target="#modify_unblock" style="padding: 1px 5px"><i class="fa fa-unlock"></i> 解禁</button>
+                      <% else %>
+                        <button class="btn btn btn-success data-alert" type="button" data-toggle="modal" id="<%= blocked_ip.id%>" data-target="#modify_block" style="padding: 1px 5px"><i class="fa fa-lock"></i> 封禁</button>
+                      <% end %>
+                      <%= link_to raw("&#xf00d; #{t'public.delete'}"), blocked_ip, method: :delete, data: {confirm: t("public.delete_confirm")}, class: "fa-btn btn btn-xs btn-danger"%>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="11">
+                  <ul class="pull-right">
+                    <%= link_to_prev_page @blocked_ips, "上一页" %>
+                    <%= link_to_next_page @blocked_ips, "下一页" %>
+                  </ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modify_block" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="gridSystemModalLabel" style="float: left;">封禁理由</h4>
+      </div>
+
+      <%= form_tag blocked_blocked_ips_path, multipart: true, method: :post do %>
+        <div class="modal-body">
+          <input type="hidden" class="hidden-id" name="id">
+          <table>
+            <tr>
+              <td style="width: 538px;">
+                <%= text_area :blocked_reason, "",class: 'form-control', style: " height: 200px;" %>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><%= t("public.cancel")%></button>
+          <button type="submit" class="btn btn-primary button-sub"><%= t("public.confirm")%></button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modify_unblock" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="gridSystemModalLabel" style="float: left;">解禁理由</h4>
+      </div>
+
+      <%= form_tag unblocked_blocked_ips_path, multipart: true, method: :post do %>
+        <div class="modal-body">
+          <input type="hidden" class="hidden-id" name="id">
+          <table>
+            <tr>
+              <td style="width: 538px;">
+                <%= text_area :unblocked_reason, "",class: 'form-control', style: " height: 200px;" %>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><%= t("public.cancel")%></button>
+          <button type="submit" class="btn btn-primary button-sub"><%= t("public.confirm")%></button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<style>
+.html-content img{
+  width: 50px;
+  height: 50px;
+}
+</style>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+  $(function() {
+    $('.footable').footable();
+    $(".data-alert").click(function(){
+      $(".hidden-id").val(this.id)
+    });
+  });
+  $('.datepicker').datepicker({dateFormat: "yy-mm-dd"})
+</script>
+
+<% end %>

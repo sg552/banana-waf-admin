@@ -1,0 +1,195 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>用户行为设置（总条数：<%= @behaviers_count %>）</h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="ibox-content m-b-xs border-bottom">
+    <div class="row">
+      <%= form_tag '', method: :get do %>
+        <div class="col-lg-11">
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="product_name">url</label>
+              <%= text_field_tag :url, params[:url], placeholder: '例如：/mobile_api/v2/otc/get_advertisements', class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="price">用户行为名称</label>
+              <%= text_field_tag :behavier_name, params[:behavier_name], class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="quantity">请求方式</label>
+              <%= select_tag :http_method, options_for_select([["请选择", ""], ["GET", 'GET'], ["POST", "POST"]], params[:http_method]), class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+            <button type="submit" class="btn btn btn-primary"> <i class="fa fa-search"></i> <%= t('public.search') %></button>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button class="btn btn-success " type="button"><i class="fa fa-download"></i>
+              <%= link_to raw("#{t('public.export_csv')}"),download_csv_behaviers_path( params.to_enum.to_h.except(:controller, :action) ), style: "color: #ffffff"%></button>
+            </div>
+          </div>
+        </div>
+      <%end%>
+      <div class="col-sm-1">
+        <div style="margin-top: 22px;">
+          <button class="btn btn btn-primary" type="button" data-toggle="modal" data-target="#modify"><%= t('public.add') %></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+    
+      <tr>
+        <td colspan="11">
+          <ul class="pull-right"><%= paginate @behaviers %></ul>
+        </td>
+      </tr>
+      <div class="ibox">
+        <div class="ibox-content">
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <th>ID</th>
+              <th>用户行为名称</th>
+              <th>url</th>
+              <th>请求方式</th>
+              <th>操作</th>
+            </thead>
+            <tbody>
+              <% if @behaviers.present? %>
+                <% @behaviers.each do |behavier| %>
+                  <tr>
+                    <td>
+                      <%= behavier.id%>
+                    </td>
+                    <td>
+                      <%= behavier.behavier_name%>
+                    </td>
+                    <td>
+                      <%= behavier.url %>
+                    </td>
+                    <td>
+                      <%= behavier.http_method%>
+                    </td>
+                    <td>
+                    <button type="submit" class="btn btn btn-primary" data-toggle="modal" data-target="#modify1" onclick="editData('<%=behavier.id%>')"><%= t('public.edit') %></button>
+                      <button type="submit" class="btn btn btn-danger"><%= link_to t('public.delete'),behavier_path(id: behavier.id), method: 'delete', style: "color: #ffffff", data: {confirm: t('public.delete_confirm')}  %></button>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="11">
+                  <ul class="pull-right"><%= paginate @behaviers %></ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- add -->
+<div class="modal fade" id="modify" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="gridSystemModalLabel" style="float: left;">添加</h4>
+      </div>
+
+      <%= form_tag behaviers_path, multipart: true, method: :post do %>
+        <div class="modal-body">
+          <table style="width: 538px;border-collapse:separate; border-spacing:0px 18px;">
+            <tr>
+              <td class="icon-width">
+                url: <%= text_field_tag :url, "", placeholder: '例如： /mobile_api/v2/otc/get_advertisements', class: 'form-control', required: true %>
+              </td>
+            </tr>
+            <tr>
+              <td class="icon-width">
+                请求方式：<%= select_tag :http_method, options_for_select([["GET", 'GET'], ["POST", "POST"]]), required: true, class: 'form-control' %>
+              </td>
+            </tr>
+            <tr>
+              <td class="icon-width">
+                用户行为名称：<%= text_field_tag :behavier_name, "", placeholder: '例如：获取广告列表', class: 'form-control', required: true %>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><%= t("public.cancel")%></button>
+          <button type="submit" class="btn btn-primary button-sub"><%= t("public.confirm")%></button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!-- edit -->
+<div class="modal fade" id="modify1" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="gridSystemModalLabel" style="float: left;">编辑</h4>
+      </div>
+
+      <%= form_tag update_data_behaviers_path, multipart: true, method: :post do %>
+        <input type="hidden" name="id" id="edit-id">
+        <div class="modal-body">
+          <table style="width: 538px;border-collapse:separate; border-spacing:0px 18px;">
+            <tr>
+              <td class="icon-width">
+                url: <%= text_field_tag :url, "", id: "edit-url", class: 'form-control', required: true %>
+              </td>
+            </tr>
+            <tr>
+              <td class="icon-width">
+                行为名称：<%= text_field_tag :behavier_name, "", id: "edit-behavier_name",class: 'form-control', required: true %>
+              </td>
+            </tr>
+            <tr>
+              <td class="icon-width">
+                请求方式：<%= select_tag :http_method,  options_for_select(["GET", "POST"]),  class: 'form-control', required: true %>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><%= t("public.cancel")%></button>
+          <button type="submit" class="btn btn-primary button-sub"><%= t("public.confirm")%></button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+  function editData(id){
+    $.ajax({
+      url: "/behaviers/"+id+"/edit",
+      success: function (data) {
+        $("#edit-url").val(data.url)
+        $("#edit-behavier_name").val(data.behavier_name)
+        $("#edit-http_method").val(data.http_method)
+        $("#edit-id").val(data.id)
+      }
+    });
+  }
+</script>
+
+<% end %>

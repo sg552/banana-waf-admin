@@ -1,0 +1,197 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>单位时间访问限制 (总共有：<%= @url_visit_limits_count %>)</h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="ibox-content m-b-xs border-bottom">
+    <div class="row">
+      <%= form_tag '', method: :get do %>
+        <div class="col-lg-11">
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="product_name">用户行为</label>
+              <%= select_tag :behavier_id, options_from_collection_for_select(Behavier.all, :id, :behavier_name, params[:behavier_id]), include_blank: '全部',  class:'form-control'  %>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="price">最大访问次数</label>
+              <%= text_field_tag :maximum_times, params[:maximum_times], class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="quantity">单位时间(秒)</label>
+              <%= text_field_tag :duration, params[:duration], class: 'form-control' %>
+            </div>
+          </div>
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button type="submit" class="btn btn btn-primary"> <i class="fa fa-search"></i> <%= t('public.search') %></button>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button class="btn btn-success " type="button"><i class="fa fa-download"></i>
+              <%= link_to raw("#{t('public.export_csv')}"),download_csv_url_visit_limits_path( params.to_enum.to_h.except(:controller, :action) ), style: "color: #ffffff"%></button>
+            </div>
+          </div>
+        </div>
+      <%end%>
+      <div class="col-sm-1">
+        <div style="margin-top: 22px;">
+          <button class="btn btn btn-primary" type="button" data-toggle="modal" data-target="#modify"><%= t('public.add') %></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <th>ID</th>
+              <th>用户行为信息</th>
+              <th>单位时间内访问最大次数</th>
+              <th>单位时间(秒)</th>
+              <th>操作</th>
+            </thead>
+            <tbody>
+              <% if @url_visit_limits.present? %>
+                <% @url_visit_limits.each do |url_visit_limit| %>
+                  <tr>
+                    <td>
+                      <%= url_visit_limit.id %>
+                    </td>
+                    <td>
+                      <%= user_behavier_info(url_visit_limit.behavier) %>
+                    </td>
+                    <td>
+                      <%= url_visit_limit.maximum_times %>
+                    </td>
+                    <td>
+                      <%= url_visit_limit.duration %>
+                    </td>
+                    <td>
+                    <button type="submit" class="btn btn btn-primary" data-toggle="modal" data-target="#modify1" onclick="editData('<%=url_visit_limit.id%>')"><%= t('public.edit') %></button>
+                      <button type="submit" class="btn btn btn-danger"><%= link_to t('public.delete'),url_visit_limit_path(id: url_visit_limit.id), method: 'delete', style: "color: #ffffff", data: {confirm: t('public.delete_confirm')}  %></button>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="11">
+                  <ul class="pull-right"><%= paginate @url_visit_limits %></ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- add -->
+<div class="modal fade" id="modify" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="gridSystemModalLabel" style="float: left;">添加</h4>
+      </div>
+
+      <%= form_tag url_visit_limits_path, multipart: true, method: :post do %>
+        <div class="modal-body">
+          <table style="width: 538px;border-collapse:separate; border-spacing:0px 18px;">
+            <tr>
+              <td class="icon-width">
+                用户行为:<%= select_tag :behavier_id, options_from_collection_for_select(Behavier.all, :id, :behavier_name), class:'form-control'  %>
+              </td>
+            </tr>
+            <tr>
+              <td class="icon-width">
+                访问次数：<%= text_field_tag :maximum_times, "",class: 'form-control', required: true %>
+              </td>
+            </tr>
+            <tr>
+              <td class="icon-width">
+                单位时间：<%= text_field_tag :duration, "",class: 'form-control', required: true %>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><%= t("public.cancel")%></button>
+          <button type="submit" class="btn btn-primary button-sub"><%= t("public.confirm")%></button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<!-- edit -->
+<div class="modal fade" id="modify1" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="gridSystemModalLabel" style="float: left;">编辑</h4>
+      </div>
+
+      <%= form_tag update_data_url_visit_limits_path, multipart: true, method: :post do %>
+        <input type="hidden" name="id" id="edit-id">
+        <div class="modal-body">
+          <table style="width: 538px;border-collapse:separate; border-spacing:0px 18px;">
+            <tr>
+              <td class="icon-width">
+                用户行为<%= select_tag :behavier_id,  options_from_collection_for_select(Behavier.all, :id, :behavier_name), class: "form-control", required: true  %>
+              </td>
+            </tr>
+            <tr>
+              <td class="icon-width">
+                访问次数：<%= text_field_tag :maximum_times, "", id: "edit-maximum_times",class: 'form-control', required: true %>
+              </td>
+            </tr>
+            <tr>
+              <td class="icon-width">
+                单位时间：<%= text_field_tag :duration, "", id: "edit-duration",class: 'form-control', required: true %>
+              </td>
+            </tr>
+            <tr>
+              <td class="icon-width">
+                用户行为名称：<%= text_field_tag :behavier_name, "", id: "edit-behavier_name",class: 'form-control', required: true %>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal"><%= t("public.cancel")%></button>
+          <button type="submit" class="btn btn-primary button-sub"><%= t("public.confirm")%></button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+  function editData(id){
+    $.ajax({
+      url: "/url_visit_limits/"+id+"/edit",
+      // data: {
+      //     id: id
+      //   },
+      success: function (data) {
+        $("#edit-behavier_id").val(data.behavier_id)
+        $("#edit-maximum_times").val(data.maximum_times)
+        $("#edit-duration").val(data.duration)
+        $("#edit-id").val(data.id)
+      }
+    });
+  }
+</script>
+
+<% end %>

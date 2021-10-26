@@ -1,0 +1,145 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>多用户共用IP（共<%= @ip_statistical_analysis_count %>条数据）</h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="ibox-content m-b-xs border-bottom">
+    <div class="row">
+      <%= form_tag '', method: :get do %>
+        <div class="col-lg-11">
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="ip">IP</label>
+              <%= text_field_tag :ip, params[:ip],  class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div class="form-group">
+              <label class="control-label" for="member_id">用户ID</label>
+              <%= text_field_tag :member_id, params[:member_id], class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div class="form-group">
+              <label class="control-label" for="host">ip状态</label>
+              <%= select_tag :state, options_for_select([["全部", ''], ["安全", 'security'], ["普通", 'ordinary'], ["危险", 'danger']], params[:state]), class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div class="form-group">
+              <label class="control-label" for="user_agent">ip最小用户量</label>
+              <%= text_field_tag :user_count, params[:user_count], class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-2">
+            <div class="form-group">
+              <label class="control-label" for="status">排序</label>
+              <%= select_tag :order, options_for_select([["用户量正序", 'count_asc'], ["用户量倒序", 'count_desc'], ["健康度正序", 'friendly_asc'], ["健康度倒序", 'friendly_desc']], params[:order]), class: 'form-control' %>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+            <button type="submit" class="btn btn btn-primary"> <i class="fa fa-search"></i> <%= t('public.search') %></button>
+            </div>
+          </div>
+
+          <div class="col-sm-1">
+            <div style="margin-top: 22px;">
+              <button class="btn btn-success " type="button"><i class="fa fa-download"></i>
+              <%= link_to raw("#{t('public.export_csv')}"),download_csv_ip_statistical_analysis_user_behaviers_path( params.to_enum.to_h.except(:controller, :action) ), style: "color: #ffffff"%></button>
+            </div>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <tr>
+        <td colspan="11">
+          <ul class="pull-right">
+            <%= link_to_prev_page @ip_statistical_analysis, "上一页" %> 
+            <%= link_to_next_page @ip_statistical_analysis, "下一页" %>
+          </ul>
+        </td>
+      </tr>
+      <div class="ibox">
+        <div class="ibox-content">
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <th>IP</th>
+              <th>人数</th>
+              <th>实名百分比</th>
+              <th>用户信息</th>
+              <th>安全分析</th>
+              <th>操作</th>
+            </thead>
+            <tbody>
+              <% if @ip_statistical_analysis.present? %>
+                <% @ip_statistical_analysis.each do |ip_statistical_analysi| %>
+                  <tr>
+                    <td>
+                      <%= link_to ip_infomation(ip_statistical_analysi), ip_statistical_analysis_user_behaviers_path(ip: ip_statistical_analysi.ip_address)%>
+                    </td>
+                    <td>
+                      <%= ip_statistical_analysi.count %>
+                    </td>
+                    <td>
+                     <%= ip_statistical_analysi.friendly.to_d * 100.to_d %>% 
+                    </td>
+                    <td>
+                      <%
+                        all_member_real_name = ip_statistical_analysi.all_member_real_name
+                        real_name_html = all_member_real_name[:real_name_html]
+                        not_real_name_html = all_member_real_name[:not_real_name_html]
+                      %>
+                      <% if !real_name_html.empty?%>
+                        实名用户：
+                        <% real_name_html.each do |member| %>
+                          <%= link_to member[1], members_path(:id => member[0]), target: '_blank' %>, 
+                        <%end%>
+                      <%end%>
+                      <% if !real_name_html.empty? && !not_real_name_html.empty?%>
+                        </br>
+                      <%end%>
+                      <% if !not_real_name_html.empty?%>
+                        未实名用户：
+                        <% not_real_name_html.each do |member| %>
+                          <%= link_to member[1], members_path(:id => member[0]), target: '_blank' %>, 
+                        <%end%>
+                      <%end%>
+                    </td>
+                    <td>
+                     <%= ip_statistical_analysi.safety_degree %>
+                    </td>
+                    <td>
+                      <%= link_to "详情", ip_statistical_analysis_user_show_user_behaviers_path(ip: ip_statistical_analysi.ip_address), class: "fa-btn btn btn-xs btn-primary", target: '_blank' %>
+                      <!-- <a class ='btn btn-primary' data-toggle="modal" data-target="#modify">实名情况</a> -->
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="11">
+                  <ul class="pull-right">
+                    <%= link_to_prev_page @ip_statistical_analysis, "上一页" %> 
+                    <%= link_to_next_page @ip_statistical_analysis, "下一页" %>
+                  </ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

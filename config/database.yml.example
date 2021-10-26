@@ -1,0 +1,37 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  collation: utf8_general_ci
+  pool: 200
+  port:
+  host:
+  username:
+  password:
+
+default: &default_waf
+  adapter: mysql2
+  encoding: utf8mb4
+  collation: utf8mb4_general_ci
+  pool: 200
+  port: 3306
+  host:
+  username:
+  password:
+
+development:
+  primary:
+    <<: *default_waf
+    database: waf_cadex
+  cadex:
+    <<: *default
+    database: cadae
+    migrations_paths: db/cadex
+
+production:
+  primary:
+    <<: *default_waf
+    database: waf_cadex
+  cadex:
+    <<: *default
+    database: cadae
+    migrations_paths: db/cadex

@@ -1,0 +1,21 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2><%=t("lever.leverage_interest")%></h2>
+  </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+  <%= form_tag create_leverage_interest_system_variables_path, method: :post do %>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-content">
+            <div class="form-group" style="margin-top: 20px">
+              借贷利息：<%= text_field :value, "", value: @leverage_interest.try(:value), class: 'form-control', style: 'display: inline; width: 100%;', placeholder: t("public.example")+"：0.002" %>
+            </div>
+            <%= submit_tag raw("&#xf00c;#{t("public.submit")}"), class: 'fa-btn btn btn-primary' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <%end%>
+</div>

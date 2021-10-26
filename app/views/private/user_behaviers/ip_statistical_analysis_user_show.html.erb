@@ -1,0 +1,58 @@
+<div class="row white-bg page-heading">
+  <div class="col-lg-10">
+    <h2>共用IP：<%= params[:ip] %>的用户</h2>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight ecommerce">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox">
+        <div class="ibox-content">
+          <table class="table-hover table table-stripped toggle-arrow-tiny">
+            <thead>
+              <tr>
+                <th>邮箱</th>
+                <th>姓名</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if @shared_ip_users.present? %>
+                <% @shared_ip_users.includes(:member).each do |shared_ip_user| %>
+                  <tr>
+                    <td>
+                      <%= shared_ip_user.member.email rescue '-' %>
+                    </td>
+                    <td>
+                      <%= shared_ip_user.member.real_name rescue '-' %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="11">
+                  <ul class="pull-right">
+                  <%= link_to_prev_page @shared_ip_users, "上一页" %>
+                  <%= link_to_next_page @shared_ip_users, "下一页" %>
+                  </ul>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :javascript do %>
+
+<script type="text/javascript">
+  $(function() {
+    $('.footable').footable();
+  });
+</script>
+
+<% end %>
